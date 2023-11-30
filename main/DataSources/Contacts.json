@@ -4273,30 +4273,6 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "DataState",
-    "Name": "msft_datastate",
-    "OptionSetInfoNameMapping": {
-      "0": "Default",
-      "1": "Retain"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": true,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "msft_datastate",
-        "OptionSetReferenceEntityName": "Contacts"
-      },
-      "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "msft_datastate",
-        "OptionSetReferenceEntityName": "Attachments"
-      }
-    },
-    "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "msft_datastate",
-    "RelatedEntityName": "Contacts",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Do not track (Contacts)",
     "Name": "msgdpr_contact_msgdpr_donottrack",
     "OptionSetInfoNameMapping": {

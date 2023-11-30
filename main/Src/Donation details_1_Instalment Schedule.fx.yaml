@@ -97,6 +97,8 @@
         Label2_100 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: |
+                =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Recipt Arrangement"
             Width: =257
@@ -116,6 +118,7 @@
         Label2_101 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -135,6 +138,7 @@
         Label2_102 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -154,6 +158,7 @@
         Label2_103 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -173,6 +178,7 @@
         Label2_104 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130
@@ -305,7 +311,7 @@
             FontWeight: =FontWeight.Bold
             Height: =46
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            OnSelect: =Navigate( 'Donation details_2' , ScreenTransition.Cover  )
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8

@@ -106,6 +106,8 @@
         Label2_84 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: |
+                =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Recipt Arrangement"
             Width: =257
@@ -125,6 +127,7 @@
         Label2_85 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -144,6 +147,7 @@
         Label2_86 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -163,6 +167,7 @@
         Label2_87 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -182,6 +187,7 @@
         Label2_88 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130
@@ -249,7 +255,6 @@
             ZIndex: =29
 
     SaveButton_11 As button:
-        Align: =Align.Justify
         Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
         Height: =46
@@ -328,7 +333,8 @@
             FontWeight: =FontWeight.Bold
             Height: =55
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            OnSelect: =Navigate( 'Donation details_2' , ScreenTransition.Cover  );
+            OnSelect: |
+                =Navigate( 'Donation details_2' , ScreenTransition.Cover  );
             RadiusBottomLeft: =9
             RadiusBottomRight: =9
             RadiusTopLeft: =9
@@ -841,52 +847,6 @@
             Y: =113
             ZIndex: =16
 
-        Button3 As button:
-            Fill: =RGBA(250, 212, 100, 1)
-            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            OnSelect: |-
-                =Set(paymentScheduleObj, {
-                    it: Dropdown7.SelectedText.Value,
-                    tnoi:TextInput8.Text,
-                    ta:TextInput8_3.Text,
-                    if:Dropdown7_1.SelectedText.Value,
-                    sd:DatePicker2.SelectedDate,
-                    ed:DatePicker2_1.SelectedDate,
-                    aei:TextInput8_4.Text
-                });
-                Set(scheduleCol,RenameColumns(ClearCollect(rowCount, Sequence(Int(paymentScheduleObj.tnoi)).Value),"Value","Id"));
-                Clear(infoCol);
-                ForAll(
-                    Sequence(Int(paymentScheduleObj.tnoi)).Value,
-                    Collect(infoCol,
-                        {id:ThisRecord.Value,
-                        sd:DateTimeValue(paymentScheduleObj.sd),
-                        ed: 
-                        If(
-                            paymentScheduleObj.if ="Monthly",
-                            DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Months),
-                            If(paymentScheduleObj.if ="Semi-annually",
-                                DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value*6,TimeUnit.Months),
-                                DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Years))),
-                        tnoi:paymentScheduleObj.tnoi,
-                        it:paymentScheduleObj.it,
-                        if:paymentScheduleObj.if,
-                        aei:paymentScheduleObj.aei}
-                    )
-                );
-                Navigate( 'Donation details_1_Instalment Schedule' , ScreenTransition.Cover  );
-            Size: =11
-            Text: ="Show Schedule details"
-            Visible: |-
-                =If(
-                    And(!IsBlank(TextInput8.Text),!IsBlank(TextInput8_3.Text),!IsBlank(TextInput8_4.Text)),
-                    true,
-                    If(Dropdown7.SelectedText.Value <> "regular",true, false))
-            Width: =130
-            X: =1094
-            Y: =118
-            ZIndex: =18
-
         Label17_7 As label:
             Height: =47
             Text: |-
@@ -978,25 +938,4 @@
         X: =590
         Y: =213
         ZIndex: =72
-
-    Label6 As label:
-        Text: |-
-            =//If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.ovalue,Dropdown12.Selected.value)
-            If(Dropdown12.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bvalue'=0,Dropdown3_3.Selected.ovalue,Dropdown12.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue')
-        X: =725
-        Y: =334
-        ZIndex: =73
-
-    Label6_1 As label:
-        Text: =If(ComboBox2.Selected.Value=128490074,0,1)
-        Width: =66
-        X: =659
-        Y: =334
-        ZIndex: =74
-
-    Label6_2 As label:
-        Text: =If(Checkbox2_21.Value=true,1,0)
-        X: =928
-        Y: =336
-        ZIndex: =75
 

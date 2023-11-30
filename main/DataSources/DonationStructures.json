@@ -129,6 +129,38 @@
     }
   },
   {
+    "DisplayName": "Donation Category (MIU)",
+    "Name": "dacrm_donationcategorymiu",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Academic Research (AR)",
+      "128490001": "Campus Development/Capital Projects (CD)",
+      "128490002": "Conferences/Workshops (CW)",
+      "128490003": "Faculty/Departmental Development/Capital (DD)",
+      "128490004": "Endowed Professorships (EP)",
+      "128490005": "General Uses (GU)",
+      "128490006": "Professorships/Fellowships (PF)",
+      "128490007": "Scholarships/Busaries/Prizes/Student Development and Activities (SC)",
+      "128490008": "Multiple Purposes",
+      "128490009": "Unidentified"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donationcategorymiu",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "dacrm_donationcategorymiu",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_donationcategorymiu",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "Accept Instalments Payment Schedule (DonationStructures)",
     "Name": "dacrm_donationstructure_dacrm_acceptinstalmentspaymentschedule",
     "OptionSetInfoNameMapping": {

@@ -18,7 +18,50 @@
         Height: =46
         HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
         OnSelect: |+
-            =
+            =If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue',Dropdown12.Selected.value);
+            If(
+                Dropdown3.Selected.Value = 128490001,
+                
+                If (IsBlank(TextInput8.Text) || IsBlank(Dropdown11.Selected),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDD1: true}),
+            
+                    Patch(DonationTerms, 
+                        Defaults(DonationTerms),
+                        {
+                            'Donation Name ':Dropdown11_1.Selected,
+                            'Payment Schedule Type':Dropdown3.Selected.Value,
+                            'Commited Amount in HKD':Value(TextInput1.Text),
+                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
+                            'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
+                            'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false)
+                            //'Donation Type':
+                                //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
+                                //'Donation Type (DonationTerms)'.'Deferred gift'
+                        });
+                   
+                   
+                    //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
+                    //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
+                    
+                    UpdateContext({requiredfieldsmissingDD1: false});
+                    //create schedule record
+                    'PowerApp->Initializevariable'.Run(Int(TextInput8.Text));
+                ),
+            
+                If( IsBlank(Dropdown11_1.Selected),
+            
+                    Notify("Please pick the donation name.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDDName: true}),
+            
+                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today()});
+                    //'Donation Type':If(Dropdown12.Selected.Value=0,Text(Dropdown3_3.Selected.Value), Dropdown12.Selected.Value)
+                    //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
+                    //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
+                    UpdateContext({requiredfieldsmissingDDName: false})
+                )
             
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
@@ -34,10 +77,10 @@
     Container1_31 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
-        Height: =64
+        Height: =75
         Width: =208
         X: =1146
-        Y: =704
+        Y: =693
         ZIndex: =26
 
         Button3_24 As button:
@@ -58,6 +101,7 @@
                 Payment Method"
             Width: =184
             X: =10
+            Y: =7
             ZIndex: =1
 
         Icon6_13 As icon.NextArrow:
@@ -65,8 +109,8 @@
             Height: =40
             Icon: =Icon.NextArrow
             Width: =33
-            X: =161
-            Y: =7
+            X: =154
+            Y: =14
             ZIndex: =2
 
     Container1_32 As groupContainer.manualLayoutContainer:
@@ -366,8 +410,8 @@
                             true,
                             If(Dropdown7.SelectedText.Value <> "regular",true, false))
                     Width: =130
-                    X: =187
-                    Y: =490
+                    X: =236
+                    Y: =484
                     ZIndex: =27
 
     Group6_11 As group:
@@ -453,6 +497,7 @@
         Label2_92 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Recipt Arrangement"
             Width: =257
@@ -472,6 +517,7 @@
         Label2_93 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -491,6 +537,7 @@
         Label2_94 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -510,6 +557,7 @@
         Label2_95 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -529,6 +577,7 @@
         Label2_96 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130

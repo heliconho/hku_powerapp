@@ -1007,6 +1007,7 @@
         Label2_116 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Recipt Arrangement"
             Width: =257
@@ -1026,6 +1027,7 @@
         Label2_117 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -1045,6 +1047,7 @@
         Label2_118 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -1064,6 +1067,7 @@
         Label2_119 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -1083,6 +1087,7 @@
         Label2_120 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130
@@ -1192,7 +1197,7 @@
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
         Height: =64
-        Width: =208
+        Width: =221
         X: =7
         Y: =704
         ZIndex: =32
