@@ -589,7 +589,7 @@
       "msevtmgt_ContactId": "Contact!",
       "msevtmgt_originatingeventid": "Originating event",
       "msft_datastate": "msft_DataState",
-      "msgdpr_consentchangesourceformId": "consent change source form Id",
+      "msgdpr_consentchangesourceformId": "Consent change source form Id",
       "msgdpr_contact_msgdpr_gdprconsentchangerecord": "GDPR consent change records",
       "msgdpr_contact_msgdpr_gdprparent": "Contacts (msgdpr_contact_msgdpr_gdprparent)",
       "msgdpr_donottrack": "Do not track",
