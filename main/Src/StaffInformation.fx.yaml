@@ -650,7 +650,7 @@ StaffInformation As screen:
         RadiusTopRight: =8
         Size: =12
         Text: ="Save "
-        Width: =73
+        Width: =72
         X: =1063
         Y: =708
         ZIndex: =35
