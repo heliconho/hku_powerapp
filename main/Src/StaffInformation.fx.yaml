@@ -469,6 +469,7 @@ StaffInformation As screen:
         Label2_3 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Receipt Arrangement"
             Width: =257

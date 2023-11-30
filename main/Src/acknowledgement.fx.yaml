@@ -413,6 +413,7 @@ acknowledgement As screen:
         Label2_28 As label:
             Align: =Align.Center
             Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Recipt Arrangement"
             Width: =257
