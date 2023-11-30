@@ -335,6 +335,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Donation details_2'.SaveButton_12.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Donation details_2'.SaveButton_12.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 2373,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Donation details_2",
+                "type": "'Donation details_2'.SaveButton_12"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Eof",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Donation details_4'.Container15_8.'Donation Details_4'.Container11.TextInput6.AccessibleLabel"
                 }
               ],
@@ -7782,36 +7822,6 @@
                 "member": "DisplayMode",
                 "module": "HKUFoundationMembership",
                 "type": "HKUFoundationMembership.SaveButton_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Donation details_1'.Label6_2.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Donation details_1'.Label6_2.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Donation details_1",
-                "type": "'Donation details_1'.Label6_2"
               }
             }
           ],

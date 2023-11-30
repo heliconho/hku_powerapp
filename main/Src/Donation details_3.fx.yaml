@@ -1192,7 +1192,7 @@
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
         Height: =64
-        Width: =208
+        Width: =221
         X: =7
         Y: =704
         ZIndex: =32
