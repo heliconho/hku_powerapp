@@ -182,6 +182,7 @@ HKUFoundationMembership As screen:
         Label2_45 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -201,6 +202,7 @@ HKUFoundationMembership As screen:
         Label2_46 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -220,6 +222,7 @@ HKUFoundationMembership As screen:
         Label2_47 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -239,6 +242,7 @@ HKUFoundationMembership As screen:
         Label2_48 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130

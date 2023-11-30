@@ -334,6 +334,7 @@
         Label2_77 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -353,6 +354,7 @@
         Label2_78 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
             Size: =10
             Text: ="HKU Foundation Membership"
             Width: =130
@@ -372,6 +374,7 @@
         Label2_79 As label:
             Align: =Align.Center
             Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
