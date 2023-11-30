@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_processingformcontactpersons",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_processingformcontactperson",
+    "MaxGetRowsCount": 500,
+    "Name": "ProcessingFormContactPeople",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_fristcontactpersonemail": "Frist Contact Person Email",
+      "dacrm_name": "First Contact Person",
+      "dacrm_processingformcontactperson_AsyncOperations": "System Jobs",
+      "dacrm_processingformcontactperson_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_ProcessingFormContactPerson_dacrm_d": "DonationTerms",
+      "dacrm_processingformcontactperson_DuplicateBaseRecord": "Duplicate Records (dacrm_processingformcontactperson_DuplicateBaseRecord)",
+      "dacrm_processingformcontactperson_DuplicateMatchingRecord": "Duplicate Records (dacrm_processingformcontactperson_DuplicateMatchingRecord)",
+      "dacrm_processingformcontactperson_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_processingformcontactperson_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_processingformcontactperson_ProcessSession": "Process Sessions",
+      "dacrm_processingformcontactperson_SyncErrors": "Sync Errors",
+      "dacrm_processingformcontactpersonid": "ProcessingFormContactPerson",
+      "dacrm_secondcontactperson": "Second Contact Person",
+      "dacrm_secondcontactpersonemail": "Second Contact Person Email",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "ProcessingFormContactPeople",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "ProcessingFormContactPeople (Views)",
+    "Name": "_dacrm_processingformcontactperson_views",
+    "RelatedEntityName": "ProcessingFormContactPeople",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0ad473c5-a055-46b7-a2ea-ad7e4f3c5b05": "ProcessingFormContactPerson Associated View",
+      "217c2e32-c062-4a48-bcd5-b446ea0a1423": "Inactive ProcessingFormContactPeople",
+      "50ad4916-7200-45f6-aa52-b2300b0383e4": "ProcessingFormContactPerson Advanced Find View",
+      "cd362377-14a4-4720-9534-4fce6415381f": "ProcessingFormContactPerson Lookup View",
+      "fe755389-48c7-4982-8d04-37fa7a7d8b71": "Active ProcessingFormContactPeople"
+    }
+  },
+  {
+    "DisplayName": "Status (ProcessingFormContactPeople)",
+    "Name": "dacrm_processingformcontactperson_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "ProcessingFormContactPeople"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "ProcessingFormContactPeople",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (ProcessingFormContactPeople)",
+    "Name": "dacrm_processingformcontactperson_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "ProcessingFormContactPeople"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "ProcessingFormContactPeople",
+    "Type": "OptionSetInfo"
+  }
+]

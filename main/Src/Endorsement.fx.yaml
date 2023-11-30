@@ -1,0 +1,510 @@
+Endorsement As screen:
+
+    Container15_7 As groupContainer.verticalAutoLayoutContainer:
+        Height: =471
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =1318
+        X: =25
+        Y: =159
+        ZIndex: =5
+
+        "'Endorsement of Acceptance_7' As groupContainer.verticalAutoLayoutContainer":
+            Height: =533.59
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Y: =987.15
+            ZIndex: =16
+
+            "'Endorsement of Acceptance_label_7' As label":
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(30, 85, 66, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =40.01
+                PaddingBottom: =5.00
+                PaddingLeft: =5.00
+                Size: =13.01
+                Text: ="Endorsement of Acceptance ^"
+                Y: =0.00
+                ZIndex: =1
+
+            Container13 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =43
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =1
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Label20 As label:
+                    Text: |-
+                        ="Please select a designation for e-approval :"
+                    Width: =400
+                    ZIndex: =1
+
+                Dropdown5 As dropdown:
+                    Height: =38
+                    Items: =["Faculty of Art","Faculty of Engineering"]
+                    ZIndex: =2
+
+            Container13_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =40
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                Label20_1 As label:
+                    Text: |-
+                        ="Level(s) of approval needed :"
+                    Width: =400
+                    ZIndex: =1
+
+                Dropdown5_1 As dropdown:
+                    Height: =39
+                    Items: =["1 Level Only", "2 levels of approval"]
+                    ZIndex: =2
+
+            Label22 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                Text: |-
+                    ="The processing form will be approved by :"
+                ZIndex: =4
+
+            "'One level' As groupContainer.horizontalAutoLayoutContainer":
+                DropShadow: =DropShadow.None
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: |
+                    =If(Dropdown5_1.Selected.Value = "1 Level Only", true, false)
+                ZIndex: =5
+
+                Label20_2 As label:
+                    Text: |-
+                        ="Approver :"
+                    Width: =100
+                    ZIndex: =1
+
+                ComboBox4 As combobox:
+                    AlignInContainer: =AlignInContainer.Start
+                    DisplayFields: =["Value"]
+                    Items: =["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"]
+                    SearchFields: =["Value"]
+                    SearchItems: =Search(["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"],ComboBox4.SearchText,"Value")
+                    ZIndex: =5
+
+            Two_level As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: |
+                    =If(Dropdown5_1.Selected.Value = "2 levels of approval", true, false)
+                ZIndex: =6
+
+                "'Two level_1' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    Label20_4 As label:
+                        Text: |-
+                            ="Level 1 approver :"
+                        Width: =170
+                        ZIndex: =1
+
+                    ComboBox5 As combobox:
+                        DisplayFields: =["Value"]
+                        Items: =["Daniel Chu(Head of Department)","Emily Lam(Secretory)"]
+                        SearchFields: =["Value"]
+                        SearchItems: =Search(["Daniel Chu(Head of Department)","Emily Lam(Secretory)"],ComboBox5.SearchText,"Value")
+                        ZIndex: =5
+
+                "'Two level_2' As groupContainer.horizontalAutoLayoutContainer":
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    Label20_5 As label:
+                        Text: |-
+                            ="Level 2 approver :"
+                        Width: =170
+                        ZIndex: =1
+
+                    ComboBox5_1 As combobox:
+                        DisplayFields: =["Value"]
+                        Items: =["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"]
+                        SearchFields: =["Value"]
+                        SearchItems: =Search(["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"],ComboBox5_1.SearchText,"Value")
+                        ZIndex: =5
+
+    Label1_7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Group6_7 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =30
+
+        Circle1_56 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2_57 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_57 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =195
+            Y: =93
+            ZIndex: =9
+
+        Label2_58 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =105
+            ZIndex: =10
+
+        Circle1_58 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =11
+
+        Label2_59 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =12
+
+        Icon3_53 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =13
+
+        Circle1_59 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =14
+
+        Label2_60 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Recipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =15
+
+        Circle1_60 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =16
+
+        Label2_61 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =17
+
+        Circle1_61 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =18
+
+        Label2_62 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =19
+
+        Circle1_62 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =20
+
+        Label2_63 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =21
+
+        Circle1_63 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =22
+
+        Label2_64 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =23
+
+        Icon3_52 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =24
+
+        Icon3_51 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =25
+
+        Icon3_54 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =26
+
+        Icon3_55 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =27
+
+        Icon3_56 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =28
+
+        Icon3_57 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =29
+
+    SaveButton_16 As button:
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |+
+            =/*If(
+                existingdonor,
+                
+                If (IsBlank(ComboBox3.SelectedItems),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingo: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingo: false})
+                ),
+            
+                If( IsBlank(TextInput3_46.Text) 
+                    || IsBlank(TextInput3_45.Text)
+                    || IsBlank(TextInput3_52.Text)
+                    || IsBlank(TextInput3_54.Text),
+            
+                    Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingn: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingn: false})
+                )
+            );*/
+            
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1066
+        Y: =713
+        ZIndex: =32
+
+    Container1_42 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =69
+        Width: =208
+        X: =1146
+        Y: =699
+        ZIndex: =33
+
+        Button3_35 As button:
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =53
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =12
+            Text: ="Submit Form"
+            Width: =134
+            X: =22
+            Y: =7
+            ZIndex: =1
+
+    Container1_43 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =34
+
+        Button3_36 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( DueDiligence , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Due Dilligence & 
+                Conflict of Interest"
+            Width: =184
+            X: =24
+            Y: =1
+            ZIndex: =1
+
+        Icon1_16 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(30, 85, 66, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+

@@ -1,0 +1,186 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_designationtypetonamemasters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_designationtypetonamemaster",
+    "MaxGetRowsCount": 500,
+    "Name": "DesignationTypeToNameMasters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_approvalhierarchy": "Approval Hierarchy ",
+      "dacrm_dacrm_donationstructure_designationname_d": "DonationStructures",
+      "dacrm_dacrm_donationterm_designationname_dacrm_": "DonationTerms (dacrm_dacrm_donationterm_designationname_dacrm_)",
+      "dacrm_dacrm_donationtransaction_designationname": "DonationTransactions",
+      "dacrm_dacrm_eapporvalmaster_designationname_dac": "EApporvalMasters",
+      "dacrm_dacrm_onationtructureodesignationrelati": "DonationStructureToDesignationRelationships",
+      "dacrm_designationcategory": "Designation Category",
+      "dacrm_designationtypeid": "Designation Type",
+      "dacrm_designationtypemasterid": "DesignationTypeMaster ID",
+      "dacrm_designationtypetonamemaster_AsyncOperations": "System Jobs",
+      "dacrm_designationtypetonamemaster_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_designationtypetonamemaster_DuplicateBaseRecord": "Duplicate Records (dacrm_designationtypetonamemaster_DuplicateBaseRecord)",
+      "dacrm_designationtypetonamemaster_DuplicateMatchingRecord": "Duplicate Records (dacrm_designationtypetonamemaster_DuplicateMatchingRecord)",
+      "dacrm_designationtypetonamemaster_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_designationtypetonamemaster_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_designationtypetonamemaster_ProcessSession": "Process Sessions",
+      "dacrm_designationtypetonamemaster_SyncErrors": "Sync Errors",
+      "dacrm_designationtypetonamemasterid": "DesignationTypeToNameMaster",
+      "dacrm_donationterm_designationtypetonamem": "DonationTerms (dacrm_donationterm_designationtypetonamem)",
+      "dacrm_isacitve": "Is Acitve",
+      "dacrm_lookupid": "Designation Number (Cost Center/Account Code)",
+      "dacrm_name": "Designation Name",
+      "dacrm_onlinegivingformcategory": "Online Giving Form Group Name ",
+      "dacrm_onlinegivinggormgroupnamema": "OnlineGivingFormGroupNameMaster",
+      "dacrm_reportcode1": "Report Code 1",
+      "dacrm_reportcode2": "Report Code 2",
+      "dacrm_showd365designationdisplayname": "Show D365 Designation Display Name",
+      "dacrm_showd365designationdisplaynameother": "Show D365 Designation Display Name (Other)",
+      "dacrm_websitedisplayname": "Online Giving Form Designation Display Name",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DesignationTypeToNameMasters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DesignationTypeToNameMasters (Views)",
+    "Name": "_dacrm_designationtypetonamemaster_views",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "045aae51-1ab5-4ba2-99dc-cc03789e4c75": "DesignationTypeToNameMaster Associated View",
+      "0755f725-1e38-ee11-bdf4-000d3a094fee": "External Scheme lookup view",
+      "31216e57-f963-ee11-8def-000d3a08bda0": "Prize (OC002) Lookup View",
+      "323f2236-59a3-43b9-8495-69dd2b3d681c": "DesignationTypeToNameMaster Advanced Find View",
+      "32978db6-1c38-ee11-bdf4-000d3a08d293": "Donation to Student Enrichment (OC006) lookup view",
+      "58afc60a-981f-4699-b91c-c862f37a506a": "Active DesignationTypeToNameMasters",
+      "6c142771-f963-ee11-8def-000d3a08be93": "Scholarship (OC001) Lookup View",
+      "86a8c801-f963-ee11-8def-000d3aa3f57b": "Historical Donation (OC004) Lookup View",
+      "91425bd1-9dce-47e1-bddb-1334e8029374": "All Designation Name Lookup View",
+      "ca247eca-1b38-ee11-bdf4-000d3a08d293": "Bursary (OC003) lookup view",
+      "e5a5273c-f963-ee11-8def-000d3a08be93": "Named Professorship Lookup View",
+      "ef6b3b71-1538-ee11-bdf4-000d3a094fee": "Award (non-monetary) Lookup View",
+      "f2358720-f963-ee11-8def-000d3aa3fbd0": "Hospital Authority Reimbursement (OC005) Lookup View",
+      "f84eb301-1c38-ee11-bdf4-000d3a08dfe0": "Cost Centre lookup view",
+      "fd0f298d-f963-ee11-8def-000d3aa3faa9": "Uncertain Cost Centre (OC900) Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Is Acitve (DesignationTypeToNameMasters)",
+    "Name": "dacrm_designationtypetonamemaster_dacrm_isacitve",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isacitve",
+        "OptionSetReferenceEntityName": "DesignationTypeToNameMasters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isacitve",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Show D365 Designation Display Name (DesignationTypeToNameMasters)",
+    "Name": "dacrm_designationtypetonamemaster_dacrm_showd365designationdisplayname",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_showd365designationdisplayname",
+        "OptionSetReferenceEntityName": "DesignationTypeToNameMasters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_showd365designationdisplayname",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Show D365 Designation Display Name (Other) (DesignationTypeToNameMasters)",
+    "Name": "dacrm_designationtypetonamemaster_dacrm_showd365designationdisplaynameother",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_showd365designationdisplaynameother",
+        "OptionSetReferenceEntityName": "DesignationTypeToNameMasters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_showd365designationdisplaynameother",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (DesignationTypeToNameMasters)",
+    "Name": "dacrm_designationtypetonamemaster_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DesignationTypeToNameMasters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DesignationTypeToNameMasters)",
+    "Name": "dacrm_designationtypetonamemaster_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DesignationTypeToNameMasters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DesignationTypeToNameMasters",
+    "Type": "OptionSetInfo"
+  }
+]

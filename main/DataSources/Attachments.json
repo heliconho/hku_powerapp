@@ -1,0 +1,86 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "activitymimeattachments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "activitymimeattachment",
+    "MaxGetRowsCount": 500,
+    "Name": "Attachments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_objectid_value": "Item",
+      "ActivityMimeAttachment_AsyncOperations": "System Jobs",
+      "ActivityMimeAttachment_BulkDeleteFailures": "Bulk Delete Failures",
+      "ActivityMimeAttachment_SyncErrors": "Sync Errors",
+      "activitymimeattachmentid": "Activity Mime Attachment",
+      "activitymimeattachmentidunique": "ActivityMimeAttachmentIdUnique",
+      "anonymouslink": "For internal use only.",
+      "attachmentcontentid": "Content Id",
+      "attachmentid": "Attachment",
+      "attachmentnumber": "Attachment Number",
+      "componentstate": "Component State",
+      "isfollowed": "Followed",
+      "ismanaged": "Is Managed",
+      "msft_datastate": "msft_DataState",
+      "overwritetime": "Record Overwrite Time",
+      "solutionid": "Solution",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Attachments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Attachments (Views)",
+    "Name": "_activitymimeattachment_views",
+    "RelatedEntityName": "Attachments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "151b96a3-a017-4493-9204-259fb15df131": "Activity Attachment Advanced Find View",
+      "270de234-e469-4806-9c7e-8d94901cd521": "Activity Attachment View",
+      "314d697c-c2f0-4ca1-a129-ce68ce9a0454": "Activity Attachment View for Email",
+      "dfece928-f881-46f5-bce1-4b3f918ecdcc": "All Activity Attachments"
+    }
+  },
+  {
+    "DisplayName": "Followed (Attachments)",
+    "Name": "activitymimeattachment_isfollowed",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isfollowed",
+        "OptionSetReferenceEntityName": "Attachments"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isfollowed",
+    "RelatedEntityName": "Attachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Entity (Attachments)",
+    "Name": "activitymimeattachment_objecttypecode",
+    "OptionSetInfoNameMapping": {
+      "2010": "Email Template",
+      "4200": "Email Activity"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "objecttypecode",
+        "OptionSetReferenceEntityName": "Attachments"
+      }
+    },
+    "OptionSetTypeKey": "EntityNameType",
+    "RelatedColumnInvariantName": "objecttypecode",
+    "RelatedEntityName": "Attachments",
+    "Type": "OptionSetInfo"
+  }
+]

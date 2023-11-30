@@ -1,0 +1,375 @@
+Screen1 As screen:
+
+    HtmlText1 As htmlViewer:
+        Height: =144
+        HtmlText: |-
+            ="Hyperlink </br> Click this link:  "& "<a href='https://www.google.com/'>" & "https://www.google.com/" & "</a>" & " </br></br>Download </br> Click " & "<a href='https://www.example.com/documents/document.pdf'>download</a> for more reference. </br> (Can generate the download link from document saved such as blob storage/sharepoint)"
+        Width: =458
+        X: =907
+        ZIndex: =2
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =370
+        Items: =designationCol
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =//ClearCollect(designationCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+        TemplatePadding: =0
+        TemplateSize: =201
+        Width: =588
+        X: =80
+        Y: =240
+        ZIndex: =3
+
+        Title2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Designation Type: " & ThisItem.designationtype 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =38
+            ZIndex: =2
+
+        Subtitle2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Amount: " & ThisItem.amount
+            VerticalAlign: =VerticalAlign.Top
+            Width: =101
+            X: =17
+            Y: =155
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(56, 96, 178, 1)
+            Height: =58
+            Icon: =Icon.ChevronRight
+            OnSelect: |
+                =//ClearCollect(designationdetailsCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+                UpdateContext({designationdetails:true,currentRecId:ThisItem.ID})
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =61
+            X: =523
+            Y: =64
+            ZIndex: =4
+
+        Separator2 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator2.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Title2_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Designation Name: " & ThisItem.designationname
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =77
+            ZIndex: =7
+
+        Title2_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Opportunity ID: " & ThisItem.oppid &ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =391
+            X: =17
+            Y: =6
+            ZIndex: =8
+
+        Icon3 As icon.Cancel:
+            Height: =38
+            Icon: =Icon.Cancel
+            OnSelect: =Remove(designationCol, ThisItem)
+            Width: =32
+            X: =538
+            Y: =6
+            ZIndex: =9
+
+        Title2_3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Donation Category (MIU): " & ThisItem.donationcategory
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =116
+            ZIndex: =10
+
+        Subtitle2_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Credit to Account: " & ThisItem.credittoaccount
+            VerticalAlign: =VerticalAlign.Top
+            Width: =170
+            X: =127
+            Y: =155
+            ZIndex: =11
+
+        Subtitle2_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="RCGAS number: " & ThisItem.rcgasnumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =153
+            X: =304
+            Y: =155
+            ZIndex: =12
+
+    Icon2 As icon.Add:
+        Height: =25
+        Icon: =Icon.Add
+        OnSelect: |-
+            =//ClearCollect(designationCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+            Patch(
+                designationCol,
+                Defaults(designationCol),
+                {
+                    ID: CountRows(designationCol) + 1,
+                    oppid: "Opp-id",
+                    designationtype: "",
+                    designationname: "",
+                    reportcode1: "",
+                    reportcode2: "",
+                    donationcategory: "",
+                    amount: "",
+                    credittoaccount: "",
+                    rcgasnumber: ""
+                }
+            )
+            //oppid:
+        Width: =34
+        X: =35
+        Y: =240
+        ZIndex: =4
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =455
+        Visible: =designationdetails
+        Width: =508
+        X: =668
+        Y: =240
+        ZIndex: =5
+
+        Label12 As label:
+            Height: =38
+            Text: |-
+                ="Designation Type: "
+            Width: =158
+            X: =4
+            Y: =11
+            ZIndex: =1
+
+        Label12_1 As label:
+            Height: =36
+            Text: |-
+                ="Designation Name: "
+            Width: =173
+            X: =4
+            Y: =63
+            ZIndex: =2
+
+        Label12_2 As label:
+            Height: =36
+            Text: |-
+                ="Report Code 1:"
+            Width: =173
+            X: =4
+            Y: =113
+            ZIndex: =3
+
+        Label12_3 As label:
+            Height: =36
+            Text: |-
+                ="Report Code 2:"
+            Width: =173
+            X: =4
+            Y: =163
+            ZIndex: =4
+
+        Label12_4 As label:
+            Height: =47
+            Text: |-
+                ="Donation Category (MIU): "
+            Width: =173
+            X: =4
+            Y: =213
+            ZIndex: =5
+
+        Label12_5 As label:
+            Height: =36
+            Text: |-
+                ="Amount: "
+            Width: =173
+            X: =4
+            Y: =267
+            ZIndex: =6
+
+        Label12_6 As label:
+            Height: =36
+            Text: |-
+                ="Credit to Account: "
+            Width: =173
+            X: =4
+            Y: =310
+            ZIndex: =7
+
+        Label12_7 As label:
+            Height: =36
+            Text: |-
+                ="RCGAS number: "
+            Width: =173
+            X: =4
+            Y: =360
+            ZIndex: =8
+
+        Dropdown9 As dropdown:
+            Height: =39
+            Items: |-
+                =//DonationStructureToDesignationRelationships
+                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,dacrm_donationstructurenamestring = Dropdown11.Selected.'Donation Name'),"dacrm_designationtype"),"Types",dacrm_designationtype.'Designation Type')
+            Reset: =resettext
+            Width: =313
+            X: =177
+            Y: =10
+            ZIndex: =9
+
+        Dropdown9_1 As dropdown:
+            Height: =39
+            Items: |
+                =//DropDownSample
+                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,dacrm_donationstructurenamestring = Dropdown11.Selected.'Donation Name'),"dacrm_designationname"),"Names",dacrm_designationname.'Designation Name')
+            Reset: =resettext
+            Width: =313
+            X: =177
+            Y: =63
+            ZIndex: =10
+
+        TextInput2 As text:
+            Default: |-
+                =//"Report Code 1"
+                If( IsBlank(LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 1')), "NA", LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 1'))
+            Reset: =resettext
+            X: =177
+            Y: =113
+            ZIndex: =11
+
+        TextInput2_1 As text:
+            Default: |-
+                =//"Report Code 2"
+                If( IsBlank(LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 2')), "N/A", LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 2'))
+            Reset: =resettext
+            X: =177
+            Y: =163
+            ZIndex: =12
+
+        Dropdown9_2 As dropdown:
+            Height: =39
+            Items: |
+                =Choices('Donation Category (MIU)')
+            Width: =313
+            X: =180
+            Y: =213
+            ZIndex: =13
+
+        TextInput2_2 As text:
+            Default: =""
+            Reset: =resettext
+            X: =177
+            Y: =260
+            ZIndex: =14
+
+        TextInput2_3 As text:
+            Default: =""
+            Reset: =resettext
+            X: =177
+            Y: =306
+            ZIndex: =15
+
+        TextInput2_4 As text:
+            Default: =" "
+            Reset: =resettext
+            X: =177
+            Y: =356
+            ZIndex: =16
+
+        Button2 As button:
+            Height: =31
+            OnSelect: |-
+                =UpdateContext({designationdetails:false});
+                Patch(designationCol, LookUp(designationCol,ID=currentRecId), {ID:currentRecId, designationtype:Dropdown9.Selected.Types, designationname:Dropdown9_1.Selected.Names, reportcode1:TextInput2.Text, reportcode2:TextInput2_1.Text,donationcategory:Dropdown9_2.Selected.Value, amount:TextInput2_2.Text, credittoaccount:TextInput2_3.Text, rcgasnumber:TextInput2_4.Text});
+                //reset the form
+                UpdateContext({resettext: !resettext})
+            Size: =12
+            Text: ="Confirm"
+            Width: =122
+            X: =368
+            Y: =408
+            ZIndex: =17
+
+    Dropdown11 As dropdown:
+        Items: =Choices('Payment Schedule Type (DonationTerms)')
+        X: =69
+        Y: =144
+        ZIndex: =7
+

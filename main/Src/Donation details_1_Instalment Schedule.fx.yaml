@@ -1,0 +1,554 @@
+"'Donation details_1_Instalment Schedule' As screen":
+    OnVisible: |-
+        =Set(datePickerVis,false);
+        Set(amountInputVis,false);
+
+    Label1_12 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Group6_12 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =30
+
+        Circle1_102 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2_97 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_96 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =195
+            Y: =93
+            ZIndex: =9
+
+        Label2_99 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =105
+            ZIndex: =10
+
+        Circle1_103 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =11
+
+        Label2_98 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =12
+
+        Icon3_90 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =13
+
+        Circle1_97 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =14
+
+        Label2_100 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Recipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =15
+
+        Circle1_98 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =16
+
+        Label2_101 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =17
+
+        Circle1_99 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =18
+
+        Label2_102 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =19
+
+        Circle1_100 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =20
+
+        Label2_103 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =21
+
+        Circle1_101 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =22
+
+        Label2_104 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =23
+
+        Icon3_93 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =24
+
+        Icon3_89 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =25
+
+        Icon3_91 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =26
+
+        Icon3_87 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =27
+
+        Icon3_88 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =28
+
+        Icon3_92 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =29
+
+    SaveButton_18 As button:
+        Fill: =RGBA(250, 209, 85, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |-
+            =/*If(
+                Dropdown3_1.SelectedText.Value = "Instalments Payment",
+                
+                If (IsBlank(Dropdown11_2.Selected)
+                    || IsBlank(Dropdown7_2.Selected)
+                    || IsBlank(TextInput8_5.Text)
+                    || IsBlank(TextInput8_6.Text)
+                    || IsBlank(TextInput8_7.Text)
+                    || IsBlank(Dropdown7_3.Selected)
+                    || IsBlank(DatePicker2_2.SelectedDate)
+                    || IsBlank(DatePicker2_3.SelectedDate),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDD1: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingDD1: false});
+                    //create schedule record
+                ),
+            
+                If( IsBlank(Dropdown11_2.Selected),
+            
+                    Notify("Please pick the donation name.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDDName: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingDDName: false})
+                )
+            );
+            
+            
+            
+            'PowerApp->Initializevariable'.Run(Int(TextInput8_5.Text));*/
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1234
+        Y: =704
+        ZIndex: =33
+
+    Container1_47 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =35
+
+        Button3_40 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(247, 205, 77, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Donor's Information"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon1_18 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(245, 209, 100, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+
+    "'Staff info_label_8' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =47.01
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =13.01
+        Text: ="Donation Details - Instalment Payment Schedule "
+        Width: =1314
+        X: =28
+        Y: =159
+        ZIndex: =36
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =470
+        Items: |-
+            =//Filter(InstallmentPaymentSchedules, 'Installment Payment Schedule ID' = GUID(d5f0a47f-75f8-4671-9500-8dd2de0e7e8e))
+            // Filter table opp id = this donation
+            //Filter(InstallmentPaymentSchedules, 'Donation Term ID' = "Opp-2")
+            //InstallmentPaymentSchedules
+            infoCol
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =1314
+        X: =28
+        Y: =206
+        ZIndex: =37
+
+        Title3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =26
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Installment Schedule: "&ThisItem.if
+            VerticalAlign: =VerticalAlign.Top
+            Width: =447
+            X: =14
+            Y: =8
+            ZIndex: =2
+
+        Subtitle3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Instalment Type: "&ThisItem.it
+            VerticalAlign: =VerticalAlign.Top
+            Width: =215
+            X: =14
+            Y: =41
+            ZIndex: =3
+
+        Separator3 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle3 As rectangle:
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =3
+            ZIndex: =6
+
+        Subtitle3_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Instalment Date: "& DateValue(ThisItem.ed)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =311
+            X: =36
+            Y: =68
+            ZIndex: =7
+
+        Subtitle3_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Instalment Amount: "&ThisItem.aei
+            VerticalAlign: =VerticalAlign.Top
+            Width: =218
+            X: =400
+            Y: =34
+            ZIndex: =8
+
+        Button6 As button:
+            Height: =54
+            OnSelect: =Navigate( 'Donation details_1_transactiondetails' , ScreenTransition.Cover  )
+            Size: =12
+            Text: ="Transaction Details"
+            Width: =162
+            X: =1131
+            Y: =34
+            ZIndex: =11
+
+        Icon6 As icon.Edit:
+            Height: =20
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =Set(amountInputVis,true);
+                //UpdateContext({editamount:true,currentRecId:ThisItem.ID})
+            Width: =20
+            X: =380
+            Y: =38
+            ZIndex: =12
+
+        Icon6_2 As icon.Edit:
+            Height: =20
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =Select(Parent);
+                Set(datePickerVis,!datePickerVis);
+            Width: =20
+            X: =14
+            Y: =68
+            ZIndex: =13
+
+        Group3 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =16
+
+            TextInput13 As text:
+                Default: =
+                Format: =TextFormat.Number
+                Height: =29
+                OnSelect: =Select(Parent)
+                Visible: =amountInputVis
+                Width: =198
+                X: =618
+                Y: =29
+                ZIndex: =14
+
+            Icon7 As icon.Add:
+                Height: =20
+                Icon: =Icon.Add
+                OnSelect: |-
+                    =Patch(infoCol,ThisItem,{aei : TextInput13.Text})
+                Visible: =amountInputVis
+                Width: =23
+                X: =822
+                Y: =36
+                ZIndex: =15
+
+        Group4 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =18
+
+            DatePicker1 As datepicker:
+                Height: =30
+                OnChange: =Set(newSd,DatePicker1.SelectedDate);
+                OnSelect: =Select(Parent)
+                Visible: =datePickerVis
+                Width: =227
+                X: =618
+                Y: =62
+                ZIndex: =16
+
+            Icon9 As icon.Add:
+                Height: =30
+                Icon: =Icon.Add
+                OnSelect: |-
+                    =Patch(infoCol,ThisItem,{ed : newSd})
+                Visible: =datePickerVis
+                Width: =28
+                X: =860
+                Y: =62
+                ZIndex: =17
+
+    Icon8 As icon.Add:
+        Height: =26
+        Icon: =Icon.Add
+        OnSelect: |
+            =//ClearCollect(designationCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+            //oppid:
+            Patch(
+                infoCol,
+                Defaults(infoCol),
+                {
+                id:CountRows(infoCol) + 1,
+                sd: Blank(),
+                ed: Blank(),
+                tnoi:"",
+                it:"",
+                if:"",
+                aei:""
+            }
+            )
+        Width: =24
+        X: =1
+        Y: =206
+        ZIndex: =38
+
