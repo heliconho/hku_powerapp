@@ -450,6 +450,7 @@
 
         Label2_91 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
             Size: =10
             Text: ="Donor's Information"
             Width: =130
@@ -468,6 +469,7 @@
 
         Label2_90 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
             Size: =10
             Text: ="Donation Details"
             Width: =130

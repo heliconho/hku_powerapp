@@ -366,6 +366,7 @@ acknowledgement As screen:
 
         Label2_26 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
             Size: =10
             Text: ="Donor's Information"
             Width: =130
@@ -384,6 +385,7 @@ acknowledgement As screen:
 
         Label2_27 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
             Size: =10
             Text: ="Donation Details"
             Width: =130

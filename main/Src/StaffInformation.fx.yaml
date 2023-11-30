@@ -398,7 +398,7 @@ StaffInformation As screen:
             Fill: =RGBA(136, 160, 209, 1)
             Height: =15
             Width: =15
-            X: =75
+            X: =118
             Y: =95
             ZIndex: =7
 
@@ -407,7 +407,7 @@ StaffInformation As screen:
             Size: =10
             Text: ="Staff Information"
             Width: =130
-            X: =17
+            X: =60
             Y: =103
             ZIndex: =8
 
@@ -416,17 +416,19 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
-            X: =191
-            Y: =95
+            X: =303
+            Y: |
+                =Circle1.Y
             ZIndex: =10
 
         Label2_1 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
             Size: =10
             Text: ="Donor's Information"
             Width: =130
-            X: =137
-            Y: =107
+            X: =245
+            Y: =106
             ZIndex: =11
 
         Circle1_2 As circle:
@@ -434,17 +436,20 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
-            X: =308
-            Y: =95
+            X: =488
+            Y: |
+                =Circle1.Y
             ZIndex: =13
 
         Label2_2 As label:
             Align: =Align.Center
+            OnSelect: |
+                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
             Size: =10
             Text: ="Donoation Details"
             Width: =130
-            X: =250
-            Y: =103
+            X: =430
+            Y: =101
             ZIndex: =14
 
         Icon3_2 As icon.HorizontalLine:
@@ -453,8 +458,8 @@ StaffInformation As screen:
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
-            X: =331
-            Y: =99
+            X: =513
+            Y: =Circle1.Y +Self.Height
             ZIndex: =15
 
         Circle1_3 As circle:
@@ -462,8 +467,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
-            X: =492
-            Y: =93
+            X: =673
+            Y: |
+                =Circle1.Y
             ZIndex: =16
 
         Label2_3 As label:
@@ -472,9 +478,9 @@ StaffInformation As screen:
             OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
             Size: =10
             Text: ="Acknowledgement & Donation Receipt Arrangement"
-            Width: =257
-            X: =371
-            Y: =108
+            Width: =239
+            X: =562
+            Y: =113
             ZIndex: =17
 
         Circle1_4 As circle:
@@ -482,8 +488,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
-            X: =676
-            Y: =93
+            X: =858
+            Y: |
+                =Circle1.Y
             ZIndex: =18
 
         Label2_4 As label:
@@ -493,37 +500,18 @@ StaffInformation As screen:
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
-            X: =618
+            X: =804
             Y: =110
             ZIndex: =19
-
-        Circle1_5 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =15
-            X: =857
-            Y: =93
-            ZIndex: =20
-
-        Label2_5 As label:
-            Align: =Align.Center
-            Height: =31
-            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
-            Size: =10
-            Text: ="HKU Foundation Membership"
-            Width: =130
-            X: =799
-            Y: =110
-            ZIndex: =21
 
         Circle1_7 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
-            X: =1063
-            Y: =93
+            X: =1043
+            Y: |
+                =Circle1.Y
             ZIndex: =24
 
         Label2_8 As label:
@@ -533,7 +521,7 @@ StaffInformation As screen:
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
-            X: =1005
+            X: =985
             Y: =110
             ZIndex: =25
 
@@ -542,8 +530,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =14
-            X: =1243
-            Y: =94
+            X: =1228
+            Y: |
+                =Circle1.Y
             ZIndex: =26
 
         Label2_9 As label:
@@ -553,8 +542,8 @@ StaffInformation As screen:
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130
-            X: =1185
-            Y: =112
+            X: =1178
+            Y: =116
             ZIndex: =27
 
         Icon3_3 As icon.HorizontalLine:
@@ -562,9 +551,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
-            Width: =80
-            X: =215
-            Y: =100
+            Width: =150
+            X: =328
+            Y: =Circle1.Y +Self.Height
             ZIndex: =28
 
         Icon3_4 As icon.HorizontalLine:
@@ -572,9 +561,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
-            Width: =80
-            X: =100
-            Y: =99
+            Width: =150
+            X: =143
+            Y: =Circle1.Y +Self.Height
             ZIndex: =29
 
         Icon3_5 As icon.HorizontalLine:
@@ -583,28 +572,18 @@ StaffInformation As screen:
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
-            X: =518
-            Y: =99
+            X: =698
+            Y: =Circle1.Y +Self.Height
             ZIndex: =30
-
-        Icon3_6 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =701
-            Y: =98
-            ZIndex: =31
 
         Icon3_7 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =891
-            Y: =98
+            Width: =150
+            X: =883
+            Y: =Circle1.Y +Self.Height
             ZIndex: =32
 
         Icon3_8 As icon.HorizontalLine:
@@ -612,9 +591,9 @@ StaffInformation As screen:
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =1094
-            Y: =99
+            Width: =150
+            X: =1068
+            Y: =Circle1.Y +Self.Height
             ZIndex: =33
 
     SaveButton As button:

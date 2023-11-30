@@ -116,6 +116,7 @@ HKUFoundationMembership As screen:
 
         Label2_42 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
             Size: =10
             Text: ="Donor's Information"
             Width: =130
@@ -134,6 +135,7 @@ HKUFoundationMembership As screen:
 
         Label2_43 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
             Size: =10
             Text: ="Donation Details"
             Width: =130
