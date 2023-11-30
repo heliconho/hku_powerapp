@@ -1,0 +1,711 @@
+StaffInformation As screen:
+    Fill: =
+
+    Container15 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =413
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =1318
+        X: =25
+        Y: =159
+        ZIndex: =5
+
+        "'Staff info_label_1' As label":
+            AlignInContainer: =AlignInContainer.Stretch
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =47.01
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =13.01
+            Text: ="Staff Information"
+            Width: =1025
+            Y: =0.00
+            ZIndex: =1
+
+        Container14_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =100.00
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Y: =46.69
+            ZIndex: =2
+
+            Container16_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.None
+                Height: =100.00
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =0.00
+                ZIndex: =1
+
+                "'Contact Person_label_2' As label":
+                    Height: =40.01
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Contact Person *"
+                    Y: =0.00
+                    ZIndex: =1
+
+                "'Contact person' As label":
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderThickness: =2
+                    Text: =User().FullName
+                    ZIndex: =3
+
+            Container17_2 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.None
+                Height: =100.00
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =0.00
+                ZIndex: =2
+
+                Email_label_2 As label:
+                    Height: =40.01
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Email *"
+                    Y: =0.00
+                    ZIndex: =1
+
+                Email As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderThickness: =2
+                    Text: =User().Email
+                    ZIndex: =3
+
+            Container17_3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                Height: =100.00
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =0.00
+                ZIndex: =3
+
+                Date_label_2 As label:
+                    Height: =40.01
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Date *"
+                    Y: =0.00
+                    ZIndex: =1
+
+                Date_text_2 As text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Default: =Text(Today(),DateTimeFormat.ShortDate)
+                    Height: =40.01
+                    LayoutMinWidth: =50
+                    PaddingBottom: =5.00
+                    PaddingLeft: =12.01
+                    Size: =13.01
+                    Width: =100
+                    Y: =40.02
+                    ZIndex: =2
+
+        Container5_1 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =40.01
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Y: =146.74
+            ZIndex: =3
+
+            Dropdown2_1 As dropdown:
+                AlignInContainer: =AlignInContainer.Start
+                BorderColor: =RGBA(166, 166, 166, 1)
+                ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronFill: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                Height: =40.01
+                Items: |
+                    =["DAAO","Library"]
+                LayoutMinWidth: =100
+                PaddingBottom: =10.00
+                PaddingLeft: =10.00
+                Size: =13.01
+                Y: =0.00
+                ZIndex: =4
+
+            TextInput8_1 As text:
+                AlignInContainer: =AlignInContainer.Start
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Default: =""
+                Fill: |+
+                    =If(requiredfieldsmissing  && IsBlank(Self.Text), 
+                        RGBA(255, 85, 85, 0.1), 
+                        RGBA(255, 255, 255, 1)
+                    )
+                    
+                FillPortions: =1
+                Height: =40.01
+                HintText: ="Position *"
+                LayoutMinWidth: =100
+                PaddingBottom: =5.00
+                PaddingLeft: =12.01
+                Size: =13.01
+                Y: =0.00
+                ZIndex: =5
+
+            TextInput4 As text:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Default: =""""""
+                Fill: |-
+                    =If(requiredfieldsmissing && IsBlank(Self.Text), 
+                        RGBA(255, 85, 85, 0.1), 
+                        RGBA(255, 255, 255, 1)
+                    )
+                Format: =TextFormat.Number
+                HintText: ="Tel *"
+                Width: =440
+                ZIndex: =8
+
+        Toggle3 As toggleSwitch:
+            Color: =RGBA(116, 116, 116, 1)
+            FalseText: ="- Another Contact person"
+            OnCheck: |-
+                =UpdateContext({SecondContact:true}) 
+            OnUncheck: |-
+                =UpdateContext({SecondContact:false}) 
+            Size: =9
+            TrueFill: =RGBA(187, 221, 140, 1)
+            TrueText: ="+ Another Contact person"
+            Width: =210
+            ZIndex: =4
+
+        Container14_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =100.00
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Visible: =SecondContact
+            Y: =46.69
+            ZIndex: =5
+
+            Container16_2 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.None
+                Height: =100.00
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =0.00
+                ZIndex: =1
+
+                "'Contact Person_label_3' As label":
+                    Height: =40.01
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Second Contact Person"
+                    Width: =300
+                    Y: =0.00
+                    ZIndex: =1
+
+                TextInput10 As text:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Default: =""
+                    Width: =655
+                    ZIndex: =2
+
+            Container17_4 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.None
+                Height: =100.00
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =0.00
+                ZIndex: =2
+
+                Email_label_3 As label:
+                    Height: =40.01
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Email"
+                    Y: =0.00
+                    ZIndex: =1
+
+                TextInput12 As text:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Default: =
+                    Width: =658
+                    ZIndex: =2
+
+        Container5_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =40.01
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Visible: =SecondContact
+            Y: =146.74
+            ZIndex: =6
+
+            TextInput8_2 As text:
+                AlignInContainer: =AlignInContainer.Start
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Default: =""
+                FillPortions: =1
+                Height: =40.01
+                HintText: ="Position"
+                LayoutMinWidth: =100
+                PaddingBottom: =5.00
+                PaddingLeft: =12.01
+                Size: =13.01
+                Y: =0.00
+                ZIndex: =5
+
+            TextInput1_2 As text:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Default: =""
+                FillPortions: =1
+                Format: =TextFormat.Number
+                Height: =40.01
+                HintText: ="Tel"
+                LayoutMinWidth: =100
+                PaddingBottom: =5.00
+                PaddingLeft: =12.01
+                Size: =13.01
+                Y: =0.00
+                ZIndex: =6
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Container1_1 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =1135
+        Y: =699
+        ZIndex: =34
+
+        Button3_1 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(247, 205, 77, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: |
+                =If(
+                    IsBlank('Contact person'.Text) 
+                    || IsBlank(Email.Text)
+                    || IsBlank(Date_text_2.Text)
+                    || IsBlank(TextInput8_1.Text)
+                    || IsBlank(TextInput4.Text),
+                    
+                    Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissing: true}),
+                   
+                    //patch function; Defaults(DonationTerms),
+                    Patch(DonationTerms,Defaults(DonationTerms),{'Form Source ': Dropdown4.Selected.Value,'Processing Form Input Status ' : Dropdown2.Selected.Value,'Owning User':rec});
+                
+                    //Set ID? filter PIC + createon(top 1; dec)
+                    UpdateContext({requiredfieldsmissing: false});
+                    Navigate( 'Donor''s information' , ScreenTransition.Cover);
+                );
+                Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '))
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Next: 
+                Donor's Information"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon6_1 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Width: =33
+            X: =161
+            Y: =7
+            ZIndex: =2
+
+    Group6 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =34
+
+        Circle1 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_1 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =191
+            Y: =95
+            ZIndex: =10
+
+        Label2_1 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =107
+            ZIndex: =11
+
+        Circle1_2 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =13
+
+        Label2_2 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donoation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =14
+
+        Icon3_2 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =15
+
+        Circle1_3 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =16
+
+        Label2_3 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Receipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =17
+
+        Circle1_4 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =18
+
+        Label2_4 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =19
+
+        Circle1_5 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =20
+
+        Label2_5 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =21
+
+        Circle1_7 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =24
+
+        Label2_8 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =25
+
+        Circle1_8 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =26
+
+        Label2_9 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =27
+
+        Icon3_3 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =28
+
+        Icon3_4 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =29
+
+        Icon3_5 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =30
+
+        Icon3_6 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =31
+
+        Icon3_7 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =32
+
+        Icon3_8 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =33
+
+    SaveButton As button:
+        Fill: =RGBA(250, 209, 85, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |
+            =If(
+                IsBlank('Contact person'.Text) 
+                || IsBlank(Email.Text)
+                || IsBlank(Date_text_2.Text)
+                || IsBlank(TextInput8_1.Text)
+                || IsBlank(TextInput4.Text),
+                
+                Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                UpdateContext({requiredfieldsmissing: true}),
+               
+                //patch function; Defaults(DonationTerms),
+                Patch(ProcessingFormContactPeople,
+                    Defaults(ProcessingFormContactPeople), 
+                    {
+                        'First Contact Person': 'Contact person'.Text,
+                        'First Contact Person Email' : Email.Text,
+                        'Second Contact Person':TextInput10.Text,
+                        'Second Contact Person Email': TextInput12.Text,
+                    }
+                );
+            
+                //Set ID? filter PIC + createon(top 1; dec)
+                UpdateContext({requiredfieldsmissing: false})
+            
+            );
+            Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '))
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1063
+        Y: =708
+        ZIndex: =35
+
+    Label10 As label:
+        Height: =35
+        Text: ="*"
+        Width: =28
+        X: =412
+        Y: =323
+        ZIndex: =36
+
+    Dropdown4 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(166, 166, 166, 1)
+        Default: ='Form Source  (DonationTerms)'.'Processing Form'
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =36
+        Items: =Choices('Form Source  (DonationTerms)')
+        SelectionColor: =RGBA(166, 166, 166, 1)
+        SelectionFill: =RGBA(166, 166, 166, 1)
+        Visible: =false
+        Width: =205
+        X: =131
+        Y: =724
+        ZIndex: =37
+
+    Dropdown2 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(166, 166, 166, 1)
+        Default: ='Processing Form Input Status  (DonationTerms)'.Draft
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =36
+        Items: =Choices('Processing Form Input Status  (DonationTerms)')
+        Visible: =false
+        Width: =169
+        X: =471
+        Y: =724
+        ZIndex: =38
+
+    Label3 As label:
+        Text: |-
+            ="Form Source: "
+        Visible: =false
+        X: =4
+        Y: =721
+        ZIndex: =39
+
+    Label3_1 As label:
+        Text: |-
+            ="Form Status: "
+        Visible: =false
+        X: =346
+        Y: =721
+        ZIndex: =40
+

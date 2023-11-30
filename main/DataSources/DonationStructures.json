@@ -1,0 +1,886 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_donationstructures",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_donationstructure",
+    "MaxGetRowsCount": 500,
+    "Name": "DonationStructures",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By (Submitter)",
+      "createdon": "Created On (Submit Date)",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_acceptinstalmentspaymentschedule": "Accept Instalments Payment Schedule",
+      "dacrm_acceptonetimepaymentschedule": "Accept One Time Payment Schedule",
+      "dacrm_acceptrecurringpaymentschedule": "Accept Recurring Payment Schedule",
+      "dacrm_accumulateddonatedamount": "Accumulated Donated Amount",
+      "dacrm_areaofengagementinteresttype": "Engagement Interest Type",
+      "dacrm_awardcode": "Award Code ",
+      "dacrm_campaignid": "Campaign ID",
+      "dacrm_campaignname": "Campaign Name",
+      "dacrm_campaigntype": "Campaign Type",
+      "dacrm_contractdate": "Contract Date to Start Date",
+      "dacrm_currency": "Currency",
+      "dacrm_dacrm_donationhistory_donationname_dacrm_": "DonationStructureHistories (dacrm_dacrm_donationhistory_donationname_dacrm_)",
+      "dacrm_dacrm_donationstructure_scholarshipname_d": "DonationStructures",
+      "dacrm_dacrm_donationterm_donationname_dacrm_don": "DonationTerms (dacrm_dacrm_donationterm_donationname_dacrm_don)",
+      "dacrm_dacrm_donationterm_donationtypelookup_dac": "DonationTerms (dacrm_dacrm_donationterm_donationtypelookup_dac)",
+      "dacrm_dacrm_givingformfieldformconfig_campaignn": "Giving Form Field Configs",
+      "dacrm_dacrm_givingformrequest_campaignname_dacr": "Giving Form Requests",
+      "dacrm_dacrm_onationtructureodesignationrelation": "DonationStructureToDesignationRelationships",
+      "dacrm_dacrm_professorshipaward_professorshipnam": "ProfessorshipAwards (dacrm_dacrm_professorshipaward_professorshipnam)",
+      "dacrm_dacrm_recognitiongift_donationstructureid": "RecognitionGifts",
+      "dacrm_dacrm_scholarshipaward_scholarshipaward": "ScholarshipAwards (dacrm_dacrm_scholarshipaward_scholarshipaward)",
+      "dacrm_description": "Description",
+      "dacrm_designationname": "Designation Name",
+      "dacrm_designationname_donationstructureid": "DesignationNames",
+      "dacrm_designationnameid": "Designation Name ID",
+      "dacrm_designationtype": "Designation Type",
+      "dacrm_donationcategorymiu": "Donation Category (MIU)",
+      "dacrm_DonationHistory_donationstructureid": "DonationStructureHistories (dacrm_DonationHistory_donationstructureid)",
+      "dacrm_donationstructure_AsyncOperations": "System Jobs",
+      "dacrm_donationstructure_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_donationstructure_donationstructure": "DonationStructureAttachments (dacrm_donationstructure_donationstructure)",
+      "dacrm_donationstructure_donationstructurefk": "DonationStructureBalances (dacrm_donationstructure_donationstructurefk)",
+      "dacrm_donationstructure_DuplicateBaseRecord": "Duplicate Records (dacrm_donationstructure_DuplicateBaseRecord)",
+      "dacrm_donationstructure_DuplicateMatchingRecord": "Duplicate Records (dacrm_donationstructure_DuplicateMatchingRecord)",
+      "dacrm_donationstructure_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_donationstructure_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_donationstructure_ProcessSession": "Process Sessions",
+      "dacrm_donationstructure_SyncErrors": "Sync Errors",
+      "dacrm_donationstructureattachment_donatio": "DonationStructureAttachments (dacrm_donationstructureattachment_donatio)",
+      "dacrm_donationstructurebalance_dDonations": "DonationStructureBalances (dacrm_donationstructurebalance_dDonations)",
+      "dacrm_donationstructureid": "Donation Structure ID",
+      "dacrm_donationstructurename": "Donation Structure",
+      "dacrm_donationterm_donationstructureid_da": "DonationTerms (dacrm_donationterm_donationstructureid_da)",
+      "dacrm_donationtype": "Donation Type ",
+      "dacrm_donationtypeformcontrol": "DonationTypeFormControl",
+      "dacrm_donationtypeformcontrolid": "Donation Type Form Control ID",
+      "dacrm_donorrecipienttype": "Donor Recipient Type",
+      "dacrm_effectivedate": "Start Date",
+      "dacrm_enddate": "End Date",
+      "dacrm_giftinkind": "gift in kind",
+      "dacrm_giftinkindtype": "Gift In Kind Type",
+      "dacrm_giftsdescription": "Gifts Description",
+      "dacrm_hobbies": "Hobby Type (dacrm_hobbies)",
+      "dacrm_hobbyname": "Hobby Name",
+      "dacrm_hobbytype": "Hobby Type (dacrm_hobbytype)",
+      "dacrm_informselection": "Inform Selection (to be deleted)",
+      "dacrm_informselectionboolen": "Inform Selection",
+      "dacrm_instalmentmonth": "Instalment Month",
+      "dacrm_isactive": "Is Active",
+      "dacrm_ismasscampaign": "Is Mass Campaign",
+      "dacrm_ismatchinggift": "Is Matching Gift",
+      "dacrm_lookupid": "Lookup ID",
+      "dacrm_name": "Donation Name",
+      "dacrm_needeapproval": "Need E-approval ",
+      "dacrm_needthankyoulettersubmission": "Need Thank You Letter Submission ",
+      "dacrm_noneedeapprovalblanketendorsement": "No Need E-Approval: Blanket Endorsement",
+      "dacrm_noneedeapprovaldescription1blanket": "No Need E-Approval: Description 1 (Blanket)",
+      "dacrm_noneedeapprovaldescription2": "No Need E-Approval: Description 2",
+      "dacrm_noneedeapprovalendorsement": "No Need E-Approval: Endorsement ",
+      "dacrm_others": "Others (please indicate)",
+      "dacrm_personincharge": "Person In Charge",
+      "dacrm_picdepartment": "PIC Department ",
+      "dacrm_plannedgifttype": "Planned Gift Type",
+      "dacrm_professorshipaward_donationstructur": "ProfessorshipAwards (dacrm_professorshipaward_donationstructur)",
+      "dacrm_professorshiptype": "Professorship Type",
+      "dacrm_scholarshipaward_donationstructurei": "ScholarshipAwards (dacrm_scholarshipaward_donationstructurei)",
+      "dacrm_scholarshipdesignatedfaculty": "Scholarship Designated Faculty ",
+      "dacrm_scholarshipname": "Scholarship Name (to be deleted)",
+      "dacrm_scholarshipnamestring": "Scholarship Name ",
+      "dacrm_scholarshipsubtype": "Scholarship Sub Type (to be deleted)",
+      "dacrm_scholarshiptype": "Scholarship Type (to be deleted)",
+      "dacrm_scholarshiptypelookup": "Scholarship Type",
+      "dacrm_scholarshiptypetosubtypemaster_dona": "ScholarshipTypeToSubTypeMaster (to be deleted)S",
+      "dacrm_targetamount": "Target Amount",
+      "dacrm_thankyouletterissuebypicdepartment": "Thank You Letter Issue by PIC Department",
+      "dacrm_thankyoulettersetting_donationstructure_d": "ThankYouLetterSettings",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DonationStructures",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DonationStructures (Views)",
+    "Name": "_dacrm_donationstructure_views",
+    "RelatedEntityName": "DonationStructures",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0b46c916-7c14-4709-a96d-f27f1369b292": "Active Donation Structures",
+      "10ce31b0-cc92-41f6-b627-bad9cff85d3f": "Donation Structure Advanced Find View",
+      "349a3d1c-a5ae-4fcc-9943-7fd257f85563": "Inactive Donation Structures",
+      "360ef66e-7874-ee11-8179-000d3a08be93": "Campaign View",
+      "77f52938-b52a-4678-b7cf-b1359853f880": "Donation Structure Associated View",
+      "7f4e0f99-b49c-413d-8a6f-41b65a257b38": "Donation Structure Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Accept Instalments Payment Schedule (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_acceptinstalmentspaymentschedule",
+    "OptionSetInfoNameMapping": {
+      "0": "False",
+      "1": "True"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_acceptinstalmentspaymentschedule",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_acceptinstalmentspaymentschedule",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Accept One Time Payment Schedule (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_acceptonetimepaymentschedule",
+    "OptionSetInfoNameMapping": {
+      "0": "False",
+      "1": "True"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_acceptonetimepaymentschedule",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_acceptonetimepaymentschedule",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Accept Recurring Payment Schedule (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_acceptrecurringpaymentschedule",
+    "OptionSetInfoNameMapping": {
+      "0": "False",
+      "1": "True"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_acceptrecurringpaymentschedule",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_acceptrecurringpaymentschedule",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Engagement Interest Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_areaofengagementinteresttype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Scholarship support",
+      "128490001": "Research support",
+      "128490002": "Capital projects",
+      "128490003": "Athletics support",
+      "128490004": "Arts and culture support",
+      "128490005": "Community service support",
+      "128490006": "Endowments",
+      "128490007": "Faculty support",
+      "128490008": "Student support services",
+      "128490009": "International initiatives",
+      "128490010": "Diversity, equity, and inclusion",
+      "128490011": "Sustainability",
+      "128490012": "Library support"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_areaofengagementinteresttype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_areaofengagementinteresttype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Campaign Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_campaigntype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Academic research",
+      "128490001": "Conferences/ Workshops/ Lecture/ Seminars",
+      "128490002": "General uses for University Central",
+      "128490003": "Campus development/ Capital projects"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_campaigntype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_campaigntype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Currency (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_currency",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Afghan Afghani (AFN)",
+      "128490001": "Albanian Lek (ALL)",
+      "128490002": "Algerian Dinar (DZD)",
+      "128490003": "Andorran Euro (EUR)",
+      "128490004": "Angolan Kwanza (AOA)",
+      "128490005": "East Caribbean Dollar (XCD) (128490005)",
+      "128490006": "Argentine Peso (ARS)",
+      "128490007": "Armenian Dram (AMD)",
+      "128490008": "Australian Dollar (AUD) (128490008)",
+      "128490009": "Euro (EUR) (128490009)",
+      "128490010": "Azerbaijani Manat (AZN)",
+      "128490011": "Bahamian Dollar (BSD)",
+      "128490012": "Bahraini Dinar (BHD)",
+      "128490013": "Bangladeshi Taka (BDT)",
+      "128490014": "Barbadian Dollar (BBD)",
+      "128490015": "Belarusian Ruble (BYN)",
+      "128490016": "Euro (EUR) (128490016)",
+      "128490017": "Belize Dollar (BZD)",
+      "128490018": "West African CFA Franc (XOF) (128490018)",
+      "128490019": "Bhutanese Ngultrum (BTN)",
+      "128490020": "Bolivian Boliviano (BOB)",
+      "128490021": "Convertible Mark (BAM)",
+      "128490022": "Botswana Pula (BWP)",
+      "128490023": "Brazilian Real (BRL)",
+      "128490024": "Brunei Dollar (BND)",
+      "128490025": "Bulgarian Lev (BGN)",
+      "128490026": "West African CFA Franc (XOF) (128490026)",
+      "128490027": "Burundian Franc (BIF)",
+      "128490028": "Cambodian Riel (KHR)",
+      "128490029": "Central African CFA Franc (XAF) (128490029)",
+      "128490030": "Canadian Dollar (CAD)",
+      "128490031": "Cape Verdean Escudo (CVE)",
+      "128490032": "Central African CFA Franc (XAF) (128490032)",
+      "128490033": "Central African CFA Franc (XAF) (128490033)",
+      "128490034": "Chilean Peso (CLP)",
+      "128490035": "Chinese Yuan (CNY)",
+      "128490036": "Colombian Peso (COP)",
+      "128490037": "Comorian Franc (KMF)",
+      "128490038": "Congolese Franc (CDF) (128490038)",
+      "128490039": "Congolese Franc (CDF) (128490039)",
+      "128490040": "Costa Rican Colón (CRC)",
+      "128490041": "West African CFA Franc (XOF) (128490041)",
+      "128490042": "Croatian Kuna (HRK)",
+      "128490043": "Cuban Peso (CUP)",
+      "128490044": "Euro (EUR) (128490044)",
+      "128490045": "Czech Koruna (CZK)",
+      "128490046": "Danish Krone (DKK)",
+      "128490047": "Djiboutian Franc (DJF)",
+      "128490048": "East Caribbean Dollar (XCD) (128490048)",
+      "128490049": "Dominican Peso (DOP)",
+      "128490050": "East Timorese Dili (USD)",
+      "128490051": "Ecuadorian Sucre (USD)",
+      "128490052": "Egyptian Pound (EGP)",
+      "128490053": "Salvadoran Colón (SVC)",
+      "128490054": "Central African CFA Franc (XAF) (128490054)",
+      "128490055": "Eritrean Nakfa (ERN)",
+      "128490056": "Euro (EUR) (128490056)",
+      "128490057": "Ethiopian Birr (ETB)",
+      "128490058": "Fijian Dollar (FJD)",
+      "128490059": "Euro (EUR) (128490059)",
+      "128490060": "Euro (EUR) (128490060)",
+      "128490061": "Gabonese Franc (XAF)",
+      "128490062": "Gambian Dalasi (GMD)",
+      "128490063": "Georgian Lari (GEL)",
+      "128490064": "Euro (EUR) (128490064)",
+      "128490065": "Ghanaian Cedi (GHS)",
+      "128490066": "Euro (EUR) (128490066)",
+      "128490067": "East Caribbean Dollar (XCD) (128490067)",
+      "128490068": "Quetzal (GTQ)",
+      "128490069": "Guinean Franc (GNF)",
+      "128490070": "West African CFA Franc (XOF) (128490070)",
+      "128490071": "Guyanese Dollar (GYD)",
+      "128490072": "Haitian Gourde (HTG)",
+      "128490073": "Honduran Lempira (HNL)",
+      "128490074": "Hong Kong Dollar (HKD)",
+      "128490075": "Hungarian Forint (HUF)",
+      "128490076": "Icelandic Króna (ISK)",
+      "128490077": "Indian Rupee (INR)",
+      "128490078": "Indonesian Rupiah (IDR)",
+      "128490079": "Iranian Rial (IRR)",
+      "128490080": "Iraqi Dinar (IQD)",
+      "128490081": "Euro (EUR) (128490081)",
+      "128490082": "Israeli New Shekel (ILS)",
+      "128490083": "Euro (EUR) (128490083)",
+      "128490084": "Jamaican Dollar (JMD)",
+      "128490085": "Japanese Yen (JPY)",
+      "128490086": "Jordanian Dinar (JOD)",
+      "128490087": "Kazakhstani Tenge (KZT)",
+      "128490088": "Kenyan Shilling (KES)",
+      "128490089": "Australian Dollar (AUD) (128490089)",
+      "128490090": "North Korean Won (KPW)",
+      "128490091": "South Korean Won (KRW)",
+      "128490092": "Euro (EUR) (128490092)",
+      "128490093": "Kuwaiti Dinar (KWD)",
+      "128490094": "Kyrgyzstani Som (KGS)",
+      "128490095": "Lao Kip (LAK)",
+      "128490096": "Euro (EUR) (128490096)",
+      "128490097": "Lebanese Pound (LBP)",
+      "128490098": "Lesotho Loti (LSL)",
+      "128490099": "Liberian Dollar (LRD)",
+      "128490100": "Libyan Dinar (LYD)",
+      "128490101": "Swiss Franc (CHF) (128490101)",
+      "128490102": "Euro (EUR) (128490102)",
+      "128490103": "Euro (EUR) (128490103)",
+      "128490104": "Euro (EUR) (128490104)",
+      "128490105": "Malagasy Ariary (MGA) (128490105)",
+      "128490106": "Malawian Kwacha (MWK)",
+      "128490107": "Malaysian Ringgit (MYR)",
+      "128490108": "Maldivian Rufiyaa (MVR)",
+      "128490109": "West African CFA Franc (XOF) (128490109)",
+      "128490110": "Euro (EUR) (128490110)",
+      "128490111": "Euro (EUR) (128490111)",
+      "128490112": "Malagasy Ariary (MGA) (128490112)",
+      "128490113": "Mauritanian Ouguiya (MRU)",
+      "128490114": "Mauritian Rupee (MUR)",
+      "128490115": "Mexican Peso (MXN)",
+      "128490116": "Micronesian Dollar (USD)",
+      "128490117": "Moldovan Leu (MDL)",
+      "128490118": "Euro (EUR) (128490118)",
+      "128490119": "Mongolian Tögrög (MNT)",
+      "128490120": "Euro (EUR) (128490120)",
+      "128490121": "Moroccan Dirham (MAD)",
+      "128490122": "Mozambican Metical (MZN)",
+      "128490123": "Myanmar Kyat (MMK)",
+      "128490124": "Namibian Dollar (NAD)",
+      "128490125": "Australian Dollar (AUD) (128490125)",
+      "128490126": "Nepalese Rupee (NPR)",
+      "128490127": "Euro (EUR) (128490127)",
+      "128490128": "New Zealand Dollar (NZD)",
+      "128490129": "Nicaraguan Córdoba (NIO)",
+      "128490130": "West African CFA Franc (XOF) (128490130)",
+      "128490131": "Nigerian Naira (NGN)",
+      "128490132": "Norwegian Krone (NOK)",
+      "128490133": "Omani Rial (OMR)",
+      "128490134": "Pakistani Rupee (PKR)",
+      "128490135": "United States Dollar (USD) (128490135)",
+      "128490136": "Panamanian Balboa (PAB)",
+      "128490137": "Papua New Guinean Kina (PGK)",
+      "128490138": "Paraguayan Guarani (PYG)",
+      "128490139": "Peruvian Sol (PEN)",
+      "128490140": "Philippine Peso (PHP)",
+      "128490141": "Polish Złoty (PLN)",
+      "128490142": "Euro (EUR) (128490142)",
+      "128490143": "Qatari Riyal (QAR)",
+      "128490144": "Romanian Leu (RON)",
+      "128490145": "Russian Ruble (RUB)",
+      "128490146": "Rwandan Franc (RWF)",
+      "128490147": "East Caribbean Dollar (XCD) (128490147)",
+      "128490148": "Samoan Tala (WST)",
+      "128490149": "São Tomé and Príncipe Dobra (STN)",
+      "128490150": "Saudi Riyal (SAR)",
+      "128490151": "Serbian Dinar (RSD)",
+      "128490152": "Seychellois Rupee (SCR)",
+      "128490153": "Sierra Leonean Leone (SLL)",
+      "128490154": "Singapore Dollar (SGD)",
+      "128490155": "Solomon Islands Dollar (SBD)",
+      "128490156": "Somali Shilling (SOS)",
+      "128490157": "South African Rand (ZAR)",
+      "128490158": "South Sudanese Pound (SSP)",
+      "128490159": "Swazi Lilangeni (SZL)",
+      "128490160": "Swedish Krona (SEK)",
+      "128490161": "Swiss Franc (CHF) (128490161)",
+      "128490162": "Syrian Pound (SYP)",
+      "128490163": "New Taiwan Dollar (TWD)",
+      "128490164": "Tajikistani Somoni (TJS)",
+      "128490165": "Tanzanian Shilling (TZS)",
+      "128490166": "Thai Baht (THB)",
+      "128490167": "Tongan Pa'anga (TOP)",
+      "128490168": "Trinidad and Tobago Dollar (TTD)",
+      "128490169": "Tunisian Dinar (TND)",
+      "128490170": "Turkish Lira (TRY)",
+      "128490171": "Turkmenistan Manat (TMT)",
+      "128490172": "Australian Dollar (AUD) (128490172)",
+      "128490173": "Ugandan Shilling (UGX)",
+      "128490174": "Ukrainian Hryvnia (UAH)",
+      "128490175": "United Arab Emirates Dirham (AED)",
+      "128490176": "British Pound (GBP)",
+      "128490177": "United States Dollar (USD) (128490177)",
+      "128490178": "Uruguayan Peso (UYU)",
+      "128490179": "Uzbekistani Som (UZS)",
+      "128490180": "Vanuatu Vatu (VUV)",
+      "128490181": "Venezuelan Bolívar (VES)",
+      "128490182": "Vietnamese Đồng (VND)",
+      "128490183": "Yemeni Rial (YER)",
+      "128490184": "Zambian Kwacha (ZMW)",
+      "128490185": "Zimbabwean Dollar (ZWL)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_currency",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_currency",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Donation Type  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_donationtype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Monetary donation",
+      "128490001": "Campaign donation",
+      "128490002": "Gift-in-kind",
+      "128490003": "Professorship",
+      "128490004": "Scholarship",
+      "128490006": "Planned gift",
+      "128490007": "Deferred gift"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donationtype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_donationtype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Donor Recipient Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_donorrecipienttype",
+    "OptionSetInfoNameMapping": {
+      "0": "False",
+      "1": "True"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donorrecipienttype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_donorrecipienttype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Gift In Kind Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_giftinkindtype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Books",
+      "128490001": "Cultural artifact",
+      "128490002": "Art pieces",
+      "128490003": "Equipment",
+      "128490004": "Software",
+      "128490005": "Others"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_giftinkindtype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_giftinkindtype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Hobby Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_hobbies",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Softball",
+      "128490001": "Sports - Squash",
+      "128490002": "Sports - Surfing",
+      "128490003": "Sports - Swimming",
+      "128490004": "Sports - Table Tennis",
+      "128490005": "Sports - Taekwondo",
+      "128490006": "Sports - Tennis",
+      "128490007": "Sports - Thai Boxing",
+      "128490008": "Sports - Triathlon",
+      "128490009": "Sports - Volleyball",
+      "128490010": "Sports - Weight Lifting",
+      "128490011": "Sports - Yoga",
+      "128490012": "Tai Chi/ Wing Chun",
+      "128490013": "Travelling",
+      "128490014": "Visual Arts",
+      "128490015": "Volunteering",
+      "128490016": "Western Calligraphy",
+      "128490017": "Western Literature",
+      "128490018": "Wine Tasting",
+      "128490019": "Writing - Articles/ Novels",
+      "128490020": "Others: please elaborate"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_hobbies",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_hobbies",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Inform Selection (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_informselectionboolen",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_informselectionboolen",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_informselectionboolen",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Active (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_isactive",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isactive",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isactive",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Mass Campaign (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_ismasscampaign",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_ismasscampaign",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_ismasscampaign",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Matching Gift (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_ismatchinggift",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_ismatchinggift",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_ismatchinggift",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Need E-approval  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_needeapproval",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_needeapproval",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_needeapproval",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Need Thank You Letter Submission  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_needthankyoulettersubmission",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_needthankyoulettersubmission",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_needthankyoulettersubmission",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "No Need E-Approval: Blanket Endorsement (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_noneedeapprovalblanketendorsement",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_noneedeapprovalblanketendorsement",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_noneedeapprovalblanketendorsement",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "No Need E-Approval: Endorsement  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_noneedeapprovalendorsement",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_noneedeapprovalendorsement",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_noneedeapprovalendorsement",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "PIC Department  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_picdepartment",
+    "OptionSetInfoNameMapping": {
+      "128490000": "DAAO",
+      "128490001": "Library"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_picdepartment",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_picdepartment",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Planned Gift Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_plannedgifttype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Bequest",
+      "128490001": "Outright gift"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_plannedgifttype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_plannedgifttype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Professorship Type (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_professorshiptype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Endowed Professorship",
+      "128490001": "Outstanding Young Professorship"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_professorshiptype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_professorshiptype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Scholarship Designated Faculty  (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_scholarshipdesignatedfaculty",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Faculty of Architecture",
+      "128490001": "Faculty of Arts",
+      "128490002": "Faculty of Business and Economics",
+      "128490003": "Faculty of Dentistry",
+      "128490004": "Faculty of Education",
+      "128490005": "Faculty of Engineering",
+      "128490006": "Faculty of Law",
+      "128490007": "Li Ka Shing Faculty of Medicine",
+      "128490008": "Faculty of Science",
+      "128490009": "Faculty of Social Sciences"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_scholarshipdesignatedfaculty",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_scholarshipdesignatedfaculty",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Scholarship Type (to be deleted) (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_scholarshiptype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Scholarships",
+      "128490001": "Prizes",
+      "128490002": "Bursaries",
+      "128490003": "Others (Travel grants, First-in-the-Family Education Fund, Student Excellence Schemes, Service Learning Funds, Social Inclusion Funds)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_scholarshiptype",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_scholarshiptype",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Thank You Letter Issue by PIC Department (DonationStructures)",
+    "Name": "dacrm_donationstructure_dacrm_thankyouletterissuebypicdepartment",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_thankyouletterissuebypicdepartment",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_thankyouletterissuebypicdepartment",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (DonationStructures)",
+    "Name": "dacrm_donationstructure_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DonationStructures)",
+    "Name": "dacrm_donationstructure_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DonationStructures"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DonationStructures",
+    "Type": "OptionSetInfo"
+  }
+]

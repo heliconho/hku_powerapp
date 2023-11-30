@@ -1,0 +1,1002 @@
+"'Donation details_1' As screen":
+    OnVisible: |
+        =/*ClearCollect(
+            type,
+            Filter(Choices('Donation Type  (DonationStructures)'),Value = 128490001)
+        );*/
+        Set(donationType, Dropdown3_3.SelectedText);
+        ClearCollect(dtCol,
+            If(
+                Or(donationType.Value = "Planned gift",donationType.Value = "Deferred gift" ),
+                DesignationTypeToNameMasters.'Designation Number (Cost Center/Account Code)',
+                Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+        ));
+
+    Label1_10 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Group6_10 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =30
+
+        Circle1_86 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2_81 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_80 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =195
+            Y: =93
+            ZIndex: =9
+
+        Label2_83 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =105
+            ZIndex: =10
+
+        Circle1_87 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =11
+
+        Label2_82 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =12
+
+        Icon3_75 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =13
+
+        Circle1_81 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =14
+
+        Label2_84 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Recipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =15
+
+        Circle1_82 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =16
+
+        Label2_85 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =17
+
+        Circle1_83 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =18
+
+        Label2_86 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =19
+
+        Circle1_84 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =20
+
+        Label2_87 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =21
+
+        Circle1_85 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =22
+
+        Label2_88 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =23
+
+        Icon3_78 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =24
+
+        Icon3_74 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =25
+
+        Icon3_76 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =26
+
+        Icon3_72 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =27
+
+        Icon3_73 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =28
+
+        Icon3_77 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =29
+
+    SaveButton_11 As button:
+        Align: =Align.Justify
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |+
+            =If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue',Dropdown12.Selected.value);
+            If(
+                Dropdown3.Selected.Value = 128490001,
+                
+                If (IsBlank(TextInput8.Text) || IsBlank(Dropdown11.Selected),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDD1: true}),
+            
+                    Patch(DonationTerms, 
+                        Defaults(DonationTerms),
+                        {
+                            'Donation Name ':Dropdown11_1.Selected,
+                            'Payment Schedule Type':Dropdown3.Selected.Value,
+                            'Commited Amount in HKD':Value(TextInput1.Text),
+                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
+                            'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
+                            'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false)
+                            //'Donation Type':
+                                //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
+                                //'Donation Type (DonationTerms)'.'Deferred gift'
+                        });
+                   
+                   
+                    //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
+                    //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
+                    
+                    UpdateContext({requiredfieldsmissingDD1: false});
+                    //create schedule record
+                    'PowerApp->Initializevariable'.Run(Int(TextInput8.Text));
+                ),
+            
+                If( IsBlank(Dropdown11_1.Selected),
+            
+                    Notify("Please pick the donation name.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDDName: true}),
+            
+                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today()});
+                    //'Donation Type':If(Dropdown12.Selected.Value=0,Text(Dropdown3_3.Selected.Value), Dropdown12.Selected.Value)
+                    //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
+                    //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
+                    UpdateContext({requiredfieldsmissingDDName: false})
+                )
+            );
+            
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1066
+        Y: =713
+        ZIndex: =33
+
+    Container1_29 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =69
+        Width: =208
+        X: =1146
+        Y: =699
+        ZIndex: =34
+
+        Button3_22 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_2' , ScreenTransition.Cover  );
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =10
+            Text: |-
+                ="Next: 
+                Donation Details - 2"
+            Width: =181
+            X: =8
+            Y: =5
+            ZIndex: =1
+
+        Icon6_12 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Width: =33
+            X: =151
+            Y: =12
+            ZIndex: =2
+
+    Container1_30 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =35
+
+        Button3_23 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Donor's Information"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon1_10 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(30, 85, 66, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+
+    "'Staff info_label_5' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =47.01
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =13.01
+        Text: ="Donation Details - 1"
+        Width: =1318
+        X: =24
+        Y: =159
+        ZIndex: =36
+
+    Dropdown3 As dropdown:
+        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Fill: |+
+            =/*If(recurringerror  || IsBlank(Self.SelectedText), 
+                RGBA(255, 85, 85, 0.1), 
+                RGBA(255, 255, 255, 1)
+            )*/
+            
+        Items: |-
+            =Filter(Choices('Payment Schedule Type (DonationTerms)'),Value <> 128490002)
+            
+            
+            //If(Dropdown3.Selected.Value = 
+            
+            //ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.'Donation Name'),"dacrm_donationtype")
+            
+            //ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.'Donation Name'),"dacrm_acceptinstalmentspaymentschedule","dacrm_acceptonetimepaymentschedule","dacrm_acceptrecurringpaymentschedule")
+            //if = yes --> add columns?
+        OnSelect: |-
+            =//ClearCollect(instalmentschedueCol, {numberofinstallment:"", 
+            ////ClearCollect(payscheduleCol, {ID:CountRows(payscheduleCol),oppid: "Opp-id", installmenttype: "", installmentdate "", installmentfrequency"", installmentamount: "", installmentcurrency: "", startdate: "", enddate: ""});
+            //If(Dropdown3.SelectedText.Value = "Recurring Payment",Notify("Recurring Payment is not accepted for this donation.", NotificationType.Error);UpdateContext({recurringerror: true}),UpdateContext({recurringerror: false}))
+        Visible: =If(Dropdown3_3.Selected.Value = 128490002, false,true)
+        Width: =260
+        X: =890
+        Y: =415
+        ZIndex: =38
+
+    Label7 As label:
+        Height: =42
+        Text: |-
+            ="Payment Schedule Method: *"
+        Visible: =If(Dropdown3_3.Selected.Value = 128490002, false,true)
+        Width: =254
+        X: =627
+        Y: =412
+        ZIndex: =40
+
+    Dropdown3_2 As dropdown:
+        Default: =LookUp(Choices('Origin of Donation (DonationTerms)'),Value = 128490003).Value
+        DisplayMode: |-
+            =//DisplayMode.Edit
+            If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Items: =Choices('Origin of Donation (DonationTerms)')
+        Width: =288
+        X: =180
+        Y: =269
+        ZIndex: =42
+
+    Label7_2 As label:
+        Text: |-
+            ="Origin of Donation: "
+        Width: =122
+        X: =25
+        Y: =269
+        ZIndex: =43
+
+    Label7_3 As label:
+        Text: |-
+            ="Donation Type:"
+        Width: =155
+        X: =25
+        Y: =214
+        ZIndex: =44
+
+    Dropdown3_3 As dropdown:
+        Default: =
+        Items: |-
+            =//Choices('Donation Type (DonationTerms)')
+            //AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,dacrm_donationstructurenamestring = Dropdown11_1.Selected.'Donation Name'),"dacrm_designationtype"),"Types",dacrm_designationtype.'Designation Type')
+            //Choices('Donation Type  (DonationStructures)')
+            //ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.'Donation Name'),"dacrm_donationtype")
+            //campaigntype
+            
+            //type
+            //Filter(Choices('Donation Type  (DonationStructures)'), Value <>128490001, Value <>128490003, Value <> 128490004, Value<>128490006, Value<>128490007);
+            
+            [{name:"Monetary donation",Value:'Donation Type  (DonationStructures)'.'Monetary donation',ovalue:128490000},{name:"Gift-in-kind",Value:'Donation Type  (DonationStructures)'.'Gift-in-kind',ovalue:128490002}]
+            
+            //Filter(Choices('Payment Schedule Type (DonationTerms)'),Value <> 128490002)
+            //'Donation Type  (DonationStructures)'
+            
+            //["Gift-in-kind", "Professorship", "Scholarship", "Planned Gift", "Deferred Gift"]
+        OnChange: |-
+            =Set(donationType, Dropdown3_3.SelectedText);
+            ClearCollect(dtCol,
+                If(
+                    Or(donationType.Value = "Gift-in-kind",donationType.Value = "Monetary donation" ),
+                    DesignationTypeToNameMasters.'Designation Number (Cost Center/Account Code)',
+                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+            ));
+        OnSelect: |+
+            =Set(donationType, Dropdown3_3.SelectedText);
+            ClearCollect(dtCol,
+                If(
+                   Or(donationType.Value = "Gift-in-kind",donationType.Value = "Monetary donation" ),
+                    DesignationTypeToNameMasters.'Designation Number (Cost Center/Account Code)',
+                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+            ));
+            
+        Width: =288
+        X: =180
+        Y: =214
+        ZIndex: =45
+
+    Label7_5 As label:
+        Height: =45
+        Text: |-
+            =" Currency: "
+        Width: =95
+        X: =488
+        Y: =267
+        ZIndex: =48
+
+    ComboBox2 As combobox:
+        Default: |+
+            =
+            
+        DefaultSelectedItems: =["Hong Kong Dollar (HKD)"]
+        DisplayFields: =["Value"]
+        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        InputTextPlaceholder: ="Foreign Currency"
+        IsSearchable: =false
+        Items: =Choices('Foreign Currency (DonationTerms)')
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        Width: =288
+        X: =590
+        Y: =270
+        ZIndex: =49
+
+    Label7_6 As label:
+        Height: =42
+        Text: |-
+            ="Total Committed Amount: "
+        Width: =148
+        X: =903
+        Y: =270
+        ZIndex: =51
+
+    TextInput1 As text:
+        Default: =""
+        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Format: =TextFormat.Number
+        Width: =288
+        X: =1051
+        Y: =267
+        ZIndex: =52
+
+    Dropdown11_1 As dropdown:
+        Fill: |+
+            =If(requiredfieldsmissingDD1  || IsBlank(Self.Selected) ||requiredfieldsmissingDDName, 
+                RGBA(255, 85, 85, 0.1), 
+                RGBA(255, 255, 255, 1)
+            )
+            
+        Items: |-
+            =//DonationStructures
+            //Filter(DonationStructures, dacrm_donationtype = Dropdown3_3.Selected.Value)
+            If(Dropdown12.Selected.value = 0,Filter(DonationStructures, dacrm_donationtype = Dropdown3_3.Selected.Value) ,Filter(DonationStructures, dacrm_donationtype = Dropdown12.Selected.value))
+        OnChange: |-
+            =/*Set(NameCol,AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.dacrm_name),"dacrm_designationname","dacrm_designationtype"),"Names",dacrm_designationname.'Designation Name',"Types",dacrm_designationtype.'Designation Type'));*/
+            
+            ClearCollect(dstdrCol,AddColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name'),"designationName",'Designation Name '.'Designation Name'));
+            //Set(donationStructureApproval, LookUp(DonationStructures,'Donation Structure' = Dropdown11_1.Selected.DonationStructures));
+        OnSelect: |-
+            =/*Set(NameCol,AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.dacrm_name),"dacrm_designationname","dacrm_designationtype"),"Names",dacrm_designationname.'Designation Name',"Types",dacrm_designationtype.'Designation Type'));*/
+            
+            ClearCollect(dstdrCol,AddColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name'),"designationName",'Designation Name '.'Designation Name'));
+        Width: =288
+        X: =1051
+        Y: =215
+        ZIndex: =59
+
+    Label7_14 As label:
+        Height: =42
+        Text: |-
+            ="Donation: *"
+        Width: =110
+        X: =900
+        Y: =210
+        ZIndex: =60
+
+    Label3_28 As label:
+        FontWeight: =FontWeight.Semibold
+        Text: |-
+            ="Payment Schedule Method :"
+        Width: =593
+        X: =25
+        Y: =368
+        ZIndex: =61
+
+    Container3 As groupContainer.manualLayoutContainer:
+        Height: =80
+        Width: =574
+        X: =32
+        Y: =406
+        ZIndex: =62
+
+        Label8 As label:
+            Height: =44
+            Text: |-
+                ="Selected donation accept below payment schedule method(s) ONLY: "
+            Width: =812
+            ZIndex: =1
+
+        Dropdown6 As dropdown:
+            Items: |-
+                =//DropDownSample
+                ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name),"dacrm_acceptonetimepaymentschedule") 
+            Visible: |-
+                =//true
+                false
+            Width: =156
+            X: =163
+            Y: =44
+            ZIndex: =3
+
+        Dropdown6_1 As dropdown:
+            Items: |-
+                =//DropDownSample
+                ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name),"dacrm_acceptinstalmentspaymentschedule") 
+            Visible: =false
+            Width: =156
+            X: =440
+            Y: =44
+            ZIndex: =5
+
+        Group1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =10
+
+            Label13 As label:
+                Height: =52
+                Text: ="One Time Payment"
+                Visible: =If(Dropdown6.Selected.dacrm_acceptonetimepaymentschedule = true,true,false)
+                Width: =181
+                X: =54
+                Y: =31
+                ZIndex: =2
+
+            Icon4 As icon.Check:
+                Height: =31
+                Icon: =Icon.Check
+                Visible: =If(Dropdown6.Selected.dacrm_acceptonetimepaymentschedule = true,true,false)
+                Width: =36
+                X: =18
+                Y: =41
+                ZIndex: =9
+
+        Group2 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =11
+
+            Label13_1 As label:
+                Height: =52
+                Text: ="Instalments Payment"
+                Visible: =If(Dropdown6_1.Selected.dacrm_acceptinstalmentspaymentschedule = true,true,false)
+                Width: =187
+                X: =301
+                Y: =31
+                ZIndex: =6
+
+            Icon4_1 As icon.Check:
+                Height: =31
+                Icon: =Icon.Check
+                Visible: =If(Dropdown6_1.Selected.dacrm_acceptinstalmentspaymentschedule = true,true,false)
+                Width: =36
+                X: =258
+                Y: =41
+                ZIndex: =10
+
+    Container8 As groupContainer.manualLayoutContainer:
+        Height: =184
+        Visible: =If(IsMatch(Dropdown3.Selected.Value, "Instalments Payment"),true,false) && If(Dropdown3_3.Selected.Value = 128490002, false,true)
+        Width: =1290
+        X: =25
+        Y: =503
+        ZIndex: =64
+
+        Label3_30 As label:
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Payment Schedule  :"
+            Width: =593
+            ZIndex: =1
+
+        Label17 As label:
+            Height: =49
+            Text: |-
+                ="Instalment Type: *"
+            Width: =134
+            X: =6
+            Y: =45
+            ZIndex: =3
+
+        Dropdown7 As dropdown:
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Items: |-
+                =//["Regular"]
+                Choices('Instalment Type (InstallmentPaymentSchedules)')
+            OnChange: |-
+                =//false
+                Set(selectedType,If(Dropdown7.SelectedText.Value <> "regular",true,false));
+            OnSelect: |-
+                =//false
+                Set(selectedType,If(Dropdown7.SelectedText.Value <> "regular",true,false));
+            Width: =150
+            X: =119
+            Y: =49
+            ZIndex: =4
+
+        Label17_1 As label:
+            Height: =58
+            Text: |-
+                ="Total Number of Instalment: *"
+            Width: =147
+            X: =288
+            Y: =40
+            ZIndex: =5
+
+        TextInput8 As text:
+            Default: =""
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Fill: |
+                =If(requiredfieldsmissingDD1  || IsBlank(Self.Text), 
+                    RGBA(255, 85, 85, 0.1), 
+                    RGBA(255, 255, 255, 1)
+                )
+            Format: =TextFormat.Number
+            OnChange: =Set(tnoi, TextInput8.Text)
+            Width: =150
+            X: =441
+            Y: =49
+            ZIndex: =6
+
+        Label17_2 As label:
+            Height: =49
+            Text: |-
+                ="Total Amount: *"
+            Width: =145
+            X: =956
+            Y: =44
+            ZIndex: =7
+
+        TextInput8_3 As text:
+            Default: =Text(Int(TextInput8_4.Text) * Int(TextInput8.Text))
+            DisplayMode: =DisplayMode.View
+            Height: =41
+            OnChange: =Set(ta,TextInput8_3.Text);
+            Visible: =false
+            Width: =171
+            X: =943
+            Y: =11
+            ZIndex: =8
+
+        Label17_3 As label:
+            Height: =49
+            Text: |-
+                ="Start Date: *"
+            Width: =114
+            X: =379
+            Y: =109
+            ZIndex: =9
+
+        DatePicker2 As datepicker:
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Width: =220
+            X: =494
+            Y: =113
+            ZIndex: =10
+
+        Label17_4 As label:
+            Height: =49
+            Text: |-
+                ="End Date: *"
+            Width: =105
+            X: =732
+            Y: =109
+            ZIndex: =11
+
+        DatePicker2_1 As datepicker:
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Width: =220
+            X: =838
+            Y: =113
+            ZIndex: =12
+
+        Label17_5 As label:
+            Height: =49
+            Text: |-
+                ="Amount of Each Instalment: *"
+            Visible: =If(Dropdown7.Selected.Value = 128490000,true,false)
+            Width: =178
+            X: =629
+            Y: =44
+            ZIndex: =13
+
+        TextInput8_4 As text:
+            Default: =""
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Format: =TextFormat.Number
+            Visible: =If(Dropdown7.Selected.Value = 128490000,true,false)
+            Width: =150
+            X: =783
+            Y: =49
+            ZIndex: =14
+
+        Label17_6 As label:
+            Height: =49
+            Text: |-
+                ="Instalment Frequency: *"
+            Width: =134
+            X: =6
+            Y: =104
+            ZIndex: =15
+
+        Dropdown7_1 As dropdown:
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Items: |
+                =If(selectedType,
+                    Filter(Choices('Instalment Frequency (InstallmentPaymentSchedules)'),Value = 128490003),
+                    Filter(Choices('Instalment Frequency (InstallmentPaymentSchedules)'),Value <> 128490003)
+                )
+                //["Annually", "Semi-Annually", "Quarterly","Monthly","Semi-monthly","Biweekly","Single Instalment"]
+            Width: =237
+            X: =119
+            Y: =113
+            ZIndex: =16
+
+        Button3 As button:
+            Fill: =RGBA(250, 212, 100, 1)
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: |-
+                =Set(paymentScheduleObj, {
+                    it: Dropdown7.SelectedText.Value,
+                    tnoi:TextInput8.Text,
+                    ta:TextInput8_3.Text,
+                    if:Dropdown7_1.SelectedText.Value,
+                    sd:DatePicker2.SelectedDate,
+                    ed:DatePicker2_1.SelectedDate,
+                    aei:TextInput8_4.Text
+                });
+                Set(scheduleCol,RenameColumns(ClearCollect(rowCount, Sequence(Int(paymentScheduleObj.tnoi)).Value),"Value","Id"));
+                Clear(infoCol);
+                ForAll(
+                    Sequence(Int(paymentScheduleObj.tnoi)).Value,
+                    Collect(infoCol,
+                        {id:ThisRecord.Value,
+                        sd:DateTimeValue(paymentScheduleObj.sd),
+                        ed: 
+                        If(
+                            paymentScheduleObj.if ="Monthly",
+                            DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Months),
+                            If(paymentScheduleObj.if ="Semi-annually",
+                                DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value*6,TimeUnit.Months),
+                                DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Years))),
+                        tnoi:paymentScheduleObj.tnoi,
+                        it:paymentScheduleObj.it,
+                        if:paymentScheduleObj.if,
+                        aei:paymentScheduleObj.aei}
+                    )
+                );
+                Navigate( 'Donation details_1_Instalment Schedule' , ScreenTransition.Cover  );
+            Size: =11
+            Text: ="Show Schedule details"
+            Visible: |-
+                =If(
+                    And(!IsBlank(TextInput8.Text),!IsBlank(TextInput8_3.Text),!IsBlank(TextInput8_4.Text)),
+                    true,
+                    If(Dropdown7.SelectedText.Value <> "regular",true, false))
+            Width: =130
+            X: =1094
+            Y: =118
+            ZIndex: =18
+
+        Label17_7 As label:
+            Height: =47
+            Text: |-
+                ="Reimbursement Amount: *"
+            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            Width: =146
+            X: =617
+            Y: =46
+            ZIndex: =19
+
+        TextInput8_5 As text:
+            Default: =""
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            Width: =150
+            X: =771
+            Y: =52
+            ZIndex: =20
+
+        Checkbox2 As checkbox:
+            CheckboxSize: =30
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Height: =41
+            Text: ="Reimbursement"
+            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            Width: =216
+            X: =616
+            Y: =8
+            ZIndex: =21
+
+        TextInput3 As text:
+            Default: =Text(Int(TextInput8_4.Text) * Int(TextInput8.Text))
+            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Width: =150
+            X: =1104
+            Y: =52
+            ZIndex: =22
+
+    Label28 As label:
+        Height: =34
+        Text: ="*"
+        Visible: |-
+            =//If(TextInput1.Text > 50000,true,false)
+            //true
+        Width: =15
+        X: =202
+        Y: =344
+        ZIndex: =68
+
+    Label7_7 As label:
+        Height: =63
+        Text: |-
+            ="Funder's Project Number:"
+        Width: =155
+        X: =25
+        Y: =310
+        ZIndex: =69
+
+    TextInput1_1 As text:
+        Default: =""
+        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Width: =288
+        X: =180
+        Y: =322
+        ZIndex: =70
+
+    Label7_8 As label:
+        Text: |-
+            ="Donation Product:"
+        Width: =91
+        X: =494
+        Y: =214
+        ZIndex: =71
+
+    Dropdown12 As dropdown:
+        Items: |
+            =//["Professorship","Scholarship","Planned gift","Deferred gift","Campaign","Not Applicable"]
+            [
+                {name:"Professorship",  value:128490003,   ovalue:'Donation Type (DonationTerms)'.Professorship},
+                {name:"Deferred gift",  value:128490007,   ovalue:'Donation Type (DonationTerms)'.'Deferred gift'},
+                {name:"Gift-in-kind",    value:128490002, ovalue:'Donation Type (DonationTerms)'.'Gift-in-kind'},
+                {name:"Monetary donation",  value:128490000,   ovalue:'Donation Type (DonationTerms)'.'Monetary donation'},
+                {name:"Planned gift",   value:128490006,    ovalue:'Donation Type (DonationTerms)'.'Planned gift'},
+                {name:"Scholarship",    value:128490004, ovalue:'Donation Type (DonationTerms)'.Scholarship},
+                {name:"Campaign donation",  value:128490001,   ovalue:'Donation Type (DonationTerms)'.'Campaign donation'},
+                {name:"Not Applicable",value:0}
+            ]
+        Width: =288
+        X: =590
+        Y: =213
+        ZIndex: =72
+
+    Label6 As label:
+        Text: |-
+            =//If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.ovalue,Dropdown12.Selected.value)
+            If(Dropdown12.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bvalue'=0,Dropdown3_3.Selected.ovalue,Dropdown12.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue')
+        X: =725
+        Y: =334
+        ZIndex: =73
+
+    Label6_1 As label:
+        Text: =If(ComboBox2.Selected.Value=128490074,0,1)
+        Width: =66
+        X: =659
+        Y: =334
+        ZIndex: =74
+
+    Label6_2 As label:
+        Text: =If(Checkbox2_21.Value=true,1,0)
+        X: =928
+        Y: =336
+        ZIndex: =75
+

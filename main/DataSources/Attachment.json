@@ -1,0 +1,163 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_attachments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_attachment",
+    "MaxGetRowsCount": 500,
+    "Name": "Attachment",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_attachment_AsyncOperations": "System Jobs",
+      "dacrm_attachment_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_attachment_FileAttachments": "FileAttachments",
+      "dacrm_attachment_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_attachment_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_attachment_ProcessSession": "Process Sessions",
+      "dacrm_attachment_SyncErrors": "Sync Errors",
+      "dacrm_attachmentid": "Attachment ID",
+      "dacrm_attachmenttype": "Attachment Type",
+      "dacrm_Constituent": "Constituent Name",
+      "dacrm_donationtermid": "DonationTerm ID",
+      "dacrm_donationtransactionid": "DonationTransaction ID",
+      "dacrm_file": "File",
+      "dacrm_filelink": "File Link",
+      "dacrm_filename": "Filename",
+      "dacrm_name": "Attachment Name",
+      "dacrm_submissiondate": "Submission Date",
+      "dacrm_submittername": "Submitter Name",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Attachment",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Attachment (Views)",
+    "Name": "_dacrm_attachment_views",
+    "RelatedEntityName": "Attachment",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0b3f9684-a34e-4db4-b224-ac91223b17c1": "Inactive Attachment",
+      "254e6c03-0d23-4daf-9f31-c0dcceaa0837": "Attachment Lookup View",
+      "67d581e6-91eb-4f2d-85f8-c744440fb5e7": "Attachment Associated View",
+      "70511677-2798-45f5-8f63-467468e784dc": "Active Attachment",
+      "71f146b7-3972-ee11-8179-000d3a08be93": "ConstituentSummary_ATTACHMENT",
+      "9aa8b290-0b3b-ee11-bdf4-000d3a094fee": "Power App View",
+      "c08cc1cf-1a7f-ee11-8179-000d3a07de56": "Donation Term View ",
+      "d55e26b0-9773-4c99-bee9-466ef32d660c": "Attachment Advanced Find View",
+      "fa0d1c77-1a7f-ee11-8179-000d3a08be93": "Donation Transaction View "
+    }
+  },
+  {
+    "DisplayName": "Attachment Type (Attachment)",
+    "Name": "dacrm_attachment_dacrm_attachmenttype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Contact report",
+      "128490001": "Background check",
+      "128490002": "Due diligence",
+      "128490003": "Deceased confirmation",
+      "128490004": "Student Report",
+      "128490005": "Event Interaction",
+      "128490006": "TOR",
+      "128490007": "Donation Term Transaction Document",
+      "128490008": "Thank You Letter",
+      "128490009": "Alumni & Books",
+      "128490010": "Alumni group document",
+      "128490011": "Award",
+      "128490012": "Biography / Briefing note / Prospect research report",
+      "128490013": "Comments / Feedback on HKU",
+      "128490014": "Convocation Newsletter",
+      "128490015": "Correspondence",
+      "128490016": "Criminal record",
+      "128490017": "Donation supporting document",
+      "128490018": "Education",
+      "128490019": "Email message",
+      "128490020": "Event document",
+      "128490021": "Facebook",
+      "128490022": "HKU Alumni website",
+      "128490023": "HKU Bricks Campaign",
+      "128490024": "HKU Foundation Membership",
+      "128490025": "HKU publications",
+      "128490026": "Invitation",
+      "128490027": "Legal letter",
+      "128490028": "Name card",
+      "128490029": "Newsletter / Publication",
+      "128490030": "Newspaper / Magazine clipping",
+      "128490031": "Obituary",
+      "128490032": "Other DAAO publications",
+      "128490033": "Performance",
+      "128490034": "Photo",
+      "128490035": "Present / Souvenir",
+      "128490036": "Press release",
+      "128490037": "Restricted documentations",
+      "128490038": "Interaction"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_attachmenttype",
+        "OptionSetReferenceEntityName": "Attachment"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_attachmenttype",
+    "RelatedEntityName": "Attachment",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Attachment)",
+    "Name": "dacrm_attachment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Attachment"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Attachment",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Attachment)",
+    "Name": "dacrm_attachment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Attachment"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Attachment",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_donationtermattachments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_donationtermattachment",
+    "MaxGetRowsCount": 500,
+    "Name": "DonationTermAttachments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_attachmentlink": "Attachment Link",
+      "dacrm_attachmenttype": "Attachment Type",
+      "dacrm_description": "Description",
+      "dacrm_donationtermattachment_Annotations": "Notes",
+      "dacrm_donationtermattachment_AsyncOperations": "System Jobs",
+      "dacrm_donationtermattachment_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_donationtermattachment_DuplicateBaseRecord": "Duplicate Records (dacrm_donationtermattachment_DuplicateBaseRecord)",
+      "dacrm_donationtermattachment_DuplicateMatchingRecord": "Duplicate Records (dacrm_donationtermattachment_DuplicateMatchingRecord)",
+      "dacrm_donationtermattachment_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_donationtermattachment_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_donationtermattachment_ProcessSession": "Process Sessions",
+      "dacrm_donationtermattachment_SharePointDocumentLocations": "Document Locations",
+      "dacrm_donationtermattachment_SyncErrors": "Sync Errors",
+      "dacrm_donationtermattachmentid": "Donation Term Attachment ID",
+      "dacrm_donationtermid": "Donation Term ID",
+      "dacrm_donationtransaction": "DonationTransaction",
+      "dacrm_name": "Attachment Name",
+      "dacrm_wrsreceiptnumber": "WRS Receipt Number",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DonationTermAttachments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DonationTermAttachments (Views)",
+    "Name": "_dacrm_donationtermattachment_views",
+    "RelatedEntityName": "DonationTermAttachments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "033f2617-9103-4452-a3eb-ecdf59a02c68": "Inactive DonationTermAttachments",
+      "1dbd35fa-65bb-4c63-92d6-1cf0d6666d8a": "DonationTermAttachment Advanced Find View",
+      "2219d211-ec6d-412a-b180-a7ae34fd0eec": "Active DonationTermAttachments",
+      "4f3d0b05-b121-47e7-9de0-88b4573631be": "DonationTermAttachment Associated View",
+      "d2683598-0838-4605-a469-40fca684e813": "DonationTermAttachment Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Attachment Type (DonationTermAttachments)",
+    "Name": "dacrm_donationtermattachment_dacrm_attachmenttype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "TOR",
+      "128490001": "Supporting documents",
+      "128490002": "Thank you letter"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_attachmenttype",
+        "OptionSetReferenceEntityName": "DonationTermAttachments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_attachmenttype",
+    "RelatedEntityName": "DonationTermAttachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (DonationTermAttachments)",
+    "Name": "dacrm_donationtermattachment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DonationTermAttachments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DonationTermAttachments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DonationTermAttachments)",
+    "Name": "dacrm_donationtermattachment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DonationTermAttachments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DonationTermAttachments",
+    "Type": "OptionSetInfo"
+  }
+]

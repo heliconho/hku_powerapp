@@ -1,0 +1,144 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_donationrecognitionrecords",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_donationrecognitionrecord",
+    "Name": "DonationRecognitionRecords",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_amount": "Amount",
+      "dacrm_constituentname": "Constituent Name",
+      "dacrm_donatedorrecognised": "Donated or Recognised",
+      "dacrm_donationrecognitionrecord_AsyncOperations": "System Jobs",
+      "dacrm_donationrecognitionrecord_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_donationrecognitionrecord_contactid": "Contacts",
+      "dacrm_donationrecognitionrecord_DuplicateBaseRecord": "Duplicate Records (dacrm_donationrecognitionrecord_DuplicateBaseRecord)",
+      "dacrm_donationrecognitionrecord_DuplicateMatchingRecord": "Duplicate Records (dacrm_donationrecognitionrecord_DuplicateMatchingRecord)",
+      "dacrm_donationrecognitionrecord_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_donationrecognitionrecord_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_donationrecognitionrecord_ProcessSession": "Process Sessions",
+      "dacrm_donationrecognitionrecord_SyncErrors": "Sync Errors",
+      "dacrm_donationrecognitionrecordid": "Donation Recognition Record ID",
+      "dacrm_donationtransactionid": "Donation Transaction ID",
+      "dacrm_inactivedate": "Inactive Date",
+      "dacrm_isinactive": "Is Inactive",
+      "dacrm_name": "Name",
+      "dacrm_transactiondate": "Transaction Date",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DonationRecognitionRecords",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DonationRecognitionRecords (Views)",
+    "Name": "_dacrm_donationrecognitionrecord_views",
+    "RelatedEntityName": "DonationRecognitionRecords",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "006f2992-3f72-4760-80c9-7e74b7ace1c8": "DonationRecognitionRecord Advanced Find View",
+      "2ce02dc6-1a06-48ef-bc22-ae2f28945870": "DonationRecognitionRecord Lookup View",
+      "796a85e9-4cfc-485e-a375-ac5185ae3537": "Active DonationRecognitionRecords",
+      "bb53973b-fcf2-41e0-81bf-9fc951602f97": "DonationRecognitionRecord Associated View",
+      "cd91cb9a-90d9-44f4-96c5-ebac3b90d842": "Inactive DonationRecognitionRecords"
+    }
+  },
+  {
+    "DisplayName": "Donated or Recognised (DonationRecognitionRecords)",
+    "Name": "dacrm_donationrecognitionrecord_dacrm_donatedorrecognised",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Donated",
+      "128490001": "Recognised"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donatedorrecognised",
+        "OptionSetReferenceEntityName": "DonationRecognitionRecords"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_donatedorrecognised",
+    "RelatedEntityName": "DonationRecognitionRecords",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Inactive (DonationRecognitionRecords)",
+    "Name": "dacrm_donationrecognitionrecord_dacrm_isinactive",
+    "OptionSetInfoNameMapping": {
+      "0": "False",
+      "1": "True"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isinactive",
+        "OptionSetReferenceEntityName": "DonationRecognitionRecords"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isinactive",
+    "RelatedEntityName": "DonationRecognitionRecords",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (DonationRecognitionRecords)",
+    "Name": "dacrm_donationrecognitionrecord_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DonationRecognitionRecords"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DonationRecognitionRecords",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DonationRecognitionRecords)",
+    "Name": "dacrm_donationrecognitionrecord_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DonationRecognitionRecords"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DonationRecognitionRecords",
+    "Type": "OptionSetInfo"
+  }
+]

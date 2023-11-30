@@ -1,0 +1,206 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_applicationuser_forms",
+      "Namespace": "ApplicationUsers (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_aaduser_forms",
+      "Namespace": "AAD Users (Forms)",
+      "Values": {
+        "Information": "dd5ded01-9aad-4e25-8d0e-e9acdaecbe4e"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_donationterm_forms",
+      "Namespace": "DonationTerms (Forms)",
+      "Values": {
+        "Information": "1b875948-e0b4-477b-87ce-c84d9e66db4b"
+      }
+    },
+    {
+      "Kind": "default.cds_contact_forms",
+      "Namespace": "Contacts (Forms)",
+      "Values": {
+        "account contact card": "29de27bc-a257-4f29-99cf-bab4a84e688f",
+        "Account quick view form": "3ace4e34-9f50-4e73-ae49-b595d6b48fa4",
+        "App for Outlook Contact Card": "cdbb9298-3b2e-41f3-8f4a-0168d6b09fc4",
+        "App for Outlook Contact Quick View": "3d22ab88-96c8-4b3f-a533-d4827e2925c9",
+        "Cases for Customer": "5194a156-576a-4fa1-bf1a-abf7a41b0e8c",
+        "ChangePassword": "01707dcb-aeca-4b87-a9e4-a5b199a54ece",
+        "Constituent Form": "369a2818-041f-ee11-9cbe-000d3a08d293",
+        "Contact": "1fed44d1-ae68-4a41-bd2b-f13acac4acfa",
+        "contact card": "707fc57b-c5e6-471b-a180-e37ed28a38e2",
+        "Contact Card form": "bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf",
+        "Contact company view": "5efdc20d-5ae6-47d2-b4ed-8a929d089d7a",
+        "Contact for Interactive experience": "cc760212-3eab-4009-b5c3-ea9cf6f3e141",
+        "Contact for Multisession experience": "e06af4d1-2812-45c7-a9c2-9fb73fee7bec",
+        "Contact form for Conversation Customer card": "5aab71db-78a0-ed11-aad1-6045bd00698c",
+        "Contact form for Customer Card": "edfc131b-8d2d-ed11-9db2-002248285e57",
+        "Contact Main form": "06e45011-6321-ee11-9966-6045bd1f9a96",
+        "Contact Quick Create": "661157fe-2fc9-4eaa-835f-5bfa2f7b64f7",
+        "Contact Quick Form": "bdb0ae1c-32fa-4374-b637-8dafe107bc44",
+        "Contact quick view form on event team member": "5d904496-1ba1-4724-a582-f46732305a7f",
+        "Contact Reference Panel": "d880c3cf-80e2-42f3-82f9-24d040d09f17",
+        "Contact_Testing": "3a34396c-1572-ee11-8179-000d3aa3fbd0",
+        "Contacts Dashboard": "70ad8b15-e3f3-4d7d-9e4b-16cb4e51b484",
+        "Customer profile": "05ea391a-d034-43fe-849b-b4fa3213a2b2",
+        "Customer profile cases": "c621206a-f769-ed11-9561-000d3a36d4e2",
+        "Donor": "3f695518-8b05-4ff5-a950-f7dd6868a43b",
+        "In Context Form": "4c9c89b9-f909-4b34-8f63-b87d7ff2f0c4",
+        "Individual": "c91e76fb-9821-ee11-9cbe-000d3a094fee",
+        "Information": "894cc46a-b0cb-4ab0-8bf6-200544e46a2d",
+        "Insights": "7b78aae4-7945-4515-848b-1f86535846d6",
+        "Invite Web Form": "d6190b35-9474-4098-9698-33f6627eb3bf",
+        "Live Persona Card Form": "449faa0e-f471-48ec-87d0-4719909546d2",
+        "Organisation": "fe4b9065-ff23-ee11-9965-000d3a094fee",
+        "Portal Contact": "3fb651a5-cdbf-46c9-87fb-d2c748662bb8",
+        "Portal Contact (Enhanced)": "c1c97961-2d42-4103-abf8-2fe2bdf38224",
+        "Portal Contact for Interactive experience": "49d062e4-d892-4baa-af50-6387989ac638",
+        "Profile web form": "0bd832d5-9d6a-456d-bdc1-21129e82cc0f",
+        "Profile Web Form - Japanese": "36cc830c-eeab-4a89-a7c9-da2ac6c451a1",
+        "Profile Web Form (Enhanced)": "bddc0100-0dbe-4562-aafe-31d08c8ab506",
+        "Profile Web Form (Enhanced) - Japanese": "01124dd8-9bff-4cc0-bb33-ea9d943c3f9f",
+        "Quick View for Household": "23edfb94-9884-4387-9f03-f95264ba5c5d",
+        "Recent Cases and Entitlements": "f3b707fb-3b5f-45f9-9c6b-5e573bb5d19e",
+        "Sales Insights": "293c878f-f068-40a0-ae48-4297e060871c",
+        "Social Profiles": "7bb87dfd-ec3e-4ed9-8e3e-5725d3067295",
+        "TimelineWallControl - Contact - Main": "986258b5-2985-4ae0-970a-5e1d108ab793",
+        "Update Contact": "26843818-6508-4afe-9342-5fae2ebf15ca",
+        "Volunteer": "56b2d9d6-1249-4711-8b6a-d561665b551d"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_address_forms",
+      "Namespace": "Address (Forms)",
+      "Values": {
+        "Information": "5514e21a-0a09-466b-b43c-b833990f5bf7"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_email_forms",
+      "Namespace": "Emails_1 (Forms)",
+      "Values": {
+        "Information": "4285b1f1-99ed-47f9-ae13-df4d44b0386e"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_phone_forms",
+      "Namespace": "Phone (Forms)",
+      "Values": {
+        "Information": "93e86f5b-f9e6-45ac-a90c-d340944a5e3a"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_donationstructure_forms",
+      "Namespace": "DonationStructures (Forms)",
+      "Values": {
+        "Information": "af7dd101-0b7a-40f6-8ce7-8b1dfc25e00d"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_onationtructureodesignationrelationship_forms",
+      "Namespace": "DonationStructureToDesignationRelationships (Forms)",
+      "Values": {
+        "Information": "d5387eda-052b-4a11-bca2-8aca4d6c4c5d"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_designationtypemaster_forms",
+      "Namespace": "DesignationTypeMasters (Forms)",
+      "Values": {
+        "Information": "caf624dd-ca50-4abf-9a6d-b390ce504f22"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_designationtypetonamemaster_forms",
+      "Namespace": "DesignationTypeToNameMasters (Forms)",
+      "Values": {
+        "Information": "e6e37069-e17a-4a8d-adc0-fa5d8d4c9a82"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_recurringgiftschedule_forms",
+      "Namespace": "RecurringGiftSchedules (Forms)",
+      "Values": {
+        "Information": "051733bb-f94f-4df7-9da2-8702175e3c87"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_installmentpaymentschedule_forms",
+      "Namespace": "InstallmentPaymentSchedules (Forms)",
+      "Values": {
+        "Information": "031d2706-13e5-4b51-85f2-bd0d19e536cd"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_donationtermattachment_forms",
+      "Namespace": "DonationTermAttachments (Forms)",
+      "Values": {
+        "Information": "17820ea7-0b82-4303-b3ac-960dcec8a7c2"
+      }
+    },
+    {
+      "Kind": "default.cds_activitymimeattachment_forms",
+      "Namespace": "Attachments (Forms)",
+      "Values": {
+        "Information": "54149ee6-7e66-4e93-bde8-b53b9f1a9c45"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_attachment_forms",
+      "Namespace": "Attachment (Forms)",
+      "Values": {
+        "Information": "6d793284-bd88-491d-9c9d-f6bea3a1b91d"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_donationrecognitionrecord_forms",
+      "Namespace": "DonationRecognitionRecords (Forms)",
+      "Values": {
+        "Information": "c46c891d-57da-45be-8387-fd1efdd515e8"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_processingformcontactperson_forms",
+      "Namespace": "ProcessingFormContactPeople (Forms)",
+      "Values": {
+        "Information": "cb88da0d-2471-44ed-babc-814e64a255dd"
+      }
+    },
+    {
+      "Kind": "default.cds_msdynmkt_email_forms",
+      "Namespace": "Emails (Forms)",
+      "Values": {
+        "Email Bulk Edit Form": "23485c53-2918-43b6-85fa-9f92cd637a9e",
+        "Email fields control": "84474717-703b-4316-b6f6-22a8b21ba4f2",
+        "Email fields control collapsed": "ce140c9e-6312-4535-a114-da4fea529026",
+        "Email header": "3fbfaf33-0ac5-4efb-ab1a-c6c194a96674",
+        "Email header form": "08732368-3f74-426e-9f96-595fbd6867e9",
+        "Email quick create form": "1b71d2e7-560c-4355-8e9a-4bfdf73b56ba",
+        "Email settings control": "202321c3-0043-4ce8-beae-746b7dc9496e",
+        "Information": "a0e2a7c5-d2f5-4ab3-bee5-fcd82be5fabc"
+      }
+    },
+    {
+      "Kind": "default.cds_customeraddress_forms",
+      "Namespace": "Addresses (Forms)",
+      "Values": {
+        "Address Nonprofit": "a84312ec-b9b6-4dc9-8b14-54611a0a2af9",
+        "Information": "df5bef3a-9237-40bd-a27c-2cd7fd434706"
+      }
+    }
+  ]
+}

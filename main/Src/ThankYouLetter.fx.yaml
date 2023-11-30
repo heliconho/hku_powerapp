@@ -1,0 +1,467 @@
+ThankYouLetter As screen:
+
+    Container15_4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =471
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =1318
+        X: =25
+        Y: =159
+        ZIndex: =5
+
+        ThankYou_4 As groupContainer.verticalAutoLayoutContainer:
+            Height: =533.59
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Y: =987.15
+            ZIndex: =8
+
+            ThankYou_label_4 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(30, 85, 66, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =40.01
+                PaddingBottom: =5.00
+                PaddingLeft: =5.00
+                Size: =13.01
+                Text: ="Thank you letter"
+                Y: =0.00
+                ZIndex: =1
+
+            Label1_24 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                Text: ="Please choose one of the following"
+                ZIndex: =2
+
+            Radio4 As radio:
+                AlignInContainer: =AlignInContainer.Stretch
+                Items: =["The beneficiary department will arrange its own acknowledgement to the donor. DAAO is not required to send any thank-you letter/note.","DAAO to send thank-you letter/note to the donor as appropriate"]
+                ZIndex: =5
+
+            Gallery2_14 As gallery.variableTemplateHeightGallery:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DelayItemLoading: =true
+                FillPortions: =0
+                Height: =110.00
+                Items: =CustomGallerySample
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplatePadding: =5.00
+                TemplateSize: =280.00
+                Visible: =If(Radio4.Selected.Value = "The beneficiary department will arrange its own acknowledgement to the donor. DAAO is not required to send any thank-you letter/note.", true, false)
+                Y: =276.13
+                ZIndex: =6
+
+                Import2_16 As import:
+                    Height: =26.00
+                    OnSelect: =Select(Parent)
+                    Size: =10.00
+                    Text: ="Choose File"
+                    Width: =91
+                    X: =12
+                    Y: =44.01
+                    ZIndex: =1
+
+                Label3_17 As label:
+                    Height: =44.01
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Upload thank you letter/note *"
+                    Width: =381
+                    X: =12
+                    Y: =4.00
+                    ZIndex: =2
+
+                Label4_16 As label:
+                    Height: =26.00
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =10.00
+                    Text: ="""No File chosen"""
+                    Width: =195
+                    X: =121
+                    Y: =44.01
+                    ZIndex: =3
+
+                Label6_16 As label:
+                    Height: =20.00
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =10.00
+                    Text: ="Maximum file size 10MB"
+                    Width: =246
+                    X: =12
+                    Y: =73.00
+                    ZIndex: =4
+
+    Label1_4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Group6_4 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =30
+
+        Circle1_32 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2_33 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_33 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =195
+            Y: =93
+            ZIndex: =9
+
+        Label2_34 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =105
+            ZIndex: =10
+
+        Circle1_34 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =11
+
+        Label2_35 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =12
+
+        Icon3_32 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =13
+
+        Circle1_35 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =14
+
+        Label2_36 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Recipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =15
+
+        Circle1_36 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =16
+
+        Label2_37 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =17
+
+        Circle1_37 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =18
+
+        Label2_38 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =19
+
+        Circle1_38 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =20
+
+        Label2_39 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =21
+
+        Circle1_39 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =22
+
+        Label2_40 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =23
+
+        Icon3_31 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =24
+
+        Icon3_30 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =25
+
+        Icon3_33 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =26
+
+        Icon3_34 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =27
+
+        Icon3_35 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =28
+
+        Icon3_36 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =29
+
+    SaveButton_13 As button:
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |+
+            =/*If(
+                existingdonor,
+                
+                If (IsBlank(ComboBox3.SelectedItems),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingo: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingo: false})
+                ),
+            
+                If( IsBlank(TextInput3_46.Text) 
+                    || IsBlank(TextInput3_45.Text)
+                    || IsBlank(TextInput3_52.Text)
+                    || IsBlank(TextInput3_54.Text),
+            
+                    Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingn: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingn: false})
+                )
+            );*/
+            
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1066
+        Y: =713
+        ZIndex: =33
+
+    Container1_35 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =69
+        Width: =208
+        X: =1146
+        Y: =699
+        ZIndex: =34
+
+        Button3_28 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =60
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( HKUFoundationMembership , ScreenTransition.Cover  )
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =10
+            Text: |-
+                ="Next: 
+                HKU Foundation Membership"
+            Width: =173
+            X: =22
+            ZIndex: =1
+
+        Icon6_15 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Width: =33
+            X: =161
+            Y: =7
+            ZIndex: =2
+
+    Container1_36 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =243
+        X: =7
+        Y: =704
+        ZIndex: =35
+
+        Button3_29 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( acknowledgement , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Acknowledgement & Recipt Arrangement"
+            Width: =185
+            X: =13
+            ZIndex: =1
+
+        Icon1_13 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(30, 85, 66, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+

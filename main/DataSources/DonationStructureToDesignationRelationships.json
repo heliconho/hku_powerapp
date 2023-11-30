@@ -1,0 +1,130 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_onationtructureodesignationrelationships",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_onationtructureodesignationrelationship",
+    "MaxGetRowsCount": 500,
+    "Name": "DonationStructureToDesignationRelationships",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_breakdownpercentage": "Breakdown Percentage ",
+      "dacrm_designationname": "Designation Name ",
+      "dacrm_designationtype": "Designation Type",
+      "dacrm_displaynameingivingform": "Display Name in Giving Form",
+      "dacrm_donationstructurename": "Donation Structure ",
+      "dacrm_donationstructurenamestring": "Donation Structure Name ",
+      "dacrm_enddate": "End Date",
+      "dacrm_isactive": "Is Active",
+      "dacrm_isactivestring": "Is Active string",
+      "dacrm_lookupid": "Lookup ID",
+      "dacrm_name": "Name",
+      "dacrm_onationtructureodesignationrelationship_AsyncOperations": "System Jobs",
+      "dacrm_onationtructureodesignationrelationship_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_onationtructureodesignationrelationship_DuplicateBaseRecord": "Duplicate Records (dacrm_onationtructureodesignationrelationship_DuplicateBaseRecord)",
+      "dacrm_onationtructureodesignationrelationship_DuplicateMatchingRecord": "Duplicate Records (dacrm_onationtructureodesignationrelationship_DuplicateMatchingRecord)",
+      "dacrm_onationtructureodesignationrelationship_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_onationtructureodesignationrelationship_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_onationtructureodesignationrelationship_ProcessSession": "Process Sessions",
+      "dacrm_onationtructureodesignationrelationship_SyncErrors": "Sync Errors",
+      "dacrm_onationtructureodesignationrelationshipid": "DonationStructureToDesignationRelationship ID",
+      "dacrm_reportcode1": "Report Code 1",
+      "dacrm_reportcode2": "Report Code 2",
+      "dacrm_startdate": "Start Date",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DonationStructureToDesignationRelationships",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DonationStructureToDesignationRelationships (Views)",
+    "Name": "_dacrm_onationtructureodesignationrelationship_views",
+    "RelatedEntityName": "DonationStructureToDesignationRelationships",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "29e566d0-87b1-4e95-ba94-e7b85710d423": "Inactive DonationStructureToDesignationRelationships",
+      "2d532088-930f-408b-98b0-b52ba233b0a6": "DonationStructureToDesignationRelationship Lookup View",
+      "3bdd123b-d4fe-432a-92d4-7f727b395032": "DonationStructureToDesignationRelationship Associated View",
+      "ea87536d-ed4e-4d93-9885-fd215c006768": "Active DonationStructureToDesignationRelationships",
+      "fb746262-f7e2-4a20-a0b0-b7fab49836ce": "DonationStructureToDesignationRelationship Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Is Active (DonationStructureToDesignationRelationships)",
+    "Name": "dacrm_onationtructureodesignationrelationship_dacrm_isactive",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isactive",
+        "OptionSetReferenceEntityName": "DonationStructureToDesignationRelationships"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isactive",
+    "RelatedEntityName": "DonationStructureToDesignationRelationships",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (DonationStructureToDesignationRelationships)",
+    "Name": "dacrm_onationtructureodesignationrelationship_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DonationStructureToDesignationRelationships"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DonationStructureToDesignationRelationships",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DonationStructureToDesignationRelationships)",
+    "Name": "dacrm_onationtructureodesignationrelationship_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DonationStructureToDesignationRelationships"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DonationStructureToDesignationRelationships",
+    "Type": "OptionSetInfo"
+  }
+]

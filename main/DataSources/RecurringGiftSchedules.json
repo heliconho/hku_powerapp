@@ -1,0 +1,124 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_recurringgiftschedules",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_recurringgiftschedule",
+    "MaxGetRowsCount": 500,
+    "Name": "RecurringGiftSchedules",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_dacrm_donationterm_recurringgiftschedulei": "DonationTerms",
+      "dacrm_donationtermid": "Donation Term ID",
+      "dacrm_enddate": "End Date",
+      "dacrm_frequency": "Frequency",
+      "dacrm_name": "Name",
+      "dacrm_others": "Others (please indicate)",
+      "dacrm_recurringgiftschedule_AsyncOperations": "System Jobs",
+      "dacrm_recurringgiftschedule_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_recurringgiftschedule_DuplicateBaseRecord": "Duplicate Records (dacrm_recurringgiftschedule_DuplicateBaseRecord)",
+      "dacrm_recurringgiftschedule_DuplicateMatchingRecord": "Duplicate Records (dacrm_recurringgiftschedule_DuplicateMatchingRecord)",
+      "dacrm_recurringgiftschedule_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_recurringgiftschedule_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_recurringgiftschedule_ProcessSession": "Process Sessions",
+      "dacrm_recurringgiftschedule_SyncErrors": "Sync Errors",
+      "dacrm_recurringgiftscheduleid": "Recurring Gift Schedule ID",
+      "dacrm_remarks": "Remarks",
+      "dacrm_startdate": "Start Date",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "RecurringGiftSchedules",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "RecurringGiftSchedules (Views)",
+    "Name": "_dacrm_recurringgiftschedule_views",
+    "RelatedEntityName": "RecurringGiftSchedules",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "448886fd-e92e-4c3f-89a1-9800921592cb": "RecurringGiftSchedule Advanced Find View",
+      "b54b7e6a-2283-4b3f-b560-f3b731c41436": "Inactive RecurringGiftSchedules",
+      "b5c028c7-179f-4816-a321-de5fdd560acf": "RecurringGiftSchedule Lookup View",
+      "cafda7a0-6efd-40c7-a70d-48b401bdb76f": "RecurringGiftSchedule Associated View",
+      "ff8ca592-b6a6-4513-8138-5186f96cc148": "Active RecurringGiftSchedules"
+    }
+  },
+  {
+    "DisplayName": "Frequency (RecurringGiftSchedules)",
+    "Name": "dacrm_recurringgiftschedule_dacrm_frequency",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Monthly",
+      "128490001": "Yearly"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_frequency",
+        "OptionSetReferenceEntityName": "RecurringGiftSchedules"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_frequency",
+    "RelatedEntityName": "RecurringGiftSchedules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (RecurringGiftSchedules)",
+    "Name": "dacrm_recurringgiftschedule_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "RecurringGiftSchedules"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "RecurringGiftSchedules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (RecurringGiftSchedules)",
+    "Name": "dacrm_recurringgiftschedule_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "RecurringGiftSchedules"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "RecurringGiftSchedules",
+    "Type": "OptionSetInfo"
+  }
+]

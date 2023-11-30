@@ -1,0 +1,32 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(designationCol, {ID:CountRows(designationCol),oppid: "Opp-id", designationtype: "", designationname: "", reportcode1: "", reportcode2: "",donationcategory: "", amount:"", credittoaccount: "", rcgasnumber: ""});
+        //ClearCollect(payscheduleCol, {ID:CountRows(payscheduleCol),oppid: "Opp-id", installmenttype: "", installmentdate "", installmentfrequency"", installmentamount: "", installmentcurrency: "", startdate: "", enddate: ""});
+        
+        //ClearCollect(allowpayscheduleCol, {paymentschedulemethod: 
+        Set(requiredfieldsmissing,true);
+        ClearCollect(A,DonationTerms);
+        Set(rec,LookUp(Users,'Primary Email' = "crmadmin@hku.hk"));
+        ClearCollect(TF,{Value:true},{Value:false});
+        //ClearCollect(instalmentschedueCol, {numberofinstallment:"", instalmentamount:"", instalmentdate:""});
+        
+        /*ClearCollect(
+           colYourCollection,
+           FirstN(
+              YourGalleryName.AllItems,
+              Value(YourNumberBox.Text)
+           )
+        )*/
+        
+        
+        //Set(GUD, "d5f0a47f-75f8-4671-9500-8dd2de0e7e8e")
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

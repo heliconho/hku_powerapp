@@ -1,0 +1,1338 @@
+"'Donation details_1_transactiondetails' As screen":
+
+    Container15_9 As groupContainer.verticalAutoLayoutContainer:
+        Height: =525
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =1318
+        X: =25
+        Y: =159
+        ZIndex: =5
+
+        "'Donation Details_5' As groupContainer.verticalAutoLayoutContainer":
+            Height: =533.59
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =5
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Y: =987.15
+            ZIndex: =5
+
+            "'Donation Detail label_5' As label":
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(30, 85, 66, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =40.01
+                PaddingBottom: =5.00
+                PaddingLeft: =5.00
+                Size: =13.01
+                Text: ="Transaction Details - Payment methods ( Please leave this section blank if the transaction have not completed)"
+                Y: =0.00
+                ZIndex: =1
+
+            Container11_5 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =40.01
+                LayoutMinHeight: =80
+                LayoutMinWidth: =0
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Y: =53.36
+                ZIndex: =3
+
+                "'Payment method_1' As combobox":
+                    DisplayFields: =["Value"]
+                    FillPortions: =1
+                    Height: =40.01
+                    InputTextPlaceholder: ="Payment Method"
+                    IsSearchable: =false
+                    Items: =["Cheque","Bank Transfer","Internal Transfer","Credit Card (payment processed)","Cash(for donation box only)","Gift-in-kind (no donation receipt will be issued)"]
+                    LayoutMinWidth: =200
+                    NoSelectionText: ="Payment Method"
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectMultiple: =false
+                    Size: =13.01
+                    Y: =0.00
+                    ZIndex: =4
+
+            Cheque_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =150
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: |
+                    =If('Payment method_1'.Selected.Value="Cheque",true, false)
+                ZIndex: =4
+
+                Cheque_doc_2 As gallery.variableTemplateHeightGallery:
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_13 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_16 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload cheque image"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_13 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_13 As label:
+                        Height: =20.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="Maximum file size 10MB"
+                        Width: =246
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+                Cheque_details_2 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =80
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =53.36
+                    ZIndex: =2
+
+                    Bank_1 As combobox:
+                        DisplayFields: =["Value"]
+                        FillPortions: =1
+                        Height: =40.01
+                        InputTextPlaceholder: ="Bank"
+                        IsSearchable: =false
+                        LayoutMinWidth: =50
+                        NoSelectionText: ="Bank"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectMultiple: =false
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                    Cheque_number_1 As text:
+                        Default: =""
+                        FillPortions: =1
+                        Format: =TextFormat.Number
+                        Height: =40.01
+                        HintText: ="Cheque Number"
+                        LayoutMinWidth: =50
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =2
+
+                    Cheque_date_1 As datepicker:
+                        DefaultDate: =
+                        InputTextPlaceholder: ="Cheque Date"
+                        ZIndex: =3
+
+                    "'Bank in date' As datepicker":
+                        DefaultDate: =
+                        InputTextPlaceholder: ="Bank in date"
+                        ZIndex: =4
+
+            BankTransfer_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =150
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =If('Payment method_1'.Selected.Value="Bank Transfer", true, false)
+                ZIndex: =5
+
+                BankTransferDoc_1 As gallery.variableTemplateHeightGallery:
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_17 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_22 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload Bank Confirmation"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_17 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_17 As label:
+                        Height: =20.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="Maximum file size 10MB"
+                        Width: =246
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+            InternalTransfer_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =150
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =If('Payment method_1'.Selected.Value="Internal Transfer", true, false)
+                ZIndex: =6
+
+                InternalTransferDoc_1 As gallery.variableTemplateHeightGallery:
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =200
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_20 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_25 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload Payment Proof"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_20 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_20 As label:
+                        Height: =20.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="Maximum file size 10MB"
+                        Width: =246
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+            "'CreditCard(processed)_1' As groupContainer.verticalAutoLayoutContainer":
+                FillPortions: =0
+                Height: =150
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =If('Payment method_1'.Selected.Value="Credit Card (payment processed)",true, false)
+                ZIndex: =8
+
+                CreditCardPaymentDoc_1 As gallery.variableTemplateHeightGallery:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_21 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_26 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload Payment Proof"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_21 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_21 As label:
+                        Height: =20.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="Maximum file size 10MB"
+                        Width: =246
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+            Cash_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =150
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =If('Payment method_1'.Selected.Value="Cash(for donation box only)",true,false)
+                ZIndex: =9
+
+                DepositSlip_1 As gallery.variableTemplateHeightGallery:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_22 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_31 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload deposit slip"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_22 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_22 As label:
+                        Height: =20.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="Maximum file size 10MB"
+                        Width: =246
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+            "'Gift-in-kind_1' As groupContainer.verticalAutoLayoutContainer":
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =50
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =10
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =If('Payment method_1'.Selected.Value="Gift-in-kind (no donation receipt will be issued)",true, false)
+                ZIndex: =10
+
+                "'Gift-in-kindDoc(to be delete)_1' As gallery.variableTemplateHeightGallery":
+                    DelayItemLoading: |
+                        =false
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: |
+                        =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Visible: =false
+                    Y: =276.13
+                    ZIndex: =1
+
+                    Import2_23 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_32 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload Supplementary Information on Gifts-in-kind form"
+                        Width: =557
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_23 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_23 As label:
+                        Height: =23
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="(get a blank Supplementary Information on Gifts-in-kind form)"
+                        Width: =687
+                        X: =12
+                        Y: =70
+                        ZIndex: =4
+
+                GiftDetails_1 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =80
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =53.36
+                    ZIndex: =2
+
+                    ItemName_1 As text:
+                        Default: =""
+                        FillPortions: =1
+                        Format: =TextFormat.Number
+                        Height: =40.01
+                        HintText: ="Item Name"
+                        LayoutMinWidth: =50
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                    Subtype_1 As combobox:
+                        DisplayFields: =["Value"]
+                        FillPortions: =1
+                        Height: =40.01
+                        InputTextPlaceholder: ="Subtype"
+                        IsSearchable: =false
+                        Items: =["Equipment","Securities/bonds/shares","Real estate","Art piece","Collectibles","Book Collections","Others"]
+                        LayoutMinWidth: =50
+                        NoSelectionText: ="Subtype"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectMultiple: =false
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =2
+
+                    Disposition_1 As combobox:
+                        DisplayFields: =["Value"]
+                        FillPortions: =1
+                        Height: =40.01
+                        InputTextPlaceholder: ="Disposition"
+                        IsSearchable: =false
+                        LayoutMinWidth: =50
+                        NoSelectionText: ="Disposition"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectMultiple: =false
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =3
+
+                    FairMarketValue_1 As text:
+                        Default: =""
+                        FillPortions: =1
+                        Format: =TextFormat.Number
+                        Height: =40.01
+                        HintText: ="Fair Market Value"
+                        LayoutMinWidth: =50
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =4
+
+                    NumberOfUnits_1 As text:
+                        Default: =""
+                        FillPortions: =1
+                        Format: =TextFormat.Number
+                        Height: =40.01
+                        HintText: ="Number of units."
+                        LayoutMinWidth: =50
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =5
+
+            "'Gift-in-kindSegment_1' As groupContainer.verticalAutoLayoutContainer":
+                FillPortions: =0
+                Height: =300
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                Visible: =If('Payment method_1'.Selected.Value="Gift-in-kind (no donation receipt will be issued)",true, false)
+                ZIndex: =13
+
+                Segment_4 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =160.08
+                    ZIndex: =1
+
+                    Segment2_1 As text:
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Segment 2"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                    Segment3_1 As text:
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Segment 3"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =2
+
+                    Segment4_1 As combobox:
+                        Height: =40.01
+                        InputTextPlaceholder: ="Segment 4"
+                        Items: =ComboBoxSample
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        SearchItems: =Search(ComboBoxSample,Segment4_1.SearchText,"Value1")
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =3
+
+                Label5_1 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Text: ="If you cannot find the Cost Centre/Segment 4 required, please email donation.admin@hku.hk for assistance."
+                    ZIndex: =2
+
+                Segment_5 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =160.08
+                    ZIndex: =3
+
+                    "'Name of securities/bonds/company_1' As text":
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Name of securities/bonds/company"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                Segment_6 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =160.08
+                    ZIndex: =4
+
+                    "'Description of Gift_1' As text":
+                        Default: =""
+                        Height: =40.01
+                        HintText: ="Description on the gift"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                    "'Annual maintenance cost/insurance_1' As text":
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Annual maintenance cost/insurance"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =2
+
+                    Label4_1 As label:
+                        LayoutMinWidth: =50
+                        Text: |-
+                            ="Gift Received date : "
+                        Width: =180
+                        ZIndex: =3
+
+                    DatePicker1_1 As datepicker:
+                        ZIndex: =4
+
+                Segment_7 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40.01
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Y: =160.08
+                    ZIndex: =5
+
+                    "'Terms or restrictions o the gift or its use_1' As text":
+                        Default: =""
+                        Height: =40.01
+                        HintText: ="Terms or restrictions o the gift or its use"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =1
+
+                    "'Proposed usage_1' As text":
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Proposed usage"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =2
+
+                    "'Proposed location of the gift_1' As text":
+                        Default: =
+                        Height: =40.01
+                        HintText: ="Proposed location of the gift( if applicable)"
+                        PaddingBottom: =5.00
+                        PaddingLeft: =12.01
+                        Size: =13.01
+                        Y: =0.00
+                        ZIndex: =5
+
+                Container9_1 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =150
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =300
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =6
+
+                    Label11_1 As label:
+                        Text: |-
+                            ="Offices consulted:"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    "'The FEO has been consulted_1' As checkbox":
+                        Text: ="The FEO has been consulted"
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    Container10_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =50
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        "'Other office_1' As checkbox":
+                            FillPortions: =1
+                            Text: ="The followin office(s) has been consulted(Please specify)"
+                            Width: =Parent.Width /2
+                            ZIndex: =1
+
+                        TextInput3_1 As text:
+                            AlignInContainer: =AlignInContainer.Center
+                            Default: =""
+                            FillPortions: =1
+                            HintText: ="Others"
+                            Width: =Parent.Width /2
+                            ZIndex: =2
+
+                Note_1 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    Height: =100
+                    LayoutMinHeight: =100
+                    Text: |-
+                        ="1.The maintenance and related costs should be considered, and the FEO and related offices should be
+                        consulted before accepting such donations where appropriate.
+                        2. No donation receipt will be issued.
+                        3. For donations of equipment or furniture with unit value over HK$15,000, please also attach a completed
+                        Asset Form (U6/0080). Donations below this amount should be recorded in the Departmental Inventory
+                        System (DIS). Please refer to DFA No.9 on Inventory and Disposal of University Furniture and Equipment."
+                    ZIndex: =7
+
+            "'Donation in support of events_2' As groupContainer.horizontalAutoLayoutContainer":
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: |
+                    =true
+                ZIndex: =15
+
+                Checkbox1_6 As checkbox:
+                    FillPortions: =1
+                    Height: =50.01
+                    OnCheck: |-
+                        =UpdateContext({DonationSupporting:true}) 
+                    OnUncheck: |-
+                        =UpdateContext({DonationSupporting:false}) 
+                    PaddingBottom: =0.00
+                    PaddingLeft: =0.00
+                    Size: =13.01
+                    Text: ="""Supplementary information on Donations in Support of Events"" attached"
+                    Y: =213.44
+                    ZIndex: =1
+
+                Gallery2_10 As gallery.variableTemplateHeightGallery:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =110.00
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =5.00
+                    TemplateSize: =280.00
+                    Visible: =DonationSupporting
+                    Y: =276.13
+                    ZIndex: =2
+
+                    Import2_24 As import:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        Size: =10.00
+                        Text: ="Choose File"
+                        Width: =91
+                        X: =12
+                        Y: =44.01
+                        ZIndex: =1
+
+                    Label3_33 As label:
+                        Height: =44.01
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =13.01
+                        Text: ="Upload Donation Supporting Document *"
+                        Width: =381
+                        X: =12
+                        Y: =4.00
+                        ZIndex: =2
+
+                    Label4_24 As label:
+                        Height: =26.00
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="""No File chosen"""
+                        Width: =195
+                        X: =121
+                        Y: =44.01
+                        ZIndex: =3
+
+                    Label6_24 As label:
+                        Height: =16
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =5.00
+                        PaddingLeft: =5.00
+                        Size: =10.00
+                        Text: ="(get a blank Supplementary Information on Donation in Support of Events Form)"
+                        Width: =609
+                        X: =12
+                        Y: =73.00
+                        ZIndex: =4
+
+            "'Donation Supporting Documents_1' As gallery.variableTemplateHeightGallery":
+                DelayItemLoading: =true
+                FillPortions: =0
+                Height: =110.00
+                Items: =CustomGallerySample
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =5.00
+                TemplateSize: =280.00
+                Y: =276.13
+                ZIndex: =16
+
+                Import2_27 As import:
+                    Height: =26.00
+                    OnSelect: =Select(Parent)
+                    Size: =10.00
+                    Text: ="Choose File"
+                    Width: =91
+                    X: =12
+                    Y: =44.01
+                    ZIndex: =1
+
+                Label3_34 As label:
+                    Height: =44.01
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =13.01
+                    Text: ="Upload Donation Supporting Document *"
+                    Width: =381
+                    X: =12
+                    Y: =4.00
+                    ZIndex: =2
+
+                Label4_27 As label:
+                    Height: =26.00
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =10.00
+                    Text: ="""No File chosen"""
+                    Width: =195
+                    X: =121
+                    Y: =44.01
+                    ZIndex: =3
+
+                Label6_27 As label:
+                    Height: =20.00
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5.00
+                    PaddingLeft: =5.00
+                    Size: =10.00
+                    Text: ="Maximum file size 10MB"
+                    Width: =246
+                    X: =12
+                    Y: =73.00
+                    ZIndex: =4
+
+    Label1_13 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Group6_13 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =30
+
+        Circle1_110 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =75
+            Y: =95
+            ZIndex: =7
+
+        Label2_105 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =17
+            Y: =103
+            ZIndex: =8
+
+        Circle1_104 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =15
+            Width: =15
+            X: =195
+            Y: =93
+            ZIndex: =9
+
+        Label2_107 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =137
+            Y: =105
+            ZIndex: =10
+
+        Circle1_111 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =308
+            Y: =95
+            ZIndex: =11
+
+        Label2_106 As label:
+            Align: =Align.Center
+            Size: =10
+            Text: ="Donation Details"
+            Width: =130
+            X: =250
+            Y: =103
+            ZIndex: =12
+
+        Icon3_97 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =331
+            Y: =99
+            ZIndex: =13
+
+        Circle1_105 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =492
+            Y: =93
+            ZIndex: =14
+
+        Label2_108 As label:
+            Align: =Align.Center
+            Height: =33
+            Size: =10
+            Text: ="Acknowledgement & Donation Recipt Arrangement"
+            Width: =257
+            X: =371
+            Y: =108
+            ZIndex: =15
+
+        Circle1_106 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =676
+            Y: =93
+            ZIndex: =16
+
+        Label2_109 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =618
+            Y: =110
+            ZIndex: =17
+
+        Circle1_107 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =857
+            Y: =93
+            ZIndex: =18
+
+        Label2_110 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="HKU Foundation Membership"
+            Width: =130
+            X: =799
+            Y: =110
+            ZIndex: =19
+
+        Circle1_108 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1063
+            Y: =93
+            ZIndex: =20
+
+        Label2_111 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =1005
+            Y: =110
+            ZIndex: =21
+
+        Circle1_109 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1243
+            Y: =94
+            ZIndex: =22
+
+        Label2_112 As label:
+            Align: =Align.Center
+            Height: =31
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1185
+            Y: =112
+            ZIndex: =23
+
+        Icon3_100 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =215
+            Y: =100
+            ZIndex: =24
+
+        Icon3_96 As icon.HorizontalLine:
+            Color: =RGBA(141, 198, 63, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =80
+            X: =100
+            Y: =99
+            ZIndex: =25
+
+        Icon3_98 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =518
+            Y: =99
+            ZIndex: =26
+
+        Icon3_94 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =701
+            Y: =98
+            ZIndex: =27
+
+        Icon3_95 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =891
+            Y: =98
+            ZIndex: =28
+
+        Icon3_99 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =140
+            X: =1094
+            Y: =99
+            ZIndex: =29
+
+    SaveButton_20 As button:
+        Fill: =RGBA(250, 209, 85, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |+
+            =/*If(
+                existingdonor,
+                
+                If (IsBlank(ComboBox3.SelectedItems),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingo: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingo: false})
+                ),
+            
+                If( IsBlank(TextInput3_46.Text) 
+                    || IsBlank(TextInput3_45.Text)
+                    || IsBlank(TextInput3_52.Text)
+                    || IsBlank(TextInput3_54.Text),
+            
+                    Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingn: true}),
+            
+                    //patch function;
+                    UpdateContext({requiredfieldsmissingn: false})
+                )
+            );*/
+            
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1234
+        Y: =713
+        ZIndex: =33
+
+    Container1_50 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =35
+
+        Button3_43 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(247, 205, 77, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_1_Instalment Schedule' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Instalment Schedule"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon1_20 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(245, 209, 100, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+

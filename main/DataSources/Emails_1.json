@@ -1,0 +1,308 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_emails",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_email",
+    "MaxGetRowsCount": 500,
+    "Name": "Emails_1",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_Constituent": "Constituent Name",
+      "dacrm_description": "Description (if not constituent)",
+      "dacrm_donotemail": "Do Not Email",
+      "dacrm_donotemailreason": "Do Not Email Reason ",
+      "dacrm_email_AsyncOperations": "System Jobs",
+      "dacrm_email_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_email_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_email_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_email_ProcessSession": "Process Sessions",
+      "dacrm_email_SyncErrors": "Sync Errors",
+      "dacrm_emailaddress": "Email Address",
+      "dacrm_emailid": "Email ID",
+      "dacrm_emailtype": "Email Type",
+      "dacrm_enddate": "End Date",
+      "dacrm_informationsource": "Information Source (to be deleted)",
+      "dacrm_informationsourcepicklist": "Information Source",
+      "dacrm_isconfidential": "Is Confidential",
+      "dacrm_isfundraisingpreferred": "Is Fundraising Preferred",
+      "dacrm_ismentorshippreferred": "Is Mentorship Preferred",
+      "dacrm_isprimary": "Is Primary",
+      "dacrm_name": "Email Name",
+      "dacrm_namename": "Contact Name",
+      "dacrm_primarycontactname": "Primary Contact Name ",
+      "dacrm_startdate": "Start Date",
+      "dacrm_tobeverified": "To be verified",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Emails_1",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Emails_1 (Views)",
+    "Name": "_dacrm_email_views",
+    "RelatedEntityName": "Emails_1",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "071327a1-e51a-ee11-8f6d-000d3a094e6b": "Email Import View",
+      "33e9c97a-b159-42b4-bf17-7f3f5cbf2898": "Email Lookup View",
+      "6e42dcb3-de29-ee11-9965-000d3a094fee": "Pending Review Email View",
+      "8098142c-458d-4ffd-9a81-553642714a20": "Inactive Email",
+      "845fb85f-ac74-415f-84aa-a448792d610e": "Email Advanced Find View",
+      "99bccb08-767e-4e10-aac1-458ab26df938": "Active Email",
+      "d0b11654-bdc9-472b-8b95-84510c4df6ee": "Email Associated View"
+    }
+  },
+  {
+    "DisplayName": "Do Not Email (Emails_1)",
+    "Name": "dacrm_email_dacrm_donotemail",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donotemail",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_donotemail",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Do Not Email Reason  (Emails_1)",
+    "Name": "dacrm_email_dacrm_donotemailreason",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Uninterested",
+      "128490001": "Irrelevant",
+      "128490002": "Spam",
+      "128490003": "Deceased",
+      "128490004": "Wrong recipient",
+      "128490005": "Privacy",
+      "128490006": "Security"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_donotemailreason",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_donotemailreason",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Email Type (Emails_1)",
+    "Name": "dacrm_email_dacrm_emailtype",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Business",
+      "128490001": "E-receipt",
+      "128490002": "HKU Graduate email",
+      "128490003": "Personal",
+      "128490004": "Invalid / reference email",
+      "128490005": "Contact person",
+      "128490006": "Secretary / Assistant"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_emailtype",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_emailtype",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Information Source (Emails_1)",
+    "Name": "dacrm_email_dacrm_informationsourcepicklist",
+    "OptionSetInfoNameMapping": {
+      "128490000": "SIS",
+      "128490001": "HCM",
+      "128490002": "Online Contact Update Form",
+      "128490003": "FANS",
+      "128490004": "Blackbaud",
+      "128490005": "Event Registration Form",
+      "128490006": "Online Giving Form",
+      "128490007": "Online Donation Processing Form",
+      "128490008": "CRM"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_informationsourcepicklist",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_informationsourcepicklist",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Confidential (Emails_1)",
+    "Name": "dacrm_email_dacrm_isconfidential",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isconfidential",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isconfidential",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Fundraising Preferred (Emails_1)",
+    "Name": "dacrm_email_dacrm_isfundraisingpreferred",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isfundraisingpreferred",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isfundraisingpreferred",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Mentorship Preferred (Emails_1)",
+    "Name": "dacrm_email_dacrm_ismentorshippreferred",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_ismentorshippreferred",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_ismentorshippreferred",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Primary (Emails_1)",
+    "Name": "dacrm_email_dacrm_isprimary",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_isprimary",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_isprimary",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "To be verified (Emails_1)",
+    "Name": "dacrm_email_dacrm_tobeverified",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_tobeverified",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_tobeverified",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Emails_1)",
+    "Name": "dacrm_email_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Emails_1)",
+    "Name": "dacrm_email_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Emails_1"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Emails_1",
+    "Type": "OptionSetInfo"
+  }
+]
