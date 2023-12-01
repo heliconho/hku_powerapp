@@ -1679,6 +1679,7 @@
 
         Label2_5 As label:
             Align: =Align.Center
+            OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
             Size: =10
             Text: ="Staff Information"
             Width: =130

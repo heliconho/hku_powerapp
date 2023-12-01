@@ -14,239 +14,6 @@
         Y: =40
         ZIndex: =6
 
-    Group6_12 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =30
-
-        Circle1_102 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(141, 198, 63, 1)
-            Height: =15
-            Width: =15
-            X: =75
-            Y: =95
-            ZIndex: =7
-
-        Label2_97 As label:
-            Align: =Align.Center
-            Size: =10
-            Text: ="Staff Information"
-            Width: =130
-            X: =17
-            Y: =103
-            ZIndex: =8
-
-        Circle1_96 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(141, 198, 63, 1)
-            Height: =15
-            Width: =15
-            X: =195
-            Y: =93
-            ZIndex: =9
-
-        Label2_99 As label:
-            Align: =Align.Center
-            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
-            Size: =10
-            Text: ="Donor's Information"
-            Width: =130
-            X: =137
-            Y: =105
-            ZIndex: =10
-
-        Circle1_103 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(136, 160, 209, 1)
-            Height: =15
-            Width: =15
-            X: =308
-            Y: =95
-            ZIndex: =11
-
-        Label2_98 As label:
-            Align: =Align.Center
-            OnSelect: =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
-            Size: =10
-            Text: ="Donation Details"
-            Width: =130
-            X: =250
-            Y: =103
-            ZIndex: =12
-
-        Icon3_90 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =150
-            X: =331
-            Y: =99
-            ZIndex: =13
-
-        Circle1_97 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =15
-            X: =492
-            Y: =93
-            ZIndex: =14
-
-        Label2_100 As label:
-            Align: =Align.Center
-            Height: =33
-            OnSelect: |
-                =Navigate(acknowledgement, ScreenTransition.Cover  )
-            Size: =10
-            Text: ="Acknowledgement & Donation Recipt Arrangement"
-            Width: =257
-            X: =371
-            Y: =108
-            ZIndex: =15
-
-        Circle1_98 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =15
-            X: =676
-            Y: =93
-            ZIndex: =16
-
-        Label2_101 As label:
-            Align: =Align.Center
-            Height: =31
-            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
-            Size: =10
-            Text: ="Thank You Letter"
-            Width: =130
-            X: =618
-            Y: =110
-            ZIndex: =17
-
-        Circle1_99 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =15
-            X: =857
-            Y: =93
-            ZIndex: =18
-
-        Label2_102 As label:
-            Align: =Align.Center
-            Height: =31
-            OnSelect: =Navigate( HKUFoundationMembership, ScreenTransition.Cover  )
-            Size: =10
-            Text: ="HKU Foundation Membership"
-            Width: =130
-            X: =799
-            Y: =110
-            ZIndex: =19
-
-        Circle1_100 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =15
-            X: =1063
-            Y: =93
-            ZIndex: =20
-
-        Label2_103 As label:
-            Align: =Align.Center
-            Height: =31
-            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
-            Size: =10
-            Text: ="Due Diligence & Conflict of Interest"
-            Width: =130
-            X: =1005
-            Y: =110
-            ZIndex: =21
-
-        Circle1_101 As circle:
-            AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =15
-            Width: =14
-            X: =1243
-            Y: =94
-            ZIndex: =22
-
-        Label2_104 As label:
-            Align: =Align.Center
-            Height: =31
-            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
-            Size: =10
-            Text: ="Endorsement of Acceptance"
-            Width: =130
-            X: =1185
-            Y: =112
-            ZIndex: =23
-
-        Icon3_93 As icon.HorizontalLine:
-            Color: =RGBA(141, 198, 63, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =80
-            X: =215
-            Y: =100
-            ZIndex: =24
-
-        Icon3_89 As icon.HorizontalLine:
-            Color: =RGBA(141, 198, 63, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =80
-            X: =100
-            Y: =99
-            ZIndex: =25
-
-        Icon3_91 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =150
-            X: =518
-            Y: =99
-            ZIndex: =26
-
-        Icon3_87 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =701
-            Y: =98
-            ZIndex: =27
-
-        Icon3_88 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =891
-            Y: =98
-            ZIndex: =28
-
-        Icon3_92 As icon.HorizontalLine:
-            Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
-            Height: =5
-            Icon: =Icon.HorizontalLine
-            Width: =140
-            X: =1094
-            Y: =99
-            ZIndex: =29
-
     SaveButton_18 As button:
         Fill: =RGBA(250, 209, 85, 1)
         FontWeight: =FontWeight.Bold
@@ -559,4 +326,215 @@
         X: =1
         Y: =206
         ZIndex: =38
+
+    Group6_8 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =59
+
+        Circle1_21 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =118
+            Y: =95
+            ZIndex: =39
+
+        Label2_21 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =60
+            Y: =103
+            ZIndex: =40
+
+        Circle1_22 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =303
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =41
+
+        Label2_22 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =245
+            Y: =106
+            ZIndex: =42
+
+        Circle1_23 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =488
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =43
+
+        Label2_23 As label:
+            Align: =Align.Center
+            OnSelect: |
+                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Donoation Details"
+            Width: =130
+            X: =430
+            Y: =101
+            ZIndex: =44
+
+        Icon3_20 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =513
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =45
+
+        Circle1_64 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =673
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =46
+
+        Label2_24 As label:
+            Align: =Align.Center
+            Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Acknowledgement & Donation Receipt Arrangement"
+            Width: =239
+            X: =562
+            Y: =113
+            ZIndex: =47
+
+        Circle1_65 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =858
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =48
+
+        Label2_65 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =804
+            Y: =110
+            ZIndex: =49
+
+        Circle1_66 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1043
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =50
+
+        Label2_66 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =985
+            Y: =110
+            ZIndex: =51
+
+        Circle1_67 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1228
+            Y: |
+                =Circle1_21.Y
+            ZIndex: =52
+
+        Label2_67 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1178
+            Y: =116
+            ZIndex: =53
+
+        Icon3_21 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =328
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =54
+
+        Icon3_22 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =143
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =55
+
+        Icon3_58 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =698
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =56
+
+        Icon3_59 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =883
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =57
+
+        Icon3_60 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =1068
+            Y: =Circle1_21.Y +Self.Height
+            ZIndex: =58
 
