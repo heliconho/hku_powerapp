@@ -429,7 +429,7 @@ StaffInformation As screen:
 
         Label2_1 As label:
             Align: =Align.Center
-            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
+            OnSelect: =If(LookUp(PageStatus,Name = "Donor's information").Status ="Complete",Navigate( 'Donor''s information' , ScreenTransition.Cover));
             Size: =10
             Text: ="Donor's Information"
             Width: =130
@@ -449,8 +449,7 @@ StaffInformation As screen:
 
         Label2_2 As label:
             Align: =Align.Center
-            OnSelect: |
-                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "DonationDetails").Status ="Complete",Navigate( 'Donation details_1' , ScreenTransition.Cover  ));
             Size: =10
             Text: ="Donoation Details"
             Width: =130
@@ -481,7 +480,7 @@ StaffInformation As screen:
         Label2_3 As label:
             Align: =Align.Center
             Height: =33
-            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "Acknowledgement").Status ="Complete",Navigate(acknowledgement, ScreenTransition.Cover  ));
             Size: =10
             Text: ="Acknowledgement & Donation Receipt Arrangement"
             Width: =239
@@ -502,7 +501,7 @@ StaffInformation As screen:
         Label2_4 As label:
             Align: =Align.Center
             Height: =31
-            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "ThankYouLetter").Status ="Complete",Navigate(ThankYouLetter, ScreenTransition.Cover  ));
             Size: =10
             Text: ="Thank You Letter"
             Width: =130
@@ -523,7 +522,7 @@ StaffInformation As screen:
         Label2_8 As label:
             Align: =Align.Center
             Height: =31
-            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "DueDiligence").Status ="Complete",Navigate( DueDiligence, ScreenTransition.Cover  ));
             Size: =10
             Text: ="Due Diligence & Conflict of Interest"
             Width: =130
@@ -544,7 +543,7 @@ StaffInformation As screen:
         Label2_9 As label:
             Align: =Align.Center
             Height: =31
-            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "Endorsement").Status ="Complete",Navigate( Endorsement , ScreenTransition.Cover  ));
             Size: =10
             Text: ="Endorsement of Acceptance"
             Width: =130
