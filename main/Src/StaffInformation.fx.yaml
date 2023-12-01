@@ -555,7 +555,7 @@ StaffInformation As screen:
 
         Icon3_3 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "Donor's information").Status ="Complete",RGBA(187, 221, 140, 1),RGBA(149, 149, 149, 1))
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
@@ -565,7 +565,7 @@ StaffInformation As screen:
 
         Icon3_4 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "StaffInformation").Status ="Complete",RGBA(187, 221, 140, 1),RGBA(149, 149, 149, 1))
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
