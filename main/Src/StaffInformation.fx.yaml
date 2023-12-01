@@ -363,7 +363,10 @@ StaffInformation As screen:
                     UpdateContext({requiredfieldsmissing: false});
                     Navigate( 'Donor''s information' , ScreenTransition.Cover);
                 );
-                Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '))
+                Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '));
+                Update( PageStatus,
+                First( Filter( PageStatus, Name="StaffInformation" ) ),
+                {Name:"StaffInformation", Status: "Complete"} )
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8
@@ -395,7 +398,8 @@ StaffInformation As screen:
 
         Circle1 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(136, 160, 209, 1)
+            Fill: |
+                =If(LookUp(PageStatus,Name = "StaffInformation").Status ="Complete",RGBA(187, 221, 140, 1),RGBA(136, 160, 209, 1))
             Height: =15
             Width: =15
             X: =118

@@ -9,6 +9,20 @@ App As appinfo:
         ClearCollect(A,DonationTerms);
         Set(rec,LookUp(Users,'Primary Email' = "crmadmin@hku.hk"));
         ClearCollect(TF,{Value:true},{Value:false});
+        
+        //Pagestatus
+        
+        ClearCollect(PageStatus,
+        {
+            Name:"StaffInformation", Status:"Draft"},{
+            Name:"Donor's information", Status:"Draft"},{
+            Name:"DonationDetails", Status:"Draft"},{
+            Name:"Acknowledgement", Status:"Draft"},{
+            Name:"ThankYouLetter", Status:"Draft"},{
+            Name:"DueDiligence", Status:"Draft"},{
+            Name:"Endorsement", Status:"Draft"}
+        );
+        
         //ClearCollect(instalmentschedueCol, {numberofinstallment:"", instalmentamount:"", instalmentdate:""});
         
         /*ClearCollect(
