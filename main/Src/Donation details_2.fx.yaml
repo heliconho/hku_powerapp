@@ -300,14 +300,14 @@
                     ZIndex: =18
 
                 Label23 As label:
-                    Text: =LookUp(DesignationTypeToNameMasters,'Designation Number (Cost Center/Account Code)' = ComboBox1.Selected.dacrm_lookupid).'Designation Name'
+                    Text: =LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Designation Name'
                     Width: =310
                     X: =184
                     Y: =134
                     ZIndex: =19
 
                 Label23_2 As label:
-                    Text: =LookUp(DesignationTypeToNameMasters,'Designation Number (Cost Center/Account Code)' = ComboBox1.Selected.dacrm_lookupid).'Designation Type'.'Designation Type'
+                    Text: =LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Designation Type'.'Designation Type'
                     Width: =320
                     X: =187
                     Y: =86

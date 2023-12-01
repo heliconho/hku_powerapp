@@ -28,6 +28,7 @@
       "dacrm_filelink": "File Link",
       "dacrm_filename": "Filename",
       "dacrm_name": "Attachment Name",
+      "dacrm_remarks": "Remarks",
       "dacrm_submissiondate": "Submission Date",
       "dacrm_submittername": "Submitter Name",
       "importsequencenumber": "Import Sequence Number",

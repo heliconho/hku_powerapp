@@ -2438,7 +2438,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery2_14",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4760,7 +4760,7 @@
       "MetaDataIDKey": "",
       "Name": "Label1_24",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8519,7 +8519,7 @@
       "MetaDataIDKey": "",
       "Name": "Radio4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

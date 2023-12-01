@@ -33,14 +33,13 @@
       "dacrm_designationtypetonamemasterid": "DesignationTypeToNameMaster",
       "dacrm_donationterm_designationtypetonamem": "DonationTerms (dacrm_donationterm_designationtypetonamem)",
       "dacrm_isacitve": "Is Acitve",
-      "dacrm_lookupid": "Designation Number (Cost Center/Account Code)",
+      "dacrm_lookupid": "Designation Number",
       "dacrm_name": "Designation Name",
-      "dacrm_onlinegivingformcategory": "Online Giving Form Group Name ",
-      "dacrm_onlinegivinggormgroupnamema": "OnlineGivingFormGroupNameMaster",
+      "dacrm_onlinegivinggormgroupnamema": "OnlineGivingForm Group Name",
       "dacrm_reportcode1": "Report Code 1",
       "dacrm_reportcode2": "Report Code 2",
       "dacrm_showd365designationdisplayname": "Show D365 Designation Display Name",
-      "dacrm_showd365designationdisplaynameother": "Show D365 Designation Display Name (Other)",
+      "dacrm_showd365designationdisplaynameother": "Show DesignationDisplayName under \"Other\" Dropdown",
       "dacrm_websitedisplayname": "Online Giving Form Designation Display Name",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
@@ -124,7 +123,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Show D365 Designation Display Name (Other) (DesignationTypeToNameMasters)",
+    "DisplayName": "Show DesignationDisplayName under \"Other\" Dropdown (DesignationTypeToNameMasters)",
     "Name": "dacrm_designationtypetonamemaster_dacrm_showd365designationdisplaynameother",
     "OptionSetInfoNameMapping": {
       "0": "No",
