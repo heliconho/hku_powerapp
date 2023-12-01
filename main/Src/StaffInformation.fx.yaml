@@ -345,7 +345,7 @@ StaffInformation As screen:
             FontWeight: =FontWeight.Bold
             Height: =46
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            OnSelect: |
+            OnSelect: |+
                 =If(
                     IsBlank('Contact person'.Text) 
                     || IsBlank(Email.Text)
@@ -353,7 +353,9 @@ StaffInformation As screen:
                     || IsBlank(TextInput8_1.Text)
                     || IsBlank(TextInput4.Text),
                     
+                     Update( PageStatus,First( Filter( PageStatus, Name="StaffInformation" ) ),{Name:"StaffInformation", Status: "Draft"} );
                     Notify("Please fill in all mandatory fields.", NotificationType.Error);
+                   
                     UpdateContext({requiredfieldsmissing: true}),
                    
                     //patch function; Defaults(DonationTerms),
@@ -362,11 +364,10 @@ StaffInformation As screen:
                     //Set ID? filter PIC + createon(top 1; dec)
                     UpdateContext({requiredfieldsmissing: false});
                     Navigate( 'Donor''s information' , ScreenTransition.Cover);
+                    Update( PageStatus,First( Filter( PageStatus, Name="StaffInformation" ) ),{Name:"StaffInformation", Status: "Complete"} );
                 );
-                Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '));
-                Update( PageStatus,
-                First( Filter( PageStatus, Name="StaffInformation" ) ),
-                {Name:"StaffInformation", Status: "Complete"} )
+                Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '))
+                
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8
@@ -408,7 +409,7 @@ StaffInformation As screen:
 
         Label2 As label:
             Align: =Align.Center
-            OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
+            OnSelect: =If(LookUp(PageStatus,Name = "StaffInformation").Status ="Complete",Navigate( StaffInformation , ScreenTransition.Cover  ))
             Size: =10
             Text: ="Staff Information"
             Width: =130
