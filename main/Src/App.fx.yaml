@@ -15,12 +15,12 @@ App As appinfo:
         ClearCollect(PageStatus,
         {
             Name:"StaffInformation", Status:"Draft"},{
-            Name:"Donor's information", Status:"Draft"},{
-            Name:"DonationDetails", Status:"Draft"},{
-            Name:"Acknowledgement", Status:"Draft"},{
-            Name:"ThankYouLetter", Status:"Draft"},{
-            Name:"DueDiligence", Status:"Draft"},{
-            Name:"Endorsement", Status:"Draft"}
+            Name:"Donor's information", Status:"NotStart"},{
+            Name:"DonationDetails", Status:"NotStart"},{
+            Name:"Acknowledgement", Status:"NotStart"},{
+            Name:"ThankYouLetter", Status:"NotStart"},{
+            Name:"DueDiligence", Status:"NotStart"},{
+            Name:"Endorsement", Status:"NotStart"}
         );
         
         //ClearCollect(instalmentschedueCol, {numberofinstallment:"", instalmentamount:"", instalmentdate:""});

@@ -1,5 +1,7 @@
 StaffInformation As screen:
     Fill: =
+    OnVisible: |-
+        = Update( PageStatus,First( Filter( PageStatus, Name="StaffInformation" ) ),{Name:"StaffInformation", Status: "Draft"} )
 
     Container15 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
@@ -400,7 +402,7 @@ StaffInformation As screen:
         Circle1 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: |
-                =If(LookUp(PageStatus,Name = "StaffInformation").Status ="Complete",RGBA(187, 221, 140, 1),RGBA(136, 160, 209, 1))
+                =If(LookUp(PageStatus,Name = "StaffInformation").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "StaffInformation").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "StaffInformation").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =118
@@ -419,7 +421,7 @@ StaffInformation As screen:
 
         Circle1_1 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "Donor's information").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "Donor's information").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "Donor's information").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =303
@@ -439,7 +441,7 @@ StaffInformation As screen:
 
         Circle1_2 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "DonationDetails").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "DonationDetails").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "DonationDetails").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =488
@@ -469,7 +471,7 @@ StaffInformation As screen:
 
         Circle1_3 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "Acknowledgement").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "Acknowledgement").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "Acknowledgement").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =673
@@ -490,7 +492,7 @@ StaffInformation As screen:
 
         Circle1_4 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "ThankYouLetter").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "ThankYouLetter").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "ThankYouLetter").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =858
@@ -511,7 +513,7 @@ StaffInformation As screen:
 
         Circle1_7 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "DueDiligence").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "DueDiligence").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "DueDiligence").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =15
             X: =1043
@@ -532,7 +534,7 @@ StaffInformation As screen:
 
         Circle1_8 As circle:
             AccessibleLabel: ="Steo 1"
-            Fill: =RGBA(149, 149, 149, 1)
+            Fill: =If(LookUp(PageStatus,Name = "Endorsement").Status ="Complete",RGBA(187, 221, 140, 1),LookUp(PageStatus,Name = "Endorsement").Status ="Draft",RGBA(136, 160, 209, 1),LookUp(PageStatus,Name = "Endorsement").Status ="NotStart",RGBA(149, 149, 149, 1))
             Height: =15
             Width: =14
             X: =1228
