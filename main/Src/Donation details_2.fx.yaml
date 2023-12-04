@@ -36,7 +36,8 @@
                             'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
                             'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
                             'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
-                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false)
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14.Text
                             //'Donation Type':
                                 //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
                                 //'Donation Type (DonationTerms)'.'Deferred gift'
@@ -56,7 +57,9 @@
                     Notify("Please pick the donation name.", NotificationType.Error);
                     UpdateContext({requiredfieldsmissingDDName: true}),
             
-                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today()});
+                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14.Text});
                     //'Donation Type':If(Dropdown12.Selected.Value=0,Text(Dropdown3_3.Selected.Value), Dropdown12.Selected.Value)
                     //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
                     //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)

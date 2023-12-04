@@ -42,6 +42,7 @@
       "dacrm_donationchinese": "Donation In Chinese",
       "dacrm_donationform": "Donation Form",
       "dacrm_donationname": "Donation Name ",
+      "dacrm_donationpurpose": "Donation Purpose",
       "dacrm_donationsource": "Donation Source",
       "dacrm_donationstatus": "Donation Status",
       "dacrm_donationstructureid": "Donation Structure ID",
@@ -67,6 +68,9 @@
       "dacrm_finalprocessapprover": "Final Process Approver",
       "dacrm_foreigncurrency": "Foreign Currency",
       "dacrm_foreigndonation": "Foreign Donation",
+      "dacrm_formpage": "Form Page",
+      "dacrm_formprimarycreatedby": "Form Primary Created By",
+      "dacrm_formstatus": "Form Status",
       "dacrm_funderprojectnumber": "Funder's Project Number (dacrm_funderprojectnumber)",
       "dacrm_fundersprojectnumber": "Funder's Project Number (dacrm_fundersprojectnumber)",
       "dacrm_giftinkinddescription": "Gift In Kind Description",
@@ -90,8 +94,10 @@
       "dacrm_matchingfactor": "Matching Factor",
       "dacrm_matchingstartdate": "Matching Start Date",
       "dacrm_name": "Opportunity ID ",
+      "dacrm_needacknowledgeletter": "Need Acknowledge letter",
       "dacrm_needeapproval": "Need E-Approval",
       "dacrm_needthankyouletter": "Need Thank You Letter",
+      "dacrm_needthankyouletter_library": "Need Thank you letter_Library",
       "dacrm_numberofgiftinkinditemsaccepted": "Number of Gift In Kind Items Accepted",
       "dacrm_numberofgiftinkinditemsrejected": "Number of Gift In Kind Items Rejected",
       "dacrm_onetimepayment": "One Time Payment",
@@ -116,7 +122,6 @@
       "dacrm_process3approvaldate": "Process 3 Approval Date",
       "dacrm_process3approver": "Process 3 Approver",
       "dacrm_process3daaoreview": "Process 3 Daao Review",
-      "dacrm_ProcessingFormContactPerson_dacrm_d": "ProcessingFormContactPeople",
       "dacrm_processingforminputstatus": "Processing Form Input Status ",
       "dacrm_processingfromsubmitdate": "Processing Form Submit Date",
       "dacrm_receivedate": "Receive Date",
@@ -585,6 +590,53 @@
     "Type": "OptionSetInfo"
   },
   {
+    "DisplayName": "Form Page (DonationTerms)",
+    "Name": "dacrm_donationterm_dacrm_formpage",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Staff Information",
+      "128490001": "Donor's Information ",
+      "128490002": "Donation Details",
+      "128490003": "Acknowledgement & Donation Recipt Arrangement",
+      "128490004": "Thank You Letter",
+      "128490005": "HKU Foundation Membership",
+      "128490006": "Due Diligence & Conflict of Interest",
+      "128490007": "Endorsement of Acceptance"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_formpage",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_formpage",
+    "RelatedEntityName": "DonationTerms",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Form Status (DonationTerms)",
+    "Name": "dacrm_donationterm_dacrm_formstatus",
+    "OptionSetInfoNameMapping": {
+      "128490000": "Draft",
+      "128490001": "Review",
+      "128490002": "Complete"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_formstatus",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_formstatus",
+    "RelatedEntityName": "DonationTerms",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "Instalments Payment (DonationTerms)",
     "Name": "dacrm_donationterm_dacrm_instalmentspayment",
     "OptionSetInfoNameMapping": {
@@ -786,6 +838,26 @@
     "Type": "OptionSetInfo"
   },
   {
+    "DisplayName": "Need Acknowledge letter (DonationTerms)",
+    "Name": "dacrm_donationterm_dacrm_needacknowledgeletter",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_needacknowledgeletter",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_needacknowledgeletter",
+    "RelatedEntityName": "DonationTerms",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "Need E-Approval (DonationTerms)",
     "Name": "dacrm_donationterm_dacrm_needeapproval",
     "OptionSetInfoNameMapping": {
@@ -822,6 +894,26 @@
     },
     "OptionSetTypeKey": "BooleanType",
     "RelatedColumnInvariantName": "dacrm_needthankyouletter",
+    "RelatedEntityName": "DonationTerms",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Need Thank you letter_Library (DonationTerms)",
+    "Name": "dacrm_donationterm_dacrm_needthankyouletter_library",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_needthankyouletter_library",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "dacrm_needthankyouletter_library",
     "RelatedEntityName": "DonationTerms",
     "Type": "OptionSetInfo"
   },
