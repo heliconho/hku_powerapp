@@ -230,14 +230,14 @@ DueDiligence As screen:
             Y: =7
             ZIndex: =1
 
-        Icon1_15 As icon.BackArrow:
+        Icon6_18 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            Icon: =Icon.BackArrow
-            Width: =39
-            X: =159
-            Y: =12
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =147
+            Y: =14
             ZIndex: =2
 
     Group6_6 As group:

@@ -209,14 +209,14 @@ HKUFoundationMembership As screen:
             Y: =7
             ZIndex: =1
 
-        Icon1_14 As icon.BackArrow:
+        Icon6_11 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            Icon: =Icon.BackArrow
-            Width: =39
-            X: =159
-            Y: =12
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =151
+            Y: =10
             ZIndex: =2
 
     Container1_39 As groupContainer.manualLayoutContainer:
