@@ -72,7 +72,7 @@ acknowledgement As screen:
                         Size: =13.01
                         Text: |-
                             ="Receipt to be sent to the contact person of the beneficiary department who will forward it to the donor.
-                            (If a hard copy receipt is required, please also kick this box. The contact person should print and send the receipt to the donor.)"
+                            (If a hard copy receipt is required, please also click this box. The contact person should print and send the receipt to the donor.)"
                         Width: =1104
                         Y: =27
                         ZIndex: =2
