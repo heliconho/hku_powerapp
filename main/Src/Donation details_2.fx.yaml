@@ -283,7 +283,7 @@
                     Text: ="Confirm"
                     Width: =122
                     X: =385
-                    Y: =490
+                    Y: =500
                     ZIndex: =17
 
                 ComboBox1 As combobox:
@@ -337,7 +337,7 @@
                         ="Donation In Chinese: "
                     Width: =108
                     X: =8
-                    Y: =388
+                    Y: =418
                     ZIndex: =24
 
                 TextInput2_15 As text:
@@ -345,7 +345,7 @@
                     Height: =71
                     Reset: =resettext
                     X: =184
-                    Y: =396
+                    Y: =416
                     ZIndex: =25
 
                 Label11 As label:
@@ -415,7 +415,7 @@
                              Label23_2.Text ="Scholarship (OC001)" ||  Label23_2.Text ="Prize (OC002)" ||  Label23_2.Text ="Bursary (OC003)","Donation in support of "& Label23.Text,
                              Label23_2.Text = "External Scheme", "Donation in relation to NON-HKU EXTERNAL award/prize/fellowship/programme: "& Label23.Text,
                         
-                             IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'&" in support of " &Label23.Text,
+                             IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2') And !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'&" in support of " &Label23.Text,
                              !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'&" in support of " &Label23.Text,
                              "Donation to the "& Label23.Text
                         
