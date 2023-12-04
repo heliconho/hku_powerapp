@@ -1701,7 +1701,7 @@
       "MetaDataIDKey": "",
       "Name": "Button3_43",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10853,7 +10853,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Icon1_20": {
+    "Icon1_19": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -10903,9 +10903,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon1_20",
+      "Name": "Icon1_19",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
