@@ -343,7 +343,7 @@ StaffInformation As screen:
         Button3_1 As button:
             Align: =Align.Left
             BorderThickness: =3
-            Fill: =RGBA(247, 205, 77, 1)
+            Fill: =RGBA(30, 85, 66, 1)
             FontWeight: =FontWeight.Bold
             Height: =46
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
@@ -604,7 +604,7 @@ StaffInformation As screen:
             ZIndex: =33
 
     SaveButton As button:
-        Fill: =RGBA(250, 209, 85, 1)
+        Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
         Height: =46
         HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)

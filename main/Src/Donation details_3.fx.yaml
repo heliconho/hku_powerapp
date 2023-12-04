@@ -959,8 +959,8 @@
             Height: =40
             Icon: =Icon.NextArrow
             Width: =33
-            X: =161
-            Y: =15
+            X: =156
+            Y: =20
             ZIndex: =2
 
     Container1_51 As groupContainer.manualLayoutContainer:
@@ -993,15 +993,14 @@
             Y: =7
             ZIndex: =1
 
-        Icon1_21 As icon.BackArrow:
+        Icon6_6 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            Icon: =Icon.BackArrow
-            Width: =39
-            X: =159
-            Y: =12
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =163
+            Y: =10
             ZIndex: =2
 
     Group6_12 As group:

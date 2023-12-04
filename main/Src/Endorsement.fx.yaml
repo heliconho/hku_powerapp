@@ -245,10 +245,10 @@ Endorsement As screen:
     Container1_43 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
-        Height: =64
-        Width: =208
+        Height: =69
+        Width: =216
         X: =7
-        Y: =704
+        Y: =699
         ZIndex: =34
 
         Button3_36 As button:
@@ -268,19 +268,19 @@ Endorsement As screen:
                 ="Back: 
                 Due Dilligence & 
                 Conflict of Interest"
-            Width: =184
+            Width: =169
             X: =24
-            Y: =1
+            Y: =6
             ZIndex: =1
 
-        Icon1_16 As icon.BackArrow:
+        Icon6_21 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            Icon: =Icon.BackArrow
-            Width: =39
-            X: =159
-            Y: =12
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =150
+            Y: =9
             ZIndex: =2
 
     Group6_7 As group:

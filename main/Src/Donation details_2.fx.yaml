@@ -36,7 +36,8 @@
                             'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
                             'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
                             'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
-                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false)
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14.Text
                             //'Donation Type':
                                 //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
                                 //'Donation Type (DonationTerms)'.'Deferred gift'
@@ -56,7 +57,9 @@
                     Notify("Please pick the donation name.", NotificationType.Error);
                     UpdateContext({requiredfieldsmissingDDName: true}),
             
-                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today()});
+                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14.Text});
                     //'Donation Type':If(Dropdown12.Selected.Value=0,Text(Dropdown3_3.Selected.Value), Dropdown12.Selected.Value)
                     //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
                     //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
@@ -144,14 +147,14 @@
             Y: =7
             ZIndex: =1
 
-        Icon1_11 As icon.BackArrow:
+        Icon6_5 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            Icon: =Icon.BackArrow
-            Width: =39
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
             X: =159
-            Y: =12
+            Y: =10
             ZIndex: =2
 
     "'Staff info_label_6' As label":
@@ -283,10 +286,11 @@
                     Text: ="Confirm"
                     Width: =122
                     X: =385
-                    Y: =490
+                    Y: =500
                     ZIndex: =17
 
                 ComboBox1 As combobox:
+                    DefaultSelectedItems: =
                     DisplayFields: =["dacrm_lookupid"]
                     InputTextPlaceholder: ="Find Account Code"
                     IsSearchable: =false
@@ -331,21 +335,13 @@
                     Y: =340
                     ZIndex: =22
 
-                Label4 As label:
-                    Height: =47
-                    Text: ="Donation in support of " & Label23
-                    Width: =320
-                    X: =182
-                    Y: =340
-                    ZIndex: =23
-
                 Label12_25 As label:
                     Height: =53
                     Text: |-
                         ="Donation In Chinese: "
                     Width: =108
                     X: =8
-                    Y: =388
+                    Y: =418
                     ZIndex: =24
 
                 TextInput2_15 As text:
@@ -353,7 +349,7 @@
                     Height: =71
                     Reset: =resettext
                     X: =184
-                    Y: =396
+                    Y: =416
                     ZIndex: =25
 
                 Label11 As label:
@@ -413,6 +409,27 @@
                     X: =236
                     Y: =484
                     ZIndex: =27
+
+                TextInput14 As text:
+                    Default: |
+                        =If(
+                            Dropdown3_3.Selected.Value = "Gift-in-kind","Gift(s)-in-kind to the " & Label23.Text&" in support of ",
+                            IsMatch(Label23.Text,"University Central",MatchOptions.Contains),"Donation to The University of Hong Kong",
+                            Label23_2.Text ="Named professorship", "Donation to establish an Endowed Professorship",
+                             Label23_2.Text ="Scholarship (OC001)" ||  Label23_2.Text ="Prize (OC002)" ||  Label23_2.Text ="Bursary (OC003)","Donation in support of "& Label23.Text,
+                             Label23_2.Text = "External Scheme", "Donation in relation to NON-HKU EXTERNAL award/prize/fellowship/programme: "& Label23.Text,
+                        
+                             IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2') And !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'),"Donation to the  "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'&" in support of " &Label23.Text,
+                             !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2' &" in support of " &Label23.Text,
+                             "Donation to the "& Label23.Text
+                        
+                        
+                        )
+                    Height: =61
+                    Mode: =TextMode.MultiLine
+                    X: =182
+                    Y: =344
+                    ZIndex: =28
 
     Icon2_2 As icon.Add:
         Height: =23

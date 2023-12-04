@@ -72,7 +72,7 @@ acknowledgement As screen:
                         Size: =13.01
                         Text: |-
                             ="Receipt to be sent to the contact person of the beneficiary department who will forward it to the donor.
-                            (If a hard copy receipt is required, please also kick this box. The contact person should print and send the receipt to the donor.)"
+                            (If a hard copy receipt is required, please also click this box. The contact person should print and send the receipt to the donor.)"
                         Width: =1104
                         Y: =27
                         ZIndex: =2
@@ -441,14 +441,14 @@ acknowledgement As screen:
             Y: =12
             ZIndex: =1
 
-        Icon1_12 As icon.BackArrow:
+        Icon6_9 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(30, 85, 66, 1)
-            Height: =35
-            Icon: =Icon.BackArrow
-            Width: =39
-            X: =154
-            Y: =22
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =152
+            Y: =17
             ZIndex: =2
 
     Group6_3 As group:

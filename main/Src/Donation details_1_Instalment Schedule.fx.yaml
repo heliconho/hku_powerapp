@@ -15,7 +15,7 @@
         ZIndex: =6
 
     SaveButton_18 As button:
-        Fill: =RGBA(250, 209, 85, 1)
+        Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
         Height: =46
         HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
@@ -76,7 +76,7 @@
         Button3_40 As button:
             Align: =Align.Left
             BorderThickness: =3
-            Fill: =RGBA(247, 205, 77, 1)
+            Fill: =RGBA(30, 85, 66, 1)
             FontWeight: =FontWeight.Bold
             Height: =46
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
@@ -96,7 +96,7 @@
 
         Icon1_18 As icon.BackArrow:
             Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(245, 209, 100, 1)
+            Fill: =RGBA(30, 85, 66, 1)
             Height: =35
             Icon: =Icon.BackArrow
             Width: =39
@@ -211,7 +211,7 @@
             VerticalAlign: =VerticalAlign.Top
             Width: =218
             X: =400
-            Y: =34
+            Y: =69
             ZIndex: =8
 
         Button6 As button:
@@ -220,8 +220,8 @@
             Size: =12
             Text: ="Transaction Details"
             Width: =162
-            X: =1131
-            Y: =34
+            X: =1132
+            Y: =27
             ZIndex: =11
 
         Icon6 As icon.Edit:
@@ -232,7 +232,7 @@
                 //UpdateContext({editamount:true,currentRecId:ThisItem.ID})
             Width: =20
             X: =380
-            Y: =38
+            Y: =68
             ZIndex: =12
 
         Icon6_2 As icon.Edit:
@@ -302,6 +302,16 @@
                 X: =860
                 Y: =62
                 ZIndex: =17
+
+        Checkbox3 As checkbox:
+            CheckboxSize: =30
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Text: ="Payment Recieved"
+            Width: =274
+            X: =816
+            Y: =29
+            ZIndex: =18
 
     Icon8 As icon.Add:
         Height: =26
