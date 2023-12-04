@@ -407,9 +407,22 @@
                     ZIndex: =27
 
                 TextInput14 As text:
-                    Default: |-
-                        =If(ComboBox1.SelectedText = "")
-                        "Donation in support of " & Label23
+                    Default: |
+                        =If(
+                            Dropdown3_3.Selected.Value = "Gift-in-kind","Gift(s)-in-kind to the " & Label23.Text&" in support of ",
+                            IsMatch(Label23.Text,"University Central",MatchOptions.Contains),"Donation to The University of Hong Kong",
+                            Label23_2.Text ="Named professorship", "Donation to establish an Endowed Professorship",
+                             Label23_2.Text ="Scholarship (OC001)" ||  Label23_2.Text ="Prize (OC002)" ||  Label23_2.Text ="Bursary (OC003)","Donation in support of "& Label23.Text,
+                             Label23_2.Text = "External Scheme", "Donation in relation to NON-HKU EXTERNAL award/prize/fellowship/programme: "& Label23.Text,
+                        
+                             IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 1'&" in support of " &Label23.Text,
+                             !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1.Selected.dacrm_lookupid).'Report Code 2'&" in support of " &Label23.Text,
+                             "Donation to the "& Label23.Text
+                        
+                        
+                        )
+                    Height: =61
+                    Mode: =TextMode.MultiLine
                     X: =182
                     Y: =344
                     ZIndex: =28

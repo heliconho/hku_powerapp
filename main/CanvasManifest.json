@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 11,
+    "BindingErrorCount": 6,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -116,7 +116,7 @@
     "ManualOfflineProfileId": "",
     "Name": "Donation processing form",
     "OriginatingVersion": "1.334",
-    "ParserErrorCount": 7,
+    "ParserErrorCount": 3,
     "ShowStatusBar": false
   },
   "PublishInfo": {
