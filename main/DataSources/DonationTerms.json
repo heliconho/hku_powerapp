@@ -36,6 +36,7 @@
       "dacrm_designationname": "Designation Name",
       "dacrm_designationtype": "Designation Type",
       "dacrm_designationtypetonamemasterid": "Designation Type To Name Master ID",
+      "dacrm_details": "Details",
       "dacrm_displayid": "Display ID ",
       "dacrm_donationcategorymiu": "Donation Category (MIU)",
       "dacrm_donationchinese": "Donation In Chinese",
@@ -104,6 +105,7 @@
       "dacrm_plannedgiftbequestexecutor": "Planned Gift Bequest Executor",
       "dacrm_plannedgiftrealizedate": "Planned Gift Realize Date",
       "dacrm_plannedgiftvalueofgift": "Planned Gift Value of Gift",
+      "dacrm_plannedgivingsource": "Planned Giving Source",
       "dacrm_process1approvaldate": "Process 1 Approval Date",
       "dacrm_process1approver": "Process 1 Conflict of Interest Approver ",
       "dacrm_process1conflictofinterestresult": "Process 1 Conflict of Interest Result",
@@ -122,6 +124,8 @@
       "dacrm_recogniseeallocation_donationtermid": "RecogniseeAllocations",
       "dacrm_recurringgiftscheduleid": "Recurring Gift Schedule ID",
       "dacrm_recurringpayment": "Recurring Payment",
+      "dacrm_referraldate": "Referral Date",
+      "dacrm_referraldetails": "Referral Details",
       "dacrm_reimbursement": "Reimbursement",
       "dacrm_rejectionreasons": "Rejection Reasons",
       "dacrm_remarks": "Remarks",
@@ -130,6 +134,7 @@
       "dacrm_rimrcgasnumber": "RIMS/RCGAS Number",
       "dacrm_startdate": "Start Date",
       "dacrm_thankyoulettergiveanonymous": "Thank You Letter: Give Anonymous",
+      "dacrm_thankyouletterissuedepartment": "Thank You Letter Issue Department ",
       "dacrm_totalvalue": "Total Value",
       "dacrm_transactionstatusiscompleted": "Transaction Status Is Completed ",
       "dacrm_vpiareviewedstatus": "VPIA Reviewed Status",
@@ -964,6 +969,27 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "dacrm_picdepartment",
+    "RelatedEntityName": "DonationTerms",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Planned Giving Source (DonationTerms)",
+    "Name": "dacrm_donationterm_dacrm_plannedgivingsource",
+    "OptionSetInfoNameMapping": {
+      "128490000": "NGO Referral",
+      "128490001": "Self Enquiry",
+      "128490002": "Other Referral"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "dacrm_plannedgivingsource",
+        "OptionSetReferenceEntityName": "DonationTerms"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "dacrm_plannedgivingsource",
     "RelatedEntityName": "DonationTerms",
     "Type": "OptionSetInfo"
   },
