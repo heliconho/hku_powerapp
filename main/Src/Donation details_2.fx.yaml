@@ -331,14 +331,6 @@
                     Y: =340
                     ZIndex: =22
 
-                Label4 As label:
-                    Height: =47
-                    Text: ="Donation in support of " & Label23
-                    Width: =320
-                    X: =182
-                    Y: =340
-                    ZIndex: =23
-
                 Label12_25 As label:
                     Height: =53
                     Text: |-
@@ -413,6 +405,14 @@
                     X: =236
                     Y: =484
                     ZIndex: =27
+
+                TextInput14 As text:
+                    Default: |-
+                        =If(ComboBox1.SelectedText = "")
+                        "Donation in support of " & Label23
+                    X: =182
+                    Y: =344
+                    ZIndex: =28
 
     Icon2_2 As icon.Add:
         Height: =23

@@ -401,7 +401,7 @@
       "MetaDataIDKey": "",
       "Name": "Button6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -663,7 +663,7 @@
       "MetaDataIDKey": "",
       "Name": "Checkbox3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9546,7 +9546,7 @@
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
