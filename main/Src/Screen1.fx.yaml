@@ -287,7 +287,7 @@ Screen1 As screen:
             Height: =39
             Items: |-
                 =//DonationStructureToDesignationRelationships
-                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,dacrm_donationstructurenamestring = Dropdown11.Selected.'Donation Name'),"dacrm_designationtype"),"Types",dacrm_designationtype.'Designation Type')
+                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11.Selected.'Donation Name'),"dacrm_designationtype"),"Types",dacrm_designationtype.'Designation Type')
             Reset: =resettext
             Width: =313
             X: =177
@@ -298,7 +298,7 @@ Screen1 As screen:
             Height: =39
             Items: |
                 =//DropDownSample
-                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,dacrm_donationstructurenamestring = Dropdown11.Selected.'Donation Name'),"dacrm_designationname"),"Names",dacrm_designationname.'Designation Name')
+                AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11.Selected.'Donation Name'),"dacrm_designationname"),"Names",dacrm_designationname.'Designation Name')
             Reset: =resettext
             Width: =313
             X: =177
@@ -308,7 +308,7 @@ Screen1 As screen:
         TextInput2 As text:
             Default: |-
                 =//"Report Code 1"
-                If( IsBlank(LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 1')), "NA", LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 1'))
+                If( IsBlank(LookUp(DesignationTypeToNameMasters, 'Designation Name' = Dropdown9_1.Selected.Names, 'Report Code 1')), "NA", LookUp(DesignationTypeToNameMasters, 'Designation Name' = Dropdown9_1.Selected.Names, 'Report Code 1'))
             Reset: =resettext
             X: =177
             Y: =113
@@ -317,7 +317,7 @@ Screen1 As screen:
         TextInput2_1 As text:
             Default: |-
                 =//"Report Code 2"
-                If( IsBlank(LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 2')), "N/A", LookUp(DesignationTypeToNameMasters, dacrm_name = Dropdown9_1.Selected.Names, 'Report Code 2'))
+                If( IsBlank(LookUp(DesignationTypeToNameMasters, 'Designation Name' = Dropdown9_1.Selected.Names, 'Report Code 2')), "N/A", LookUp(DesignationTypeToNameMasters, 'Designation Name' = Dropdown9_1.Selected.Names, 'Report Code 2'))
             Reset: =resettext
             X: =177
             Y: =163

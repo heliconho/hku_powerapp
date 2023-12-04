@@ -106,7 +106,7 @@ Endorsement As screen:
                     Items: =["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"]
                     SearchFields: =["Value"]
                     SearchItems: =Search(["Andrew Chan(Dean of Faculty of Art)","Florence Chu(Secretory)"],ComboBox4.SearchText,"Value")
-                    ZIndex: =5
+                    ZIndex: =2
 
             Two_level As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
