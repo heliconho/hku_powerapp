@@ -275,6 +275,16 @@
                 Y: =36
                 ZIndex: =15
 
+        Checkbox3 As checkbox:
+            CheckboxSize: =30
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Text: ="Payment Recieved"
+            Width: =274
+            X: =816
+            Y: =29
+            ZIndex: =18
+
         Group4 As group:
             Height: =5
             Width: =5
@@ -302,16 +312,6 @@
                 X: =860
                 Y: =62
                 ZIndex: =17
-
-        Checkbox3 As checkbox:
-            CheckboxSize: =30
-            FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
-            Text: ="Payment Recieved"
-            Width: =274
-            X: =816
-            Y: =29
-            ZIndex: =18
 
     Icon8 As icon.Add:
         Height: =26

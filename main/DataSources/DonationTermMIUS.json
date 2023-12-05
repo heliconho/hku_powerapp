@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dacrm_donationtermmius",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dacrm_donationtermmiu",
+    "Name": "DonationTermMIUS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dacrm_donationcategorymiu": "Donation Category (MIU)",
+      "dacrm_donationterm": "DonationTerm",
+      "dacrm_donationtermmiu_AsyncOperations": "System Jobs",
+      "dacrm_donationtermmiu_BulkDeleteFailures": "Bulk Delete Failures",
+      "dacrm_donationtermmiu_DuplicateBaseRecord": "Duplicate Records (dacrm_donationtermmiu_DuplicateBaseRecord)",
+      "dacrm_donationtermmiu_DuplicateMatchingRecord": "Duplicate Records (dacrm_donationtermmiu_DuplicateMatchingRecord)",
+      "dacrm_donationtermmiu_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dacrm_donationtermmiu_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dacrm_donationtermmiu_ProcessSession": "Process Sessions",
+      "dacrm_donationtermmiu_SyncErrors": "Sync Errors",
+      "dacrm_donationtermmiuid": "DonationTermMIU",
+      "dacrm_name": "Name",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DonationTermMIUS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DonationTermMIUS (Views)",
+    "Name": "_dacrm_donationtermmiu_views",
+    "RelatedEntityName": "DonationTermMIUS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "4a0c1fbd-7ed0-452b-9ed1-f5dde247dcb6": "Active DonationTermMIUS",
+      "6798be89-5c9b-4471-8ba6-10b416cd4d01": "Inactive DonationTermMIUS",
+      "7229e6d6-f93e-403b-b866-514fb0bbb9e0": "DonationTermMIU Associated View",
+      "995f8f80-55aa-4e44-9686-31a6ee91c208": "DonationTermMIU Advanced Find View",
+      "bd09c428-bd18-4673-b187-eafa0abd5bcb": "DonationTermMIU Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (DonationTermMIUS)",
+    "Name": "dacrm_donationtermmiu_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DonationTermMIUS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DonationTermMIUS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DonationTermMIUS)",
+    "Name": "dacrm_donationtermmiu_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DonationTermMIUS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DonationTermMIUS",
+    "Type": "OptionSetInfo"
+  }
+]

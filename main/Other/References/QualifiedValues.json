@@ -201,6 +201,20 @@
         "Address Nonprofit": "a84312ec-b9b6-4dc9-8b14-54611a0a2af9",
         "Information": "df5bef3a-9237-40bd-a27c-2cd7fd434706"
       }
+    },
+    {
+      "Kind": "default.cds_dacrm_donatiioncategorymiumaster_forms",
+      "Namespace": "DonationCategoryMIUMasters (Forms)",
+      "Values": {
+        "Information": "55a52177-1331-4350-9acc-7606143732f6"
+      }
+    },
+    {
+      "Kind": "default.cds_dacrm_donationtermmiu_forms",
+      "Namespace": "DonationTermMIUS (Forms)",
+      "Values": {
+        "Information": "0c067d9e-beb2-436c-9076-aae33ee93522"
+      }
     }
   ]
 }

@@ -1651,6 +1651,16 @@
         Y: =250
         ZIndex: =61
 
+    Icon6_3 As icon.NextArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.NextArrow
+        Rotation: =180
+        Width: =32
+        X: =163
+        Y: =716
+        ZIndex: =82
+
     Group6_1 As group:
         Height: =5
         Width: =5
@@ -1861,14 +1871,4 @@
             X: =1068
             Y: =Circle1_5.Y +Self.Height
             ZIndex: =81
-
-    Icon6_3 As icon.NextArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =40
-        Icon: =Icon.NextArrow
-        Rotation: =180
-        Width: =32
-        X: =163
-        Y: =716
-        ZIndex: =82
 
