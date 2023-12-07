@@ -172,26 +172,6 @@ ThankYouLetter As screen:
         Y: =699
         ZIndex: =34
 
-        Button3_28 As button:
-            Align: =Align.Left
-            BorderThickness: =3
-            Fill: =RGBA(30, 85, 66, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =60
-            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-            OnSelect: =Navigate( HKUFoundationMembership , ScreenTransition.Cover  )
-            RadiusBottomLeft: =9
-            RadiusBottomRight: =9
-            RadiusTopLeft: =9
-            RadiusTopRight: =9
-            Size: =10
-            Text: |-
-                ="Next: 
-                HKU Foundation Membership"
-            Width: =173
-            X: =22
-            ZIndex: =1
-
         Icon6_15 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
             Height: =40
@@ -200,6 +180,48 @@ ThankYouLetter As screen:
             X: =161
             Y: =7
             ZIndex: =2
+
+        Button3_37 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            DisplayMode: |-
+                =//DisplayMode.Edit
+                If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =62
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( DueDiligence , ScreenTransition.Cover  )
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =10
+            Text: |-
+                ="Next: 
+                Due Diligence &  
+                Conflict of Interest"
+            Visible: |-
+                =//If (needAprroval= true ,true,false)
+                //Switch('Dropdown10_neede-approval', "Yes", false, true)
+                //If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,true,false)
+                true
+            Width: =172
+            X: =22
+            ZIndex: =3
+
+        Icon6_22 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Visible: |-
+                =//If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,true,false)
+                true
+            Width: =33
+            X: =161
+            Y: =7
+            ZIndex: =4
 
     Container1_36 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)

@@ -1013,7 +1013,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -1215,6 +1216,11 @@
         {
           "Category": "Design",
           "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -2990,7 +2996,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -3192,6 +3199,11 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -6194,7 +6206,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -6396,6 +6409,11 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -6790,7 +6808,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -6992,6 +7011,11 @@
         {
           "Category": "Design",
           "PropertyName": "DelayItemLoading",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -9436,7 +9460,8 @@
           "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -9643,6 +9668,11 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -13284,7 +13314,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -13486,6 +13517,11 @@
         {
           "Category": "Design",
           "PropertyName": "DelayItemLoading",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],

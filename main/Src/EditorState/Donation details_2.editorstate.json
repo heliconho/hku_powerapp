@@ -4309,7 +4309,8 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Default"
+        "Default",
+        "MaxTemplateSize"
       ],
       "GalleryTemplateChildName": "galleryTemplate2_2",
       "HasDynamicProperties": false,
@@ -4459,6 +4460,11 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],

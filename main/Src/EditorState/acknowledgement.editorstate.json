@@ -14069,7 +14069,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -14271,6 +14272,11 @@
         {
           "Category": "Design",
           "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -14559,7 +14565,8 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "TemplatePadding"
+        "TemplatePadding",
+        "MaxTemplateSize"
       ],
       "DynamicProperties": [
         {
@@ -14761,6 +14768,11 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
           "RuleProviderType": "Unknown"
         }
       ],
