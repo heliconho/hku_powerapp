@@ -700,3 +700,8 @@ StaffInformation As screen:
         Y: =721
         ZIndex: =40
 
+    Label4 As label:
+        Text: =abcd
+        X: =60
+        ZIndex: =41
+

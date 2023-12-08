@@ -9,6 +9,7 @@ App As appinfo:
         ClearCollect(A,DonationTerms);
         Set(rec,LookUp(Users,'Primary Email' = "crmadmin@hku.hk"));
         ClearCollect(TF,{Value:true},{Value:false});
+        Set(abcd, Param("oppid"));
         
         //Pagestatus
         
