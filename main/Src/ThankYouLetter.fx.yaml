@@ -1,7 +1,7 @@
 ThankYouLetter As screen:
 
     Container15_4 As groupContainer.verticalAutoLayoutContainer:
-        Height: =471
+        Height: =435
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -16,7 +16,7 @@ ThankYouLetter As screen:
             Height: =533.59
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =10
-            LayoutMinHeight: =400
+            LayoutMinHeight: =150
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =0.00
@@ -51,7 +51,7 @@ ThankYouLetter As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DelayItemLoading: =true
                 FillPortions: =0
-                Height: =110.00
+                Height: =100
                 Items: =CustomGallerySample
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -59,7 +59,7 @@ ThankYouLetter As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
                 TemplatePadding: =5.00
-                TemplateSize: =280.00
+                TemplateSize: =200
                 Visible: =If(Radio4.Selected.Value = "The beneficiary department will arrange its own acknowledgement to the donor. DAAO is not required to send any thank-you letter/note.", true, false)
                 Y: =276.13
                 ZIndex: =6
@@ -261,6 +261,41 @@ ThankYouLetter As screen:
             X: =160
             Y: =14
             ZIndex: =2
+
+    Container1_44 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =69
+        Visible: |
+            =true
+        Width: =139
+        X: =1204
+        Y: =639
+        ZIndex: =56
+
+        Button3_38 As button:
+            BorderThickness: =3
+            DisplayMode: |-
+                =//DisplayMode.Edit
+                If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(247, 205, 77, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =//Navigate( DueDiligence , ScreenTransition.Cover  )
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =12
+            Text: ="Sumbit "
+            Visible: |-
+                =//If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,false,true)
+                true
+            Width: =117
+            X: =16
+            Y: =5
+            ZIndex: =1
 
     Group6_4 As group:
         Height: =5
@@ -472,4 +507,24 @@ ThankYouLetter As screen:
             X: =1068
             Y: =Circle1_31.Y +Self.Height
             ZIndex: =55
+
+    Label5_4 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =45
+        Text: ="E-Approval is not required for this donation, please submit the form."
+        Visible: =If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,false,true)
+        Width: =578
+        X: =788
+        Y: =594
+        ZIndex: =57
+
+    Label5_5 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =45
+        Text: ="E-Approval is required for this donation, please continue the form."
+        Visible: =If(LookUp(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name).dacrm_needeapproval = true,true,false)
+        Width: =578
+        X: =788
+        Y: =594
+        ZIndex: =58
 
