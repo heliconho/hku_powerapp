@@ -18,7 +18,7 @@ acknowledgement As screen:
                 =
                  
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =340
+            LayoutMinHeight: =400
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
@@ -471,6 +471,51 @@ acknowledgement As screen:
                         Y: =10
                         ZIndex: =10
 
+            Container9 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                Visible: =If(Checkbox3_6.Value = true, true, false)
+                ZIndex: =10
+
+                Label15 As label:
+                    Text: |-
+                        ="Name:"
+                    Width: =300
+                    ZIndex: =1
+
+                Label15_3 As label:
+                    Text: |-
+                        ="Title:"
+                    Width: =300
+                    ZIndex: =2
+
+                Label15_1 As label:
+                    Text: |-
+                        ="Email:"
+                    Width: =300
+                    ZIndex: =3
+
+                Label15_2 As label:
+                    Text: |-
+                        ="Address:"
+                    Width: =300
+                    ZIndex: =4
+
+                Label15_4 As label:
+                    Text: |-
+                        ="Amount:"
+                    Width: =300
+                    ZIndex: =5
+
+                Label15_5 As label:
+                    Text: |-
+                        ="Softcopy/Hardcopy:"
+                    Width: =300
+                    ZIndex: =6
+
     Label1_3 As label:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(30, 85, 66, 1)
@@ -604,10 +649,14 @@ acknowledgement As screen:
             ZIndex: =2
 
     Container7 As groupContainer.verticalAutoLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =181
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         LayoutWrap: =true
         Visible: =details
+        Width: =451
         X: =695
         Y: =430
         ZIndex: =56
