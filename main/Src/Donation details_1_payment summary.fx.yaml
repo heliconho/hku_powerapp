@@ -1,0 +1,429 @@
+"'Donation details_1_payment summary' As screen":
+
+    Label1_16 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =6
+
+    Container1_53 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =35
+
+        Button3_46 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_1_Instalment Schedule' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Instalment Schedule"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon1_20 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(30, 85, 66, 1)
+            Height: =35
+            Icon: =Icon.BackArrow
+            Width: =39
+            X: =159
+            Y: =12
+            ZIndex: =2
+
+    "'Donation Detail label_7' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =13.01
+        Text: ="Payment Details - Payment Summary"
+        Width: =1318
+        X: =25
+        Y: =164
+        ZIndex: =56
+
+    Group6_13 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =56
+
+        Circle1_79 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =118
+            Y: =95
+            ZIndex: =36
+
+        Label2_97 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =60
+            Y: =103
+            ZIndex: =37
+
+        Circle1_97 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =303
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =38
+
+        Label2_98 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =245
+            Y: =106
+            ZIndex: =39
+
+        Circle1_98 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =488
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =40
+
+        Label2_80 As label:
+            Align: =Align.Center
+            OnSelect: |
+                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Donoation Details"
+            Width: =130
+            X: =430
+            Y: =101
+            ZIndex: =41
+
+        Icon3_88 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =513
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =42
+
+        Circle1_99 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =673
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =43
+
+        Label2_101 As label:
+            Align: =Align.Center
+            Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Acknowledgement & Donation Receipt Arrangement"
+            Width: =239
+            X: =562
+            Y: =113
+            ZIndex: =44
+
+        Circle1_100 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =858
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =45
+
+        Label2_99 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =804
+            Y: =110
+            ZIndex: =46
+
+        Circle1_101 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1043
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =47
+
+        Label2_100 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =985
+            Y: =110
+            ZIndex: =48
+
+        Circle1_102 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1228
+            Y: |
+                =Circle1_79.Y
+            ZIndex: =49
+
+        Label2_102 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1178
+            Y: =116
+            ZIndex: =50
+
+        Icon3_87 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =328
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =51
+
+        Icon3_71 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =143
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =52
+
+        Icon3_89 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =698
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =53
+
+        Icon3_90 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =883
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =54
+
+        Icon3_91 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =1068
+            Y: =Circle1_79.Y +Self.Height
+            ZIndex: =55
+
+    "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =107
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =1318
+        X: =25
+        Y: =223
+        ZIndex: =57
+
+        Title5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="Payment 1"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =226
+            X: =31
+            Y: =16
+            ZIndex: =2
+
+        Subtitle5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                ="Currency: HKD"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =31
+            Y: =49
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator5 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle5 As rectangle:
+            Height: =Parent.TemplateHeight - Separator5.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle5_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                ="Amount: 9000"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =31
+            Y: =75
+            ZIndex: =7
+
+        Subtitle5_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                ="Payment method: Cheque"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =240
+            Y: =16
+            ZIndex: =8
+
+        Subtitle5_3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                ="Payment Date: 1/2/2024"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =240
+            Y: =45
+            ZIndex: =9
+
+    Button3_47 As button:
+        Align: =Align.Left
+        BorderThickness: =3
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: =Navigate( acknowledgement , ScreenTransition.Cover  )
+        RadiusBottomLeft: =9
+        RadiusBottomRight: =9
+        RadiusTopLeft: =9
+        RadiusTopRight: =9
+        Size: =10
+        Text: |-
+            ="Next: 
+            Acknowledgement & Recipt Arrangement"
+        Width: =184
+        X: =1143
+        Y: =690
+        ZIndex: =58
+
+    Icon6_23 As icon.NextArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.NextArrow
+        Width: =33
+        X: =1294
+        Y: =697
+        ZIndex: =59
+
