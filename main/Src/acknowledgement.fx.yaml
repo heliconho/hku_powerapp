@@ -18,7 +18,7 @@ acknowledgement As screen:
                 =
                  
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =300
+            LayoutMinHeight: =340
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
@@ -47,12 +47,14 @@ acknowledgement As screen:
 
             RecieptNeeded As groupContainer.manualLayoutContainer:
                 FillPortions: =0
+                Height: =40
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 Visible: =If(Dropdown1.Selected.Value="Receipt needed", true, false)
-                ZIndex: =8
+                ZIndex: =3
 
                 Container6 As groupContainer.verticalAutoLayoutContainer:
+                    Height: =48
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMode: =LayoutMode.Auto
                     Width: =1230
@@ -65,53 +67,13 @@ acknowledgement As screen:
                             ="Special arrangment below needed (Please leave this section blank if not special arrangment needed) : "
                         ZIndex: =1
 
-                    Checkbox4_5 As checkbox:
-                        Height: =66.70
-                        PaddingBottom: =0.00
-                        PaddingLeft: =0.00
-                        Size: =13.01
-                        Text: |-
-                            ="Receipt to be sent to the contact person of the beneficiary department who will forward it to the donor.
-                            (If a hard copy receipt is required, please also click this box. The contact person should print and send the receipt to the donor.)"
-                        Width: =1104
-                        Y: =27
-                        ZIndex: =2
-
-                    Container7 As groupContainer.horizontalAutoLayoutContainer:
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =700
-                        ZIndex: =3
-
-                        Checkbox3_5 As checkbox:
-                            Height: =50.01
-                            OnCheck: |-
-                                =UpdateContext({differentDonor:true})
-                            OnUncheck: |-
-                                =UpdateContext({differentDonor:false})
-                            PaddingBottom: =0.00
-                            PaddingLeft: =0.00
-                            Size: =13.01
-                            Text: |-
-                                ="Receipt to be issued to a person or organisation different from the donor's name (please specify):"
-                            Width: =600
-                            Y: =74
-                            ZIndex: =1
-
-                        TextInput5 As text:
-                            Default: =""
-                            DisplayMode: =If(differentDonor,DisplayMode.Edit,DisplayMode.Disabled)
-                            HintText: ="Please specify"
-                            ZIndex: =2
-
             NoReciept As groupContainer.manualLayoutContainer:
                 FillPortions: =0
                 Height: =500
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 Visible: =If(Dropdown1.Selected.Value="No need to send out reciept", true, false)
-                ZIndex: =9
+                ZIndex: =4
 
                 Container4 As groupContainer.verticalAutoLayoutContainer:
                     Height: =303
@@ -319,6 +281,196 @@ acknowledgement As screen:
                             Y: =120
                             ZIndex: =2
 
+            Checkbox4_6 As checkbox:
+                Height: =66.70
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Size: =13.01
+                Text: |-
+                    ="Receipt to be sent to the contact person of the beneficiary department who will forward it to the donor.
+                    (If a hard copy receipt is required, please also click this box. The contact person should print and send the receipt to the donor.)"
+                Width: =1104
+                Y: =27
+                ZIndex: =5
+
+            Checkbox3_6 As checkbox:
+                Height: =50.01
+                OnCheck: |-
+                    =UpdateContext({differentDonor:true})
+                OnUncheck: |-
+                    =UpdateContext({differentDonor:false})
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Size: =13.01
+                Text: ="Receipt to be issued to a person or organisation different from the donor's name (please specify)"
+                Width: =630
+                Y: =74
+                ZIndex: =6
+
+            Checkbox3_7 As checkbox:
+                Height: =50.01
+                OnCheck: |-
+                    =UpdateContext({differentDonor:true})
+                OnUncheck: |-
+                    =UpdateContext({differentDonor:false})
+                PaddingBottom: =0.00
+                PaddingLeft: =0.00
+                Size: =13.01
+                Text: ="Receipt spilt to different people (only for signle designation donation)"
+                Width: =650
+                Y: =74
+                ZIndex: =7
+
+            Container2 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                Visible: |-
+                    =
+                     
+                ZIndex: =8
+
+                Label6 As label:
+                    Text: |-
+                        ="Name: "
+                    Width: =300
+                    ZIndex: =1
+
+                Label6_1 As label:
+                    Text: |-
+                        ="Title: "
+                    Width: =300
+                    ZIndex: =2
+
+                Label6_2 As label:
+                    Text: |-
+                        ="Tel: "
+                    Width: =300
+                    ZIndex: =3
+
+                Label6_3 As label:
+                    Text: |-
+                        ="Email: "
+                    Width: =300
+                    ZIndex: =4
+
+                Label6_4 As label:
+                    Text: |-
+                        ="Address: "
+                    Width: =300
+                    ZIndex: =5
+
+                Label6_5 As label:
+                    Text: |-
+                        ="Amount: "
+                    Width: =300
+                    ZIndex: =6
+
+                Label6_6 As label:
+                    Text: |-
+                        ="Softcopy/Hardcopy: "
+                    Width: =300
+                    ZIndex: =7
+
+            Container5 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: |-
+                    =//true
+                    If(Checkbox3_7.Value = true, true, false)
+                ZIndex: =9
+
+                Icon1 As icon.Add:
+                    Height: =30
+                    Icon: =Icon.Add
+                    OnSelect: |-
+                        =ClearCollect(Receiptcol, {Name: "Chan Tai Man", Amount:"5000", Email: "chan56@gmail.com"})
+                    Width: =30
+                    ZIndex: =1
+
+                "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    FillPortions: =10.5
+                    Items: =Receiptcol
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =200
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =80
+                    ZIndex: =3
+
+                    NextArrow6 As icon.ChevronRight:
+                        AccessibleLabel: =Self.Tooltip
+                        Color: =RGBA(166, 166, 166, 1)
+                        Height: =50
+                        Icon: =Icon.ChevronRight
+                        OnSelect: =Set(details, true)
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        Tooltip: ="View item details"
+                        Width: =50
+                        X: =566
+                        Y: =30
+                        ZIndex: =4
+
+                    Separator7 As rectangle:
+                        Height: =8
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
+
+                    Rectangle7 As rectangle:
+                        Height: =Parent.TemplateHeight - Separator7.Height
+                        OnSelect: =Select(Parent)
+                        Visible: =ThisItem.IsSelected
+                        Width: =4
+                        ZIndex: =6
+
+                    Label21 As label:
+                        OnSelect: =Select(Parent)
+                        Text: |-
+                            ="Recipient Name: "&ThisItem.Name
+                        Width: =318
+                        X: =17
+                        ZIndex: =7
+
+                    Label21_1 As label:
+                        OnSelect: =Select(Parent)
+                        Text: |-
+                            ="Recipient Email: "&ThisItem.Email
+                        Width: =318
+                        X: =17
+                        Y: =20
+                        ZIndex: =8
+
+                    Label21_2 As label:
+                        OnSelect: =Select(Parent)
+                        Text: |-
+                            ="Recipient Email: "&ThisItem.Amount
+                        Width: =318
+                        X: =17
+                        Y: =40
+                        ZIndex: =9
+
+                    Icon10 As icon.Cancel:
+                        Color: =RGBA(166, 166, 166, 1)
+                        Height: =20
+                        Icon: =Icon.Cancel
+                        OnSelect: =Remove(Receiptcol,ThisItem)
+                        Width: =25
+                        X: =578
+                        Y: =10
+                        ZIndex: =10
+
     Label1_3 As label:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(30, 85, 66, 1)
@@ -450,6 +602,60 @@ acknowledgement As screen:
             X: =152
             Y: =17
             ZIndex: =2
+
+    Container7 As groupContainer.verticalAutoLayoutContainer:
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        Visible: =details
+        X: =695
+        Y: =430
+        ZIndex: =56
+
+        Label24 As label:
+            Text: |-
+                ="Name: "
+            ZIndex: =1
+
+        Label24_1 As label:
+            Text: |-
+                ="Title: "
+            ZIndex: =2
+
+        Label24_2 As label:
+            Text: |-
+                ="Tel: "
+            ZIndex: =3
+
+        Label24_3 As label:
+            Text: |-
+                ="Email: "
+            ZIndex: =4
+
+        Label24_4 As label:
+            Text: |-
+                ="Address: "
+            ZIndex: =5
+
+        Label24_5 As label:
+            Text: |-
+                ="Softcopy/Hardcopy: "
+            Width: =200
+            ZIndex: =6
+
+        Label24_6 As label:
+            Text: |-
+                ="Amount: "
+            Width: =200
+            ZIndex: =7
+
+        Button3 As button:
+            Height: =20
+            OnSelect: =Set(details, false)
+            Size: =10
+            Text: ="Confirm"
+            Width: =80
+            ZIndex: =8
 
     Group6_3 As group:
         Height: =5

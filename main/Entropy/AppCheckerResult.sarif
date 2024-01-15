@@ -1778,19 +1778,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.RecieptNeeded.Container6.Container7.TextInput5.AccessibleLabel"
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.RecieptNeeded.Container6.Container7.TextInput5.AccessibleLabel",
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "acknowledgement",
-                "type": "acknowledgement.Container15_3.Acknoeledgement_4.RecieptNeeded.Container6.Container7.TextInput5"
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1"
               }
             }
           ],
@@ -1800,8 +1800,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -13562,6 +13562,186 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.NextArrow6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.NextArrow6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.NextArrow6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.Icon10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Gallery7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "acknowledgement",
+                "type": "acknowledgement.Container15_3.Acknoeledgement_4.Container5.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Donation details_1_payment summary'.Gallery5.TabIndex"
                 }
               ],
@@ -13796,6 +13976,36 @@
           },
           "ruleId": "app-CollectDelegatableDataSource",
           "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "acknowledgement.differentDonor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "acknowledgement.differentDonor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "differentDonor",
+                "module": "acknowledgement",
+                "type": "acknowledgement"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
         },
         {
           "locations": [

@@ -34,7 +34,7 @@
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
                 Size: =13.01
-                Text: ="Transaction Details - Payment methods ( Please leave this section blank if the transaction have not completed)"
+                Text: ="Payment Details - Instalment Payment methods"
                 Y: =0.00
                 ZIndex: =1
 
@@ -1067,7 +1067,7 @@
         Size: =12
         Text: ="Save "
         Width: =73
-        X: =1234
+        X: =1054
         Y: =713
         ZIndex: =33
 
@@ -1109,6 +1109,44 @@
             Width: =39
             X: =159
             Y: =12
+            ZIndex: =2
+
+    Container1_54 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =69
+        Width: =208
+        X: =1146
+        Y: =699
+        ZIndex: =56
+
+        Button3_48 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =62
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( acknowledgement , ScreenTransition.Cover  )
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =10
+            Text: |-
+                ="Next: 
+                Acknowledgement & Recipt Arrangement"
+            Width: =184
+            X: =10
+            ZIndex: =1
+
+        Icon6_24 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Width: =33
+            X: =161
+            Y: =7
             ZIndex: =2
 
     Group6_10 As group:
