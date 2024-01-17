@@ -1,121 +1,363 @@
 Screen6 As screen:
 
-    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Items: =dstdrCol
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =104
-        X: =40
-        Y: =40
+    Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =732
+        Width: =1318
+        X: =25
+        Y: =28
         ZIndex: =1
 
-        Image4 As image:
-            Height: =72
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =72
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+        DataCard1_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1083
+            Width: =1318
+            X: =0
+            Y: =0
             ZIndex: =1
 
-        Title4 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =25
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Designation Name '.'Designation Name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =331
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle4.Size * 1.8)) / 2
-            ZIndex: =2
+            Label25_12 As label:
+                Text: |-
+                    ="Donor Name:"
+                X: =8
+                Y: =40
+                ZIndex: =1
 
-        Subtitle4 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Donation Structure Name '
-            VerticalAlign: =VerticalAlign.Top
-            Width: =146
-            X: =Title4.X
-            Y: =Title4.Y + Title4.Height
-            ZIndex: =3
+            Label25_11 As label:
+                Text: |-
+                    ="Event Title:"
+                X: =440
+                Y: =40
+                ZIndex: =2
 
-        NextArrow4 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
-            Height: =50
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
+            Label25_10 As label:
+                Text: |-
+                    ="Event Venue:"
+                X: =8
+                Y: =92
+                ZIndex: =3
 
-        Separator4 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
+            Label27_3 As label:
+                Text: |-
+                    ="Estimated Number of Participants: "
+                Width: =204
+                X: =998
+                Y: =92
+                ZIndex: =4
 
-        Rectangle4 As rectangle:
-            Height: =Parent.TemplateHeight - Separator4.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
+            TextInput5_10 As text:
+                Default: =
+                Width: =290
+                X: =134
+                Y: =40
+                ZIndex: =5
 
-        Title4_1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =25
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Designation Type'.'Designation Type'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =242
-            X: =398
-            Y: =27
-            ZIndex: =7
+            TextInput5_9 As text:
+                Default: =
+                Width: =571
+                X: =541
+                Y: =40
+                ZIndex: =6
 
-        Subtitle4_1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Lookup ID'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =146
-            X: =271
-            Y: =54
-            ZIndex: =8
+            TextInput5_8 As text:
+                Default: =
+                Width: =484
+                X: =134
+                Y: =92
+                ZIndex: =7
 
-    Button1 As button:
-        Text: ="Create New"
-        X: =992
-        Y: =100
-        ZIndex: =2
+            TextInput5_7 As text:
+                Default: =
+                Width: =94
+                X: =1202
+                Y: =92
+                ZIndex: =8
+
+            Label27_2 As label:
+                Text: |-
+                    ="Event Date:"
+                Width: =109
+                X: =625
+                Y: =92
+                ZIndex: =9
+
+            DatePicker4_1 As datepicker:
+                Width: =248
+                X: =737
+                Y: =92
+                ZIndex: =10
+
+            Dropdown14_1 As dropdown:
+                Items: =["Monetary Donation", "In-Kind Donation"]
+                Width: =306
+                X: =158
+                Y: =146
+                ZIndex: =11
+
+            Label25_9 As label:
+                Text: |-
+                    ="Donation Type:"
+                X: =8
+                Y: =146
+                ZIndex: =12
+
+            Label25_13 As label:
+                Text: |-
+                    ="Donation Amount/ Estimated Value:"
+                Width: =181
+                X: =475
+                Y: =146
+                ZIndex: =13
+
+            TextInput5_11 As text:
+                Default: =
+                Width: =189
+                X: =643
+                Y: =146
+                ZIndex: =14
+
+            Label25_14 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part A: Donation Details"
+                Width: =456
+                X: =8
+                ZIndex: =15
+
+            Label25_15 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part B: Acknowledgement"
+                Width: =456
+                X: =8
+                Y: =258
+                ZIndex: =16
+
+            Label25_16 As label:
+                Height: =38
+                Text: |-
+                    ="Name to be acknowledged:"
+                Width: =237
+                X: =8
+                Y: =298
+                ZIndex: =17
+
+            Label30_1 As label:
+                Height: =41
+                Text: |-
+                    ="Description on the gift and its usage:"
+                Width: =208
+                X: =8
+                Y: =201
+                ZIndex: =18
+
+            TextInput5_12 As text:
+                Default: =
+                Width: =908
+                X: =204
+                Y: =202
+                ZIndex: =19
+
+            TextInput5_13 As text:
+                Default: =
+                Height: =38
+                Width: =296
+                X: =245
+                Y: =298
+                ZIndex: =20
+
+            Label25_17 As label:
+                Height: =38
+                Text: |-
+                    ="Means of acknowledgment:"
+                Width: =237
+                X: =8
+                Y: =336
+                ZIndex: =21
+
+            Checkbox5_4 As checkbox:
+                Text: ="Poster"
+                X: =8
+                Y: =363
+                ZIndex: =22
+
+            Checkbox5_5 As checkbox:
+                Text: ="Leaflet"
+                X: =8
+                Y: =414
+                ZIndex: =23
+
+            Checkbox5_6 As checkbox:
+                Text: ="Banner"
+                X: =8
+                Y: =464
+                ZIndex: =24
+
+            Checkbox5_7 As checkbox:
+                Text: ="Website"
+                X: =8
+                Y: =512
+                ZIndex: =25
+
+            Checkbox6_3 As checkbox:
+                Text: =" House programme"
+                Width: =208
+                X: =8
+                Y: =562
+                ZIndex: =26
+
+            Checkbox6_4 As checkbox:
+                Text: ="Booth"
+                X: =8
+                Y: =612
+                ZIndex: =27
+
+            Checkbox6_5 As checkbox:
+                Text: ="Others"
+                X: =8
+                Y: =662
+                ZIndex: =28
+
+            Label31_4 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =370
+                ZIndex: =29
+
+            Label31_5 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =417
+                ZIndex: =30
+
+            Label31_6 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =467
+                ZIndex: =31
+
+            Label31_7 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =520
+                ZIndex: =32
+
+            Label32_2 As label:
+                Text: |-
+                    ="Size of acknowledgement message:"
+                Width: =306
+                X: =245
+                Y: =572
+                ZIndex: =33
+
+            Label32_3 As label:
+                Text: |-
+                    ="Size of booth:"
+                Width: =355
+                X: =243
+                Y: =617
+                ZIndex: =34
+
+            TextInput15_7 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =360
+                ZIndex: =35
+
+            TextInput15_8 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =412
+                ZIndex: =36
+
+            TextInput15_9 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =464
+                ZIndex: =37
+
+            TextInput15_10 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =512
+                ZIndex: =38
+
+            TextInput15_11 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =564
+                ZIndex: =39
+
+            TextInput15_12 As text:
+                Default: =
+                Width: =600
+                X: =576
+                Y: =617
+                ZIndex: =40
+
+            TextInput15_13 As text:
+                Default: =
+                Height: =81
+                Mode: =TextMode.MultiLine
+                Width: =933
+                X: =243
+                Y: =672
+                ZIndex: =41
+
+            Label33_3 As label:
+                Height: =34
+                Text: ="*  Please delete as appropriate"
+                Width: =1288
+                X: =8
+                Y: =753
+                ZIndex: =42
+
+            Label33_4 As label:
+                Height: =107
+                Text: |-
+                    ="Notes:
+                    1. Donors can be given nominal acknowledgement or return as recognition and should not be permitted to generate any direct financial gain as a result of supporting the event. Otherwise it will not be regarded as a donation and a web‐based receipt should be issued.
+                    2. Any publicity items to be produced by the donor in a joint promotion should be agreed and approved by the University beforehand and carefully monitored. Enquiries can be directed to DAAO"
+                Width: =1288
+                X: =8
+                Y: =873
+                ZIndex: =43
+
+            Import1_1 As import:
+                Height: =31
+                Size: =10
+                Text: ="Upload Document"
+                Width: =137
+                X: =14
+                Y: =826
+                ZIndex: =44
+
+            Label33_5 As label:
+                Height: =35
+                Text: ="Click to upload supporting document"
+                Width: =330
+                X: =8
+                Y: =787
+                ZIndex: =45
 
