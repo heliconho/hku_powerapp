@@ -88,139 +88,6 @@
                     Y: =213.44
                     ZIndex: =1
 
-                Gallery2_9 As gallery.variableTemplateHeightGallery:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DelayItemLoading: =true
-                    FillPortions: =0
-                    Height: =60
-                    Items: =CustomGallerySample
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =5.00
-                    TemplateSize: =280.00
-                    Visible: =DonationSupporting
-                    Y: =276.13
-                    ZIndex: =2
-
-                    Import2_25 As import:
-                        Height: =26.00
-                        OnSelect: =Select(Parent)
-                        Size: =10.00
-                        Text: ="Choose File"
-                        Width: =91
-                        X: =12
-                        Y: =44.01
-                        ZIndex: =1
-
-                    Label3_35 As label:
-                        Height: =44.01
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =5.00
-                        PaddingLeft: =5.00
-                        Size: =13.01
-                        Text: ="Upload Donation Supporting Document *"
-                        Width: =381
-                        X: =12
-                        Y: =4.00
-                        ZIndex: =2
-
-                    Label4_25 As label:
-                        Height: =26.00
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =5.00
-                        PaddingLeft: =5.00
-                        Size: =10.00
-                        Text: ="""No File chosen"""
-                        Width: =195
-                        X: =121
-                        Y: =44.01
-                        ZIndex: =3
-
-                    Label6_25 As label:
-                        Height: =16
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =5.00
-                        PaddingLeft: =5.00
-                        Size: =10.00
-                        Text: ="(get a blank Supplementary Information on Donation in Support of Events Form)"
-                        Width: =609
-                        X: =12
-                        Y: =73.00
-                        ZIndex: =4
-
-            "'Donation other Supporting Documents_1' As gallery.variableTemplateHeightGallery":
-                DelayItemLoading: =true
-                FillPortions: =0
-                Height: =110.00
-                Items: |-
-                    =//Filter(DonationTermAttachments,)
-                    CustomGallerySample
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =287
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =5.00
-                TemplateSize: =280.00
-                Y: =276.13
-                ZIndex: =4
-
-                Import2_26 As import:
-                    Height: =26.00
-                    OnSelect: =Select(Parent)
-                    Size: =10.00
-                    Text: ="Choose File"
-                    Visible: =false
-                    Width: =91
-                    X: =12
-                    Y: =44.01
-                    ZIndex: =1
-
-                Label3_36 As label:
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =5.00
-                    PaddingLeft: =5.00
-                    Size: =13.01
-                    Text: ="Upload Other Donation Supporting Document/Gifts-in-kind Evidence *"
-                    Width: =581
-                    X: =6
-                    Y: =4.00
-                    ZIndex: =2
-
-                Label4_26 As label:
-                    Height: =26.00
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =5.00
-                    PaddingLeft: =5.00
-                    Size: =10.00
-                    Text: ="""No File chosen"""
-                    Width: =195
-                    X: =121
-                    Y: =44.01
-                    ZIndex: =3
-
-                Label6_26 As label:
-                    Height: =20.00
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =5.00
-                    PaddingLeft: =5.00
-                    Size: =10.00
-                    Text: ="Maximum file size 10MB"
-                    Width: =246
-                    X: =12
-                    Y: =73.00
-                    ZIndex: =4
-
-                Icon5 As icon.AddDocument:
-                    Height: =68
-                    Icon: =Icon.AddDocument
-                    OnSelect: =Navigate('Attachment Page',ScreenTransition.Fade)
-                    Width: =58
-                    X: =781
-                    Y: =23
-                    ZIndex: =5
-
     Label1_9 As label:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(30, 85, 66, 1)
@@ -351,6 +218,344 @@
             X: =152
             Y: =10
             ZIndex: =2
+
+    Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =259
+        Width: =1318
+        X: =25
+        Y: =425
+        ZIndex: =56
+
+        DataCard1_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =925
+            Width: =1318
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label25 As label:
+                Text: |-
+                    ="Donor Name:"
+                X: =8
+                Y: =40
+                ZIndex: =1
+
+            Label25_1 As label:
+                Text: |-
+                    ="Event Title:"
+                X: =440
+                Y: =40
+                ZIndex: =2
+
+            Label25_2 As label:
+                Text: |-
+                    ="Event Venue:"
+                X: =8
+                Y: =92
+                ZIndex: =3
+
+            Label27 As label:
+                Text: |-
+                    ="Estimated Number of Participants: "
+                Width: =204
+                X: =998
+                Y: =92
+                ZIndex: =4
+
+            TextInput5 As text:
+                Default: =
+                Width: =290
+                X: =134
+                Y: =40
+                ZIndex: =5
+
+            TextInput5_1 As text:
+                Default: =
+                Width: =571
+                X: =541
+                Y: =40
+                ZIndex: =6
+
+            TextInput5_2 As text:
+                Default: =
+                Width: =484
+                X: =134
+                Y: =92
+                ZIndex: =7
+
+            TextInput5_3 As text:
+                Default: =
+                Width: =94
+                X: =1202
+                Y: =92
+                ZIndex: =8
+
+            Label27_1 As label:
+                Text: |-
+                    ="Event Date:"
+                Width: =109
+                X: =625
+                Y: =92
+                ZIndex: =9
+
+            DatePicker4 As datepicker:
+                Width: =248
+                X: =737
+                Y: =92
+                ZIndex: =10
+
+            Dropdown14 As dropdown:
+                Items: =["Monetary Donation", "In-Kind Donation"]
+                Width: =306
+                X: =158
+                Y: =146
+                ZIndex: =11
+
+            Label25_3 As label:
+                Text: |-
+                    ="Donation Type:"
+                X: =8
+                Y: =146
+                ZIndex: =12
+
+            Label25_4 As label:
+                Text: |-
+                    ="Donation Amount/ Estimated Value:"
+                Width: =181
+                X: =475
+                Y: =146
+                ZIndex: =13
+
+            TextInput5_4 As text:
+                Default: =
+                Width: =189
+                X: =643
+                Y: =146
+                ZIndex: =14
+
+            Label25_5 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part A: Donation Details"
+                Width: =456
+                X: =8
+                ZIndex: =15
+
+            Label25_6 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part B: Acknowledgement"
+                Width: =456
+                X: =8
+                Y: =258
+                ZIndex: =16
+
+            Label25_7 As label:
+                Height: =38
+                Text: |-
+                    ="Name to be acknowledged:"
+                Width: =237
+                X: =8
+                Y: =298
+                ZIndex: =17
+
+            Label30 As label:
+                Height: =41
+                Text: |-
+                    ="Description on the gift and its usage:"
+                Width: =208
+                X: =8
+                Y: =201
+                ZIndex: =18
+
+            TextInput5_5 As text:
+                Default: =
+                Width: =908
+                X: =204
+                Y: =202
+                ZIndex: =19
+
+            TextInput5_6 As text:
+                Default: =
+                Height: =38
+                Width: =296
+                X: =245
+                Y: =298
+                ZIndex: =20
+
+            Label25_8 As label:
+                Height: =38
+                Text: |-
+                    ="Means of acknowledgment:"
+                Width: =237
+                X: =8
+                Y: =336
+                ZIndex: =21
+
+            Checkbox5 As checkbox:
+                Text: ="Poster"
+                X: =8
+                Y: =363
+                ZIndex: =22
+
+            Checkbox5_1 As checkbox:
+                Text: ="Leaflet"
+                X: =8
+                Y: =414
+                ZIndex: =23
+
+            Checkbox5_2 As checkbox:
+                Text: ="Banner"
+                X: =8
+                Y: =464
+                ZIndex: =24
+
+            Checkbox5_3 As checkbox:
+                Text: ="Website"
+                X: =8
+                Y: =512
+                ZIndex: =25
+
+            Checkbox6 As checkbox:
+                Text: =" House programme"
+                Width: =208
+                X: =8
+                Y: =562
+                ZIndex: =26
+
+            Checkbox6_1 As checkbox:
+                Text: ="Booth"
+                X: =8
+                Y: =612
+                ZIndex: =27
+
+            Checkbox6_2 As checkbox:
+                Text: ="Others"
+                X: =8
+                Y: =662
+                ZIndex: =28
+
+            Label31 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =370
+                ZIndex: =29
+
+            Label31_1 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =417
+                ZIndex: =30
+
+            Label31_2 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =467
+                ZIndex: =31
+
+            Label31_3 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =520
+                ZIndex: =32
+
+            Label32 As label:
+                Text: |-
+                    ="Size of acknowledgement message:"
+                Width: =306
+                X: =245
+                Y: =572
+                ZIndex: =33
+
+            Label32_1 As label:
+                Text: |-
+                    ="Size of booth:"
+                Width: =355
+                X: =243
+                Y: =617
+                ZIndex: =34
+
+            TextInput15 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =360
+                ZIndex: =35
+
+            TextInput15_1 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =412
+                ZIndex: =36
+
+            TextInput15_2 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =464
+                ZIndex: =37
+
+            TextInput15_3 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =512
+                ZIndex: =38
+
+            TextInput15_4 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =564
+                ZIndex: =39
+
+            TextInput15_5 As text:
+                Default: =
+                Width: =600
+                X: =576
+                Y: =617
+                ZIndex: =40
+
+            TextInput15_6 As text:
+                Default: =
+                Height: =81
+                Mode: =TextMode.MultiLine
+                Width: =933
+                X: =243
+                Y: =672
+                ZIndex: =41
+
+            Label33 As label:
+                Height: =170
+                Text: |-
+                    ="*  Please delete as appropriate
+                    
+                    Notes:
+                    1. Donors can be given nominal acknowledgement or return as recognition and should not be permitted to generate any direct financial gain as a result of supporting the event. Otherwise it will not be regarded as a donation and a web‐based receipt should be issued.
+                    2. Any publicity items to be produced by the donor in a joint promotion should be agreed and approved by the University beforehand and carefully monitored. Enquiries can be directed to DAAO"
+                Width: =1288
+                X: =8
+                Y: =753
+                ZIndex: =42
 
     Group6_9 As group:
         Height: =5
