@@ -233,7 +233,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =925
+            Height: =1083
             Width: =1318
             X: =0
             Y: =0
@@ -545,17 +545,40 @@
                 ZIndex: =41
 
             Label33 As label:
-                Height: =170
-                Text: |-
-                    ="*  Please delete as appropriate
-                    
-                    Notes:
-                    1. Donors can be given nominal acknowledgement or return as recognition and should not be permitted to generate any direct financial gain as a result of supporting the event. Otherwise it will not be regarded as a donation and a web‐based receipt should be issued.
-                    2. Any publicity items to be produced by the donor in a joint promotion should be agreed and approved by the University beforehand and carefully monitored. Enquiries can be directed to DAAO"
+                Height: =34
+                Text: ="*  Please delete as appropriate"
                 Width: =1288
                 X: =8
                 Y: =753
                 ZIndex: =42
+
+            Label33_1 As label:
+                Height: =107
+                Text: |-
+                    ="Notes:
+                    1. Donors can be given nominal acknowledgement or return as recognition and should not be permitted to generate any direct financial gain as a result of supporting the event. Otherwise it will not be regarded as a donation and a web‐based receipt should be issued.
+                    2. Any publicity items to be produced by the donor in a joint promotion should be agreed and approved by the University beforehand and carefully monitored. Enquiries can be directed to DAAO"
+                Width: =1288
+                X: =8
+                Y: =873
+                ZIndex: =43
+
+            Import1 As import:
+                Height: =31
+                Size: =10
+                Text: ="Upload Document"
+                Width: =137
+                X: =14
+                Y: =826
+                ZIndex: =44
+
+            Label33_2 As label:
+                Height: =35
+                Text: ="Click to upload supporting document"
+                Width: =330
+                X: =8
+                Y: =787
+                ZIndex: =45
 
     Group6_9 As group:
         Height: =5
