@@ -1,0 +1,896 @@
+"'Donation details_designation copy' As screen":
+    OnVisible: =
+
+    Label1_18 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Donation Processing Form"
+        Width: =1318
+        X: =25
+        Y: =40
+        ZIndex: =1
+
+    SaveButton_22 As button:
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: |+
+            =If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue',Dropdown12.Selected.value);
+            If(
+                Dropdown3.Selected.Value = 128490001,
+                
+                If (IsBlank(TextInput8.Text) || IsBlank(Dropdown11.Selected),
+            
+                    Notify("Please fill in the mandatory field.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDD1: true}),
+            
+                    Patch(DonationTerms, 
+                        Defaults(DonationTerms),
+                        {
+                            'Donation Name ':Dropdown11_1.Selected,
+                            'Payment Schedule Type':Dropdown3.Selected.Value,
+                            'Commited Amount in HKD':Value(TextInput1.Text),
+                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
+                            'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
+                            'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14_1.Text
+                            //'Donation Type':
+                                //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
+                                //'Donation Type (DonationTerms)'.'Deferred gift'
+                        });
+                   
+                    //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
+                    //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
+                    
+                    //patch to donationtermMIU table
+            
+                    UpdateContext({requiredfieldsmissingDD1: false});
+                    //create schedule record
+                    'PowerApp->Initializevariable'.Run(Int(TextInput8.Text));
+                ),
+            
+                If( IsBlank(Dropdown11_1.Selected),
+            
+                    Notify("Please pick the donation name.", NotificationType.Error);
+                    UpdateContext({requiredfieldsmissingDDName: true}),
+            
+                     Patch(DonationTerms, 
+                        Defaults(DonationTerms),
+                        {
+                            'Donation Name ':Dropdown11_1.Selected,
+                            'Payment Schedule Type':Dropdown3.Selected.Value,
+                            'Commited Amount in HKD':Value(TextInput1.Text),
+                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
+                            'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
+                            'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Is Anonymous':If(Checkbox2_21.Value=true,true,false),
+                            'Donation Purpose': TextInput14_1.Text
+                            //'Donation Type':
+                                //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
+                                //'Donation Type (DonationTerms)'.'Deferred gift'
+                        });
+                    
+                    //patch to donationtermMIU table
+                    
+                    UpdateContext({requiredfieldsmissingDDName: false})
+                )
+            
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="Save "
+        Width: =73
+        X: =1066
+        Y: =713
+        ZIndex: =25
+
+    Container1_56 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =75
+        Width: =208
+        X: =1146
+        Y: =693
+        ZIndex: =26
+
+        Button3_50 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =62
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_3' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =9
+            RadiusBottomRight: =9
+            RadiusTopLeft: =9
+            RadiusTopRight: =9
+            Size: =10
+            Text: |-
+                ="Next: 
+                Payment Method"
+            Width: =184
+            X: =10
+            Y: =7
+            ZIndex: =1
+
+        Icon6_25 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Width: =33
+            X: =154
+            Y: =14
+            ZIndex: =2
+
+    Container1_57 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        X: =7
+        Y: =704
+        ZIndex: =27
+
+        Button3_51 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: |
+                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Donation Details "
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon6_26 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =159
+            Y: =10
+            ZIndex: =2
+
+    "'Staff info_label_7' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =47.01
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =13.01
+        Text: ="Donation Details - Designation(s)"
+        Width: =1318
+        X: =25
+        Y: =149
+        ZIndex: =28
+
+    Label3_29 As label:
+        FontWeight: =FontWeight.Semibold
+        Text: |-
+            ="Donation Designation(s) :"
+        Width: =593
+        X: =24
+        Y: =205
+        ZIndex: =29
+
+    Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =463
+        Visible: =designationdetails
+        Width: =606
+        X: =721
+        Y: =218
+        ZIndex: =30
+
+        DataCard3_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =562
+            Visible: =designationdetails
+            Width: =606
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container1_4 As groupContainer.manualLayoutContainer:
+                Height: =650
+                Width: =598
+                Y: =20
+                ZIndex: =1
+
+                Label12_22 As label:
+                    Height: =38
+                    Text: |-
+                        ="Designation Type: "
+                    Width: =158
+                    X: =4
+                    Y: =198
+                    ZIndex: =1
+
+                Label12_26 As label:
+                    Height: =39
+                    Text: |-
+                        ="Designation Name: "
+                    Width: =173
+                    X: =4
+                    Y: =243
+                    ZIndex: =2
+
+                Label12_27 As label:
+                    Height: =47
+                    Text: |-
+                        ="Donation Category (MIU): "
+                    Width: =173
+                    X: =4
+                    Y: =291
+                    ZIndex: =5
+
+                Label12_28 As label:
+                    Height: =36
+                    Text: |-
+                        ="Amount: "
+                    Width: =173
+                    X: =8
+                    Y: =352
+                    ZIndex: =6
+
+                Label12_29 As label:
+                    Height: =49
+                    Text: |-
+                        ="RIMS/RCGAS number: "
+                    Width: =173
+                    X: =8
+                    Y: =395
+                    ZIndex: =8
+
+                TextInput2_13 As text:
+                    Default: =""
+                    Reset: =resettext
+                    X: =182
+                    Y: =353
+                    ZIndex: =14
+
+                TextInput2_16 As text:
+                    Default: =" "
+                    Reset: =resettext
+                    X: =182
+                    Y: =403
+                    ZIndex: =16
+
+                Button2_3 As button:
+                    Height: =31
+                    OnSelect: |-
+                        =UpdateContext({designationdetails:false});
+                        Patch(designationCol, LookUp(designationCol,ID=currentRecId), {ID:currentRecId, designationtype:Label23_3.Text, designationname:Label23_4.Text,donationcategory:Concat(ComboBox6_1.SelectedItems,'Donation Category MIU', ", "), amount:TextInput2_13.Text,  rcgasnumber:TextInput2_16.Text});
+                        //reset the form
+                        UpdateContext({resettext: !resettext})
+                        //credittoaccount:TextInput2_13.Text,, reportcode1:TextInput2_10.Text, reportcode2:TextInput2_11.Text
+                    Size: =12
+                    Text: ="Confirm"
+                    Width: =122
+                    X: =385
+                    Y: =612
+                    ZIndex: =17
+
+                ComboBox1_1 As combobox:
+                    DefaultSelectedItems: =
+                    DisplayFields: =["dacrm_lookupid"]
+                    InputTextPlaceholder: ="Find Account Code"
+                    IsSearchable: =false
+                    Items: =dtCol.dacrm_lookupid
+                    SearchFields: =["dacrm_lookupid"]
+                    SearchItems: =[]
+                    SelectMultiple: =false
+                    Width: =320
+                    X: =184
+                    Y: =140
+                    ZIndex: =18
+
+                Label23_4 As label:
+                    BorderThickness: =1
+                    Text: =//LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Designation Name'
+                    Width: =320
+                    X: =184
+                    Y: =246
+                    ZIndex: =19
+
+                Label23_3 As label:
+                    BorderThickness: =1
+                    Text: =//LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Designation Type'.'Designation Type'
+                    Width: =320
+                    X: =184
+                    Y: =196
+                    ZIndex: =20
+
+                Label12_19 As label:
+                    Height: =75
+                    Text: |-
+                        ="Lookup ID    (Account Code    /Cost Center) : "
+                    Width: =173
+                    X: =4
+                    Y: =123
+                    ZIndex: =21
+
+                Label12_30 As label:
+                    Height: =36
+                    Text: |-
+                        ="Donation Purpose: "
+                    Width: =173
+                    X: =8
+                    Y: =452
+                    ZIndex: =22
+
+                Label12_31 As label:
+                    Height: =53
+                    Text: |-
+                        ="Donation In Chinese: "
+                    Width: =108
+                    X: =8
+                    Y: =530
+                    ZIndex: =24
+
+                TextInput2_17 As text:
+                    Default: =" "
+                    Height: =71
+                    Reset: =resettext
+                    X: =184
+                    Y: =528
+                    ZIndex: =25
+
+                Label11_3 As label:
+                    Height: =36
+                    Text: ="*"
+                    Visible: =//If(TextInput1.Text>1000000,true,false)
+                    Width: =27
+                    X: =81
+                    Y: =517
+                    ZIndex: =26
+
+                Button3_3 As button:
+                    Fill: =RGBA(250, 212, 100, 1)
+                    HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                    OnSelect: |-
+                        =Set(paymentScheduleObj, {
+                            it: Dropdown7.SelectedText.Value,
+                            tnoi:TextInput8.Text,
+                            ta:TextInput8_3.Text,
+                            if:Dropdown7_1.SelectedText.Value,
+                            sd:DatePicker2.SelectedDate,
+                            ed:DatePicker2_1.SelectedDate,
+                            aei:TextInput2_13.Text
+                        });
+                        Set(eachAmount,(Int(paymentScheduleObj.aei)/Int(paymentScheduleObj.tnoi)));
+                        Set(scheduleCol,RenameColumns(ClearCollect(rowCount, Sequence(Int(paymentScheduleObj.tnoi)).Value),"Value","Id"));
+                        Clear(infoCol);
+                        ForAll(
+                            Sequence(Int(paymentScheduleObj.tnoi)).Value,
+                            Collect(infoCol,
+                                {
+                                    id:ThisRecord.Value,
+                                    sd:DateTimeValue(paymentScheduleObj.sd),
+                                    ed: 
+                                    If(
+                                        paymentScheduleObj.if ="Monthly",
+                                        DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Months),
+                                        If(paymentScheduleObj.if ="Semi-annually",
+                                            DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value*6,TimeUnit.Months),
+                                            DateAdd(DateTimeValue(paymentScheduleObj.sd),ThisRecord.Value,TimeUnit.Years))),
+                                    tnoi:paymentScheduleObj.tnoi,
+                                    it:paymentScheduleObj.it,
+                                    if:paymentScheduleObj.if,
+                                    aei:Text(eachAmount)
+                                }
+                            )
+                        );
+                        Navigate( 'Donation details_1_Instalment Schedule' , ScreenTransition.Cover  );
+                    Size: =11
+                    Text: ="Show Schedule details"
+                    Visible: |-
+                        =If(
+                            And(!IsBlank(TextInput8.Text),!IsBlank(TextInput8_3.Text),!IsBlank(TextInput8_4.Text)),
+                            true,
+                            If(Dropdown7.SelectedText.Value <> "regular",true, false))
+                    Width: =130
+                    X: =236
+                    Y: =596
+                    ZIndex: =27
+
+                TextInput14_1 As text:
+                    Default: |
+                        =If(
+                            Dropdown3_3.Selected.Value = "Gift-in-kind","Gift(s)-in-kind to the " & Label23_4.Text&" in support of ",
+                            IsMatch(Label23_4.Text,"University Central",MatchOptions.Contains),"Donation to The University of Hong Kong",
+                            Label23_3.Text ="Named professorship", "Donation to establish an Endowed Professorship",
+                             Label23_3.Text ="Scholarship (OC001)" ||  Label23_3.Text ="Prize (OC002)" ||  Label23_3.Text ="Bursary (OC003)","Donation in support of "& Label23_4.Text,
+                             Label23_3.Text = "External Scheme", "Donation in relation to NON-HKU EXTERNAL award/prize/fellowship/programme: "& Label23_4.Text,
+                        
+                             IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Report Code 2') And !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Report Code 1'),"Donation to the  "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Report Code 1'&" in support of " &Label23_4.Text,
+                             !IsBlank(LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Report Code 2'),"Donation to the "&LookUp(DesignationTypeToNameMasters,'Designation Number' = ComboBox1_1.Selected.dacrm_lookupid).'Report Code 2' &" in support of " &Label23_4.Text,
+                             "Donation to the "& Label23_4.Text
+                        
+                        
+                        )
+                    Height: =61
+                    Mode: =TextMode.MultiLine
+                    X: =182
+                    Y: =456
+                    ZIndex: =28
+
+                ComboBox6_1 As combobox:
+                    DisplayFields: =["dacrm_name"]
+                    Items: =DonationCategoryMIUMasters
+                    SearchFields: =["dacrm_name"]
+                    SearchItems: =Search(DonationCategoryMIUMasters,ComboBox6_1.SearchText,"dacrm_name")
+                    Width: =320
+                    X: =182
+                    Y: =299
+                    ZIndex: =29
+
+                Label12_32 As label:
+                    Text: |-
+                        ="Product Type:"
+                    Width: =173
+                    X: =4
+                    Y: =15
+                    ZIndex: =30
+
+                Label12_33 As label:
+                    Text: |-
+                        ="Product:"
+                    Width: =173
+                    X: =4
+                    Y: =77
+                    ZIndex: =31
+
+                Dropdown13 As dropdown:
+                    Items: |
+                        =["Professorship","Scholarship","Not applicable"]
+                    Width: =320
+                    X: =184
+                    Y: =15
+                    ZIndex: =32
+
+                ComboBox8 As combobox:
+                    InputTextPlaceholder: ="Find product"
+                    Items: =ComboBoxSample
+                    SearchItems: =Search(ComboBoxSample,ComboBox8.SearchText,"Value1")
+                    Width: =320
+                    X: =184
+                    Y: =77
+                    ZIndex: =33
+
+    Icon2_3 As icon.Add:
+        Height: =23
+        Icon: =Icon.Add
+        OnSelect: |-
+            =//ClearCollect(designationCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+            Patch(
+                designationCol,
+                Defaults(designationCol),
+                {
+                    ID: CountRows(designationCol) + 1,
+                    //oppid: "Opp-id",
+                    designationtype: "",
+                    designationname: "",
+                    reportcode1: "",
+                    reportcode2: "",
+                    donationcategory: "",
+                    amount: "",
+                    credittoaccount: "",
+                    rcgasnumber: ""
+                }
+            );
+            Set(ShowGallery, true)
+            //oppid:
+        Visible: |-
+            =true
+            //muldesignations
+        Width: =34
+        X: =26
+        Y: =245
+        ZIndex: =31
+
+    Button7_1 As button:
+        Fill: =RGBA(30, 85, 66, 1)
+        Height: =29
+        OnSelect: |-
+            =ForAll(
+                dstdrCol,
+                Patch(
+                    designationCol, 
+                    Defaults(designationCol),
+                            //LookUp(designationCol,ID=currentRecId), 
+                    {        
+                        ID: CountRows(designationCol) + 1, designationtype:ThisRecord.'Designation Type'.'Designation Type', designationname:ThisRecord.designationName,reportcode1:ThisRecord.'Report Code 1', reportcode2:ThisRecord.'Report Code 2'}
+                    )
+            );
+            Set(ShowGallery,true);
+        Size: =12
+        Text: ="Default Designations"
+        Visible: |
+            =//!muldesignations
+            If(Toggle2.Value= true, true, false)
+        Width: =205
+        X: =264
+        Y: =210
+        ZIndex: =33
+
+    "Gallery2_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =437
+        Items: =designationCol
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =//ClearCollect(designationCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+        TemplatePadding: =0
+        TemplateSize: =162
+        Visible: =ShowGallery
+        Width: =588
+        X: =75
+        Y: =256
+        ZIndex: =34
+
+        Title2_12 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =20
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Designation Type: " & ThisItem.designationtype 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =73
+            ZIndex: =2
+
+        NextArrow2_3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(56, 96, 178, 1)
+            Height: =58
+            Icon: =Icon.ChevronRight
+            OnSelect: |
+                =//ClearCollect(designationdetailsCol, {oppid: "Opp-id", designationtype: "(type)", designationname: "(name)", reportcode1: "(code1)", reportcode2: "(code2)",donationcategory: "(MIU)", amount:"($)", credittoaccount: "(acc)", rcgasnumber: "RCGAS"});
+                UpdateContext({designationdetails:true,currentRecId:ThisItem.ID})
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =61
+            X: =519
+            Y: =64
+            ZIndex: =4
+
+        Separator2_3 As rectangle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =5
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =153
+            ZIndex: =5
+
+        Rectangle2_3 As rectangle:
+            Fill: =RGBA(166, 166, 166, 1)
+            Height: =Parent.TemplateHeight - Separator2_3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Title2_13 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =26
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Designation Name: " & ThisItem.designationname
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =101
+            ZIndex: =7
+
+        Icon3_104 As icon.Cancel:
+            Height: =38
+            Icon: =Icon.Cancel
+            OnSelect: =Remove(designationCol, ThisItem)
+            Width: =32
+            X: =538
+            Y: =6
+            ZIndex: =9
+
+        Title2_14 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Product: " 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =48
+            ZIndex: =10
+
+        Subtitle2_9 As label:
+            Font: =Font.Arial
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Normal, FontWeight.Normal)
+            Height: =20
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Amount: " & ThisItem.amount
+            VerticalAlign: =VerticalAlign.Top
+            Width: =391
+            X: =17
+            Y: =127
+            ZIndex: =12
+
+        Title2_15 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Product Type: " 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =512
+            X: =17
+            Y: =19
+            ZIndex: =13
+
+    Group6_14 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =55
+
+        Circle1_103 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =15
+            Width: =15
+            X: =118
+            Y: =95
+            ZIndex: =35
+
+        Label2_104 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Staff Information"
+            Width: =130
+            X: =60
+            Y: =103
+            ZIndex: =36
+
+        Circle1_104 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =303
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =37
+
+        Label2_112 As label:
+            Align: =Align.Center
+            OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
+            Size: =10
+            Text: ="Donor's Information"
+            Width: =130
+            X: =245
+            Y: =106
+            ZIndex: =38
+
+        Circle1_112 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =488
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =39
+
+        Label2_103 As label:
+            Align: =Align.Center
+            OnSelect: |
+                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Donoation Details"
+            Width: =130
+            X: =430
+            Y: =101
+            ZIndex: =40
+
+        Icon3_100 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =513
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =41
+
+        Circle1_113 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =673
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =42
+
+        Label2_115 As label:
+            Align: =Align.Center
+            Height: =33
+            OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Acknowledgement & Donation Receipt Arrangement"
+            Width: =239
+            X: =562
+            Y: =113
+            ZIndex: =43
+
+        Circle1_114 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =858
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =44
+
+        Label2_113 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Thank You Letter"
+            Width: =130
+            X: =804
+            Y: =110
+            ZIndex: =45
+
+        Circle1_115 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =15
+            X: =1043
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =46
+
+        Label2_114 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Due Diligence & Conflict of Interest"
+            Width: =130
+            X: =985
+            Y: =110
+            ZIndex: =47
+
+        Circle1_116 As circle:
+            AccessibleLabel: ="Steo 1"
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =15
+            Width: =14
+            X: =1228
+            Y: |
+                =Circle1_103.Y
+            ZIndex: =48
+
+        Label2_116 As label:
+            Align: =Align.Center
+            Height: =31
+            OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
+            Size: =10
+            Text: ="Endorsement of Acceptance"
+            Width: =130
+            X: =1178
+            Y: =116
+            ZIndex: =49
+
+        Icon3_99 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =328
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =50
+
+        Icon3_92 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =143
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =51
+
+        Icon3_101 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =698
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =52
+
+        Icon3_102 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =883
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =53
+
+        Icon3_103 As icon.HorizontalLine:
+            Color: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =5
+            Icon: =Icon.HorizontalLine
+            Width: =150
+            X: =1068
+            Y: =Circle1_103.Y +Self.Height
+            ZIndex: =54
+

@@ -1,0 +1,363 @@
+Screen6_1 As screen:
+
+    Canvas1_5 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =732
+        Width: =1318
+        X: =25
+        Y: =28
+        ZIndex: =1
+
+        DataCard1_3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =805
+            Width: =1318
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label25_19 As label:
+                Text: |-
+                    ="Donor Name:"
+                X: =8
+                Y: =40
+                ZIndex: =1
+
+            Label25_20 As label:
+                Text: |-
+                    ="Event Title:"
+                X: =440
+                Y: =40
+                ZIndex: =2
+
+            Label25_21 As label:
+                Text: |-
+                    ="Event Venue:"
+                X: =8
+                Y: =92
+                ZIndex: =3
+
+            Label27_5 As label:
+                Text: |-
+                    ="Estimated Number of Participants: "
+                Width: =204
+                X: =998
+                Y: =92
+                ZIndex: =4
+
+            TextInput5_14 As text:
+                Default: =
+                Width: =290
+                X: =134
+                Y: =40
+                ZIndex: =5
+
+            TextInput5_15 As text:
+                Default: =
+                Width: =571
+                X: =541
+                Y: =40
+                ZIndex: =6
+
+            TextInput5_16 As text:
+                Default: =
+                Width: =484
+                X: =134
+                Y: =92
+                ZIndex: =7
+
+            TextInput5_17 As text:
+                Default: =
+                Width: =94
+                X: =1202
+                Y: =92
+                ZIndex: =8
+
+            Label27_4 As label:
+                Text: |-
+                    ="Event Date:"
+                Width: =109
+                X: =625
+                Y: =92
+                ZIndex: =9
+
+            DatePicker4_2 As datepicker:
+                Width: =248
+                X: =737
+                Y: =92
+                ZIndex: =10
+
+            Dropdown14_2 As dropdown:
+                Items: =["Monetary Donation", "In-Kind Donation"]
+                Width: =306
+                X: =158
+                Y: =146
+                ZIndex: =11
+
+            Label25_22 As label:
+                Text: |-
+                    ="Donation Type:"
+                X: =8
+                Y: =146
+                ZIndex: =12
+
+            Label25_23 As label:
+                Text: |-
+                    ="Donation Amount/ Estimated Value:"
+                Width: =181
+                X: =475
+                Y: =146
+                ZIndex: =13
+
+            TextInput5_18 As text:
+                Default: =
+                Width: =189
+                X: =643
+                Y: =146
+                ZIndex: =14
+
+            Label25_18 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part A: Donation Details"
+                Width: =456
+                X: =8
+                ZIndex: =15
+
+            Label25_24 As label:
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Part B: Acknowledgement"
+                Width: =456
+                X: =8
+                Y: =258
+                ZIndex: =16
+
+            Label25_25 As label:
+                Height: =38
+                Text: |-
+                    ="Name to be acknowledged:"
+                Width: =237
+                X: =8
+                Y: =298
+                ZIndex: =17
+
+            Label30_2 As label:
+                Height: =41
+                Text: |-
+                    ="Description on the gift and its usage:"
+                Width: =208
+                X: =8
+                Y: =201
+                ZIndex: =18
+
+            TextInput5_19 As text:
+                Default: =
+                Width: =908
+                X: =204
+                Y: =202
+                ZIndex: =19
+
+            TextInput5_20 As text:
+                Default: =
+                Height: =38
+                Width: =296
+                X: =245
+                Y: =298
+                ZIndex: =20
+
+            Label25_26 As label:
+                Height: =38
+                Text: |-
+                    ="Means of acknowledgment:"
+                Width: =237
+                X: =8
+                Y: =336
+                ZIndex: =21
+
+            Checkbox5_8 As checkbox:
+                Text: ="Poster"
+                X: =8
+                Y: =363
+                ZIndex: =22
+
+            Checkbox5_9 As checkbox:
+                Text: ="Leaflet"
+                X: =8
+                Y: =414
+                ZIndex: =23
+
+            Checkbox5_10 As checkbox:
+                Text: ="Banner"
+                X: =8
+                Y: =464
+                ZIndex: =24
+
+            Checkbox5_11 As checkbox:
+                Text: ="Website"
+                X: =8
+                Y: =512
+                ZIndex: =25
+
+            Checkbox6_6 As checkbox:
+                Text: =" House programme"
+                Width: =208
+                X: =8
+                Y: =562
+                ZIndex: =26
+
+            Checkbox6_7 As checkbox:
+                Text: ="Booth"
+                X: =8
+                Y: =612
+                ZIndex: =27
+
+            Checkbox6_8 As checkbox:
+                Text: ="Others"
+                X: =8
+                Y: =662
+                ZIndex: =28
+
+            Label31_8 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =370
+                ZIndex: =29
+
+            Label31_9 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =417
+                ZIndex: =30
+
+            Label31_10 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =467
+                ZIndex: =31
+
+            Label31_11 As label:
+                Height: =35
+                Text: |-
+                    ="Logo/ Name/ Others (please specify)*:"
+                Width: =333
+                X: =245
+                Y: =520
+                ZIndex: =32
+
+            Label32_4 As label:
+                Text: |-
+                    ="Size of acknowledgement message:"
+                Width: =306
+                X: =245
+                Y: =572
+                ZIndex: =33
+
+            Label32_5 As label:
+                Text: |-
+                    ="Size of booth:"
+                Width: =355
+                X: =243
+                Y: =617
+                ZIndex: =34
+
+            TextInput15_14 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =360
+                ZIndex: =35
+
+            TextInput15_15 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =412
+                ZIndex: =36
+
+            TextInput15_16 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =464
+                ZIndex: =37
+
+            TextInput15_17 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =512
+                ZIndex: =38
+
+            TextInput15_18 As text:
+                Default: =
+                Width: =600
+                X: =578
+                Y: =564
+                ZIndex: =39
+
+            TextInput15_19 As text:
+                Default: =
+                Width: =600
+                X: =576
+                Y: =617
+                ZIndex: =40
+
+            TextInput15_20 As text:
+                Default: =
+                Height: =81
+                Mode: =TextMode.MultiLine
+                Width: =933
+                X: =243
+                Y: =672
+                ZIndex: =41
+
+            Label33_6 As label:
+                Height: =34
+                Text: ="*  Please delete as appropriate"
+                Width: =1288
+                X: =8
+                Y: =753
+                ZIndex: =42
+
+            Label33_8 As label:
+                Height: =107
+                Text: |-
+                    ="Notes:
+                    1. Donors can be given nominal acknowledgement or return as recognition and should not be permitted to generate any direct financial gain as a result of supporting the event. Otherwise it will not be regarded as a donation and a web‐based receipt should be issued.
+                    2. Any publicity items to be produced by the donor in a joint promotion should be agreed and approved by the University beforehand and carefully monitored. Enquiries can be directed to DAAO"
+                Width: =1288
+                X: =8
+                Y: =873
+                ZIndex: =43
+
+            Import1_2 As import:
+                Height: =31
+                Size: =10
+                Text: ="Upload Document"
+                Width: =137
+                X: =14
+                Y: =826
+                ZIndex: =44
+
+            Label33_7 As label:
+                Height: =35
+                Text: ="Click to upload supporting document"
+                Width: =330
+                X: =8
+                Y: =787
+                ZIndex: =45
+

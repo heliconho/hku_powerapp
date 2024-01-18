@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 10,
+    "BindingErrorCount": 43,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -116,7 +116,7 @@
     "ManualOfflineProfileId": "",
     "Name": "Donation processing form",
     "OriginatingVersion": "1.334",
-    "ParserErrorCount": 3,
+    "ParserErrorCount": 2,
     "ShowStatusBar": false
   },
   "PublishInfo": {
@@ -134,10 +134,15 @@
     "StaffInformation",
     "Donor's information",
     "Donation details_1",
+    "Donation details_copy",
+    "Donation details_designation",
+    "Donation details_designation copy",
     "Donation details_1_Instalment Schedule",
-    "Donation details_1_transactiondetails",
+    "Donation details_Instalment Schedule_copy",
+    "Payment Details_transactiondetails",
+    "Payment Details_transactiondetails_copy",
+    "Payment Details_transactiondetails_copy_1",
     "Donation details_1_payment summary",
-    "Donation details_2",
     "Donation details_3",
     "Donation details_4",
     "Attachment Page",
@@ -151,6 +156,7 @@
     "Screen3",
     "Screen4",
     "Screen5",
-    "Screen6"
+    "Screen6",
+    "Screen6_1"
   ]
 }

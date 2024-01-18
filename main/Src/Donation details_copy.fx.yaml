@@ -1,18 +1,18 @@
-"'Donation details_1' As screen":
+"'Donation details_copy' As screen":
     OnVisible: |
         =/*ClearCollect(
             type,
             Filter(Choices('Donation Type  (DonationStructures)'),Value = 128490001)
         );*/
-        Set(donationType, Dropdown3_3.SelectedText);
+        Set(donationType, Dropdown3_4.SelectedText);
         ClearCollect(dtCol,
             If(
                 Or(donationType.Value = "Planned gift",donationType.Value = "Deferred gift" ),
                 DesignationTypeToNameMasters.'Designation Number',
-                Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+                Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_2.Selected.'Donation Name').'Lookup ID'
         ));
 
-    Label1_10 As label:
+    Label1_17 As label:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
@@ -23,17 +23,17 @@
         Y: =40
         ZIndex: =6
 
-    SaveButton_11 As button:
+    SaveButton_17 As button:
         Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
         Height: =46
         HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
         OnSelect: |+
-            =If(Dropdown12.Selected.value=0,Dropdown3_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue',Dropdown12.Selected.value);
+            =If(Dropdown12_1.Selected.value=0,Dropdown3_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bovalue',Dropdown12_1.Selected.value);
             If(
-                Dropdown3.Selected.Value = 128490001,
+                Dropdown3_1.Selected.Value = 128490001,
                 
-                If (IsBlank(TextInput8.Text) || IsBlank(Dropdown11.Selected),
+                If (IsBlank(TextInput8_7.Text) || IsBlank(Dropdown11.Selected),
             
                     Notify("Please fill in the mandatory field.", NotificationType.Error);
                     UpdateContext({requiredfieldsmissingDD1: true}),
@@ -41,12 +41,12 @@
                     Patch(DonationTerms, 
                         Defaults(DonationTerms),
                         {
-                            'Donation Name ':Dropdown11_1.Selected,
-                            'Payment Schedule Type':Dropdown3.Selected.Value,
-                            'Commited Amount in HKD':Value(TextInput1.Text),
-                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,
-                            'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today(),
-                            'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,false,true),
+                            'Donation Name ':Dropdown11_2.Selected,
+                            'Payment Schedule Type':Dropdown3_1.Selected.Value,
+                            'Commited Amount in HKD':Value(TextInput1_3.Text),
+                            'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_4.Text,
+                            'Foreign Currency':ComboBox2_1.Selected.Value, 'Start Date':Today(),
+                            'Opportunity is in Foreign Currency':If(ComboBox2_1.Selected.Value=128490074,false,true),
                             'Is Anonymous':If(Checkbox2_21.Value=true,true,false)
                             //'Donation Type':
                                 //If(Dropdown12.SelectedText.value=0,Dropdown3_3.Selected.Value,Dropdown12.Selected.ovalue)
@@ -59,15 +59,15 @@
                     
                     UpdateContext({requiredfieldsmissingDD1: false});
                     //create schedule record
-                    'PowerApp->Initializevariable'.Run(Int(TextInput8.Text));
+                    'PowerApp->Initializevariable'.Run(Int(TextInput8_7.Text));
                 ),
             
-                If( IsBlank(Dropdown11_1.Selected),
+                If( IsBlank(Dropdown11_2.Selected),
             
                     Notify("Please pick the donation name.", NotificationType.Error);
                     UpdateContext({requiredfieldsmissingDDName: true}),
             
-                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_1.Selected,'Payment Schedule Type':Dropdown3.Selected.Value,'Commited Amount in HKD':Value(TextInput1.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_1.Text,'Foreign Currency':ComboBox2.Selected.Value, 'Start Date':Today()});
+                     Patch(DonationTerms, Defaults(DonationTerms),{'Donation Name ':Dropdown11_2.Selected,'Payment Schedule Type':Dropdown3_1.Selected.Value,'Commited Amount in HKD':Value(TextInput1_3.Text), 'Funder''s Project Number (dacrm_funderprojectnumber)':TextInput1_4.Text,'Foreign Currency':ComboBox2_1.Selected.Value, 'Start Date':Today()});
                     //'Donation Type':If(Dropdown12.Selected.Value=0,Text(Dropdown3_3.Selected.Value), Dropdown12.Selected.Value)
                     //'Opportunity is in Foreign Currency':If(ComboBox2.Selected.Value=128490074,0,1)
                     //'Is Anonymous':If(Checkbox2_21.Value=true,1,0)
@@ -86,7 +86,7 @@
         Y: =713
         ZIndex: =33
 
-    Container1_29 As groupContainer.manualLayoutContainer:
+    Container1_45 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
         Height: =69
@@ -95,7 +95,7 @@
         Y: =699
         ZIndex: =34
 
-        Button3_22 As button:
+        Button3_28 As button:
             Align: =Align.Left
             BorderThickness: =3
             Fill: =RGBA(30, 85, 66, 1)
@@ -117,7 +117,7 @@
             Y: =5
             ZIndex: =1
 
-        Icon6_12 As icon.NextArrow:
+        Icon6_27 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
             Height: =40
             Icon: =Icon.NextArrow
@@ -126,7 +126,7 @@
             Y: =12
             ZIndex: =2
 
-    Container1_30 As groupContainer.manualLayoutContainer:
+    Container1_55 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         DropShadow: =DropShadow.None
         Height: =64
@@ -135,7 +135,7 @@
         Y: =704
         ZIndex: =35
 
-        Button3_23 As button:
+        Button3_49 As button:
             Align: =Align.Left
             BorderThickness: =3
             Fill: =RGBA(30, 85, 66, 1)
@@ -156,7 +156,7 @@
             Y: =7
             ZIndex: =1
 
-        Icon6_4 As icon.NextArrow:
+        Icon6_28 As icon.NextArrow:
             Color: =RGBA(255, 255, 255, 1)
             Height: =40
             Icon: =Icon.NextArrow
@@ -166,7 +166,7 @@
             Y: =10
             ZIndex: =2
 
-    "'Staff info_label_5' As label":
+    "'Staff info_label_9' As label":
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(30, 85, 66, 1)
         FontWeight: =FontWeight.Bold
@@ -180,8 +180,8 @@
         Y: =159
         ZIndex: =36
 
-    Dropdown3 As dropdown:
-        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+    Dropdown3_1 As dropdown:
+        DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
         Fill: |+
             =/*If(recurringerror  || IsBlank(Self.SelectedText), 
                 RGBA(255, 85, 85, 0.1), 
@@ -202,50 +202,50 @@
             =//ClearCollect(instalmentschedueCol, {numberofinstallment:"", 
             ////ClearCollect(payscheduleCol, {ID:CountRows(payscheduleCol),oppid: "Opp-id", installmenttype: "", installmentdate "", installmentfrequency"", installmentamount: "", installmentcurrency: "", startdate: "", enddate: ""});
             //If(Dropdown3.SelectedText.Value = "Recurring Payment",Notify("Recurring Payment is not accepted for this donation.", NotificationType.Error);UpdateContext({recurringerror: true}),UpdateContext({recurringerror: false}))
-        Visible: =If(Dropdown3_3.Selected.Value = 128490002, false,true)
+        Visible: =If(Dropdown3_4.Selected.Value = 128490002, false,true)
         Width: =260
-        X: =890
-        Y: =415
+        X: =751
+        Y: =362
         ZIndex: =38
 
-    Label7 As label:
+    Label7_1 As label:
         Height: =42
         Text: |-
-            ="Payment Schedule Method: *"
-        Visible: =If(Dropdown3_3.Selected.Value = 128490002, false,true)
+            ="Payment Product Method: *"
+        Visible: =If(Dropdown3_4.Selected.Value = 128490002, false,true)
         Width: =254
-        X: =627
-        Y: =412
+        X: =497
+        Y: =360
         ZIndex: =40
 
-    Dropdown3_2 As dropdown:
+    Dropdown3_5 As dropdown:
         Default: =LookUp(Choices('Origin of Donation (DonationTerms)'),Value = 128490003).Value
         DisplayMode: |-
             =//DisplayMode.Edit
-            If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
         Items: =Choices('Origin of Donation (DonationTerms)')
         Width: =288
         X: =180
-        Y: =269
+        Y: =309
         ZIndex: =42
 
-    Label7_2 As label:
+    Label7_11 As label:
         Text: |-
             ="Origin of Donation: "
         Width: =122
         X: =25
-        Y: =269
+        Y: =309
         ZIndex: =43
 
-    Label7_3 As label:
+    Label7_4 As label:
         Text: |-
             ="Donation Type:"
         Width: =155
         X: =25
-        Y: =214
+        Y: =254
         ZIndex: =44
 
-    Dropdown3_3 As dropdown:
+    Dropdown3_4 As dropdown:
         Default: =
         Items: |-
             =//Choices('Donation Type (DonationTerms)')
@@ -264,43 +264,43 @@
             
             //["Gift-in-kind", "Professorship", "Scholarship", "Planned Gift", "Deferred Gift"]
         OnChange: |-
-            =Set(donationType, Dropdown3_3.SelectedText);
+            =Set(donationType, Dropdown3_4.SelectedText);
             ClearCollect(dtCol,
                 If(
                     Or(donationType.Value = "Gift-in-kind",donationType.Value = "Monetary donation" ),
                     DesignationTypeToNameMasters.'Designation Number',
-                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_2.Selected.'Donation Name').'Lookup ID'
             ));
         OnSelect: |+
-            =Set(donationType, Dropdown3_3.SelectedText);
+            =Set(donationType, Dropdown3_4.SelectedText);
             ClearCollect(dtCol,
                 If(
                    Or(donationType.Value = "Gift-in-kind",donationType.Value = "Monetary donation" ),
                     DesignationTypeToNameMasters.'Designation Number',
-                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name').'Lookup ID'
+                    Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_2.Selected.'Donation Name').'Lookup ID'
             ));
             
         Width: =288
         X: =180
-        Y: =214
+        Y: =254
         ZIndex: =45
 
-    Label7_5 As label:
+    Label7_10 As label:
         Height: =45
         Text: |-
             =" Currency: "
         Width: =95
         X: =488
-        Y: =267
+        Y: =307
         ZIndex: =48
 
-    ComboBox2 As combobox:
+    ComboBox2_1 As combobox:
         Default: |+
             =
             
         DefaultSelectedItems: =["Hong Kong Dollar (HKD)"]
         DisplayFields: =["Value"]
-        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
         InputTextPlaceholder: ="Foreign Currency"
         IsSearchable: =false
         Items: =Choices('Foreign Currency (DonationTerms)')
@@ -308,303 +308,151 @@
         SearchItems: =[]
         Width: =288
         X: =590
-        Y: =270
+        Y: =310
         ZIndex: =49
 
-    Label7_6 As label:
+    Label7_12 As label:
         Height: =42
         Text: |-
             ="Total Committed Amount: "
         Width: =148
         X: =903
-        Y: =270
+        Y: =310
         ZIndex: =51
 
-    TextInput1 As text:
+    TextInput1_3 As text:
         Default: =""
-        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
         Format: =TextFormat.Number
         Width: =288
         X: =1051
-        Y: =267
+        Y: =307
         ZIndex: =52
 
-    Dropdown11_1 As dropdown:
-        Fill: |+
-            =If(requiredfieldsmissingDD1  || IsBlank(Self.Selected) ||requiredfieldsmissingDDName, 
-                RGBA(255, 85, 85, 0.1), 
-                RGBA(255, 255, 255, 1)
-            )
-            
-        Items: |-
-            =//DonationStructures
-            //Filter(DonationStructures, dacrm_donationtype = Dropdown3_3.Selected.Value)
-            If(Dropdown12.Selected.value = 0,Filter(DonationStructures, dacrm_donationtype = Dropdown3_3.Selected.Value) ,Filter(DonationStructures, dacrm_donationtype = Dropdown12.Selected.value))
-        OnChange: |-
-            =/*Set(NameCol,AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.dacrm_name),"dacrm_designationname","dacrm_designationtype"),"Names",dacrm_designationname.'Designation Name',"Types",dacrm_designationtype.'Designation Type'));*/
-            
-            ClearCollect(dstdrCol,AddColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name'),"designationName",'Designation Name '.'Designation Name'));
-            //Set(donationStructureApproval, LookUp(DonationStructures,'Donation Structure' = Dropdown11_1.Selected.DonationStructures));
-        OnSelect: |-
-            =/*Set(NameCol,AddColumns(ShowColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.dacrm_name),"dacrm_designationname","dacrm_designationtype"),"Names",dacrm_designationname.'Designation Name',"Types",dacrm_designationtype.'Designation Type'));*/
-            
-            ClearCollect(dstdrCol,AddColumns(Filter(DonationStructureToDesignationRelationships,'Donation Structure Name ' = Dropdown11_1.Selected.'Donation Name'),"designationName",'Designation Name '.'Designation Name'));
-        Width: =288
-        X: =1051
-        Y: =215
-        ZIndex: =59
-
-    Label7_14 As label:
-        Height: =42
-        Text: |-
-            ="Donation: *"
-        Width: =110
-        X: =900
-        Y: =210
-        ZIndex: =60
-
-    Label3_28 As label:
-        FontWeight: =FontWeight.Semibold
-        Text: |-
-            ="Payment Schedule Method :"
-        Width: =593
-        X: =25
-        Y: =368
-        ZIndex: =61
-
-    Container3 As groupContainer.manualLayoutContainer:
-        Height: =80
-        Width: =574
-        X: =32
-        Y: =406
-        ZIndex: =62
-
-        Label8 As label:
-            Height: =44
-            Text: |-
-                ="Selected donation accept below payment schedule method(s) ONLY: "
-            Width: =812
-            ZIndex: =1
-
-        Dropdown6 As dropdown:
-            Items: |-
-                =//DropDownSample
-                ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name),"dacrm_acceptonetimepaymentschedule") 
-            Visible: |-
-                =//true
-                false
-            Width: =156
-            X: =163
-            Y: =44
-            ZIndex: =3
-
-        Dropdown6_1 As dropdown:
-            Items: |-
-                =//DropDownSample
-                ShowColumns(Filter(DonationStructures, dacrm_name = Dropdown11_1.Selected.dacrm_name),"dacrm_acceptinstalmentspaymentschedule") 
-            Visible: =false
-            Width: =156
-            X: =440
-            Y: =44
-            ZIndex: =5
-
-        Group1 As group:
-            Height: =5
-            Width: =5
-            X: =40
-            Y: =40
-            ZIndex: =10
-
-            Label13 As label:
-                Height: =52
-                Text: ="One Time Payment"
-                Visible: =If(Dropdown6.Selected.dacrm_acceptonetimepaymentschedule = true,true,false)
-                Width: =181
-                X: =54
-                Y: =31
-                ZIndex: =2
-
-            Icon4 As icon.Check:
-                Height: =31
-                Icon: =Icon.Check
-                Visible: =If(Dropdown6.Selected.dacrm_acceptonetimepaymentschedule = true,true,false)
-                Width: =36
-                X: =18
-                Y: =41
-                ZIndex: =9
-
-        Group2 As group:
-            Height: =5
-            Width: =5
-            X: =40
-            Y: =40
-            ZIndex: =11
-
-            Label13_1 As label:
-                Height: =52
-                Text: ="Instalments Payment"
-                Visible: =If(Dropdown6_1.Selected.dacrm_acceptinstalmentspaymentschedule = true,true,false)
-                Width: =187
-                X: =301
-                Y: =31
-                ZIndex: =6
-
-            Icon4_1 As icon.Check:
-                Height: =31
-                Icon: =Icon.Check
-                Visible: =If(Dropdown6_1.Selected.dacrm_acceptinstalmentspaymentschedule = true,true,false)
-                Width: =36
-                X: =258
-                Y: =41
-                ZIndex: =10
-
-    Container8 As groupContainer.manualLayoutContainer:
-        Height: =184
-        Visible: =If(IsMatch(Dropdown3.Selected.Value, "Instalments Payment"),true,false) && If(Dropdown3_3.Selected.Value = 128490002, false,true)
+    Container8_1 As groupContainer.manualLayoutContainer:
+        Height: =179
+        Visible: =If(IsMatch(Dropdown3_1.Selected.Value, "Instalments Payment"),true,false) && If(Dropdown3_4.Selected.Value = 128490002, false,true)
         Width: =1290
-        X: =25
-        Y: =503
+        X: =24
+        Y: =429
         ZIndex: =64
 
-        Label3_30 As label:
+        Label3_45 As label:
             FontWeight: =FontWeight.Semibold
             Text: |-
                 ="Payment Schedule  :"
-            Width: =593
+            Width: =240
             ZIndex: =1
 
-        Label17 As label:
+        Label17_11 As label:
             Height: =49
             Text: |-
                 ="Instalment Type: *"
+            Visible: =false
             Width: =134
-            X: =6
-            Y: =45
+            X: =967
+            Y: =118
             ZIndex: =3
 
-        Dropdown7 As dropdown:
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Dropdown7_2 As dropdown:
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
             Items: |-
                 =//["Regular"]
                 Choices('Instalment Type (InstallmentPaymentSchedules)')
             OnChange: |-
                 =//false
-                Set(selectedType,If(Dropdown7.SelectedText.Value <> "regular",true,false));
+                Set(selectedType,If(Dropdown7_2.SelectedText.Value <> "regular",true,false));
             OnSelect: |-
                 =//false
-                Set(selectedType,If(Dropdown7.SelectedText.Value <> "regular",true,false));
+                Set(selectedType,If(Dropdown7_2.SelectedText.Value <> "regular",true,false));
+            Visible: =false
             Width: =150
-            X: =119
-            Y: =49
+            X: =1080
+            Y: =122
             ZIndex: =4
 
-        Label17_1 As label:
+        Label17_8 As label:
             Height: =58
             Text: |-
                 ="Total Number of Instalment: *"
             Width: =147
-            X: =288
-            Y: =40
+            X: =407
+            Y: =36
             ZIndex: =5
 
-        TextInput8 As text:
+        TextInput8_7 As text:
             Default: =""
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
             Fill: |
                 =If(requiredfieldsmissingDD1  || IsBlank(Self.Text), 
                     RGBA(255, 85, 85, 0.1), 
                     RGBA(255, 255, 255, 1)
                 )
             Format: =TextFormat.Number
-            OnChange: =Set(tnoi, TextInput8.Text)
+            OnChange: =Set(tnoi, TextInput8_7.Text)
             Width: =150
-            X: =441
-            Y: =49
+            X: =560
+            Y: =45
             ZIndex: =6
 
-        Label17_2 As label:
-            Height: =49
-            Text: |-
-                ="Total Amount: *"
-            Width: =145
-            X: =956
-            Y: =44
-            ZIndex: =7
-
-        TextInput8_3 As text:
-            Default: =Text(Int(TextInput8_4.Text) * Int(TextInput8.Text))
+        TextInput8_6 As text:
+            Default: =Text(Int(TextInput8_8.Text) * Int(TextInput8_7.Text))
             DisplayMode: =DisplayMode.View
             Height: =41
-            OnChange: =Set(ta,TextInput8_3.Text);
+            OnChange: =Set(ta,TextInput8_6.Text);
             Visible: =false
             Width: =171
-            X: =943
-            Y: =11
+            X: =912
+            Y: =15
             ZIndex: =8
 
-        Label17_3 As label:
+        Label17_14 As label:
             Height: =49
             Text: |-
                 ="Start Date: *"
             Width: =114
-            X: =379
+            X: =7
             Y: =109
             ZIndex: =9
 
-        DatePicker2 As datepicker:
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
-            Width: =220
-            X: =494
-            Y: =113
+        DatePicker2_2 As datepicker:
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Height: =38
+            Width: =237
+            X: =141
+            Y: =109
             ZIndex: =10
 
-        Label17_4 As label:
-            Height: =49
-            Text: |-
-                ="End Date: *"
-            Width: =105
-            X: =732
-            Y: =109
-            ZIndex: =11
-
-        DatePicker2_1 As datepicker:
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
-            Width: =220
-            X: =838
-            Y: =113
-            ZIndex: =12
-
-        Label17_5 As label:
+        Label17_9 As label:
             Height: =49
             Text: |-
                 ="Amount of Each Instalment: *"
-            Visible: =If(Dropdown7.Selected.Value = 128490000,true,false)
+            Visible: =If(Dropdown7_2.Selected.Value = 128490000,true,false)
             Width: =178
-            X: =629
-            Y: =44
+            X: =748
+            Y: =40
             ZIndex: =13
 
-        TextInput8_4 As text:
+        TextInput8_8 As text:
             Default: =""
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
             Format: =TextFormat.Number
-            Visible: =If(Dropdown7.Selected.Value = 128490000,true,false)
+            Visible: =If(Dropdown7_2.Selected.Value = 128490000,true,false)
             Width: =150
-            X: =783
-            Y: =49
+            X: =902
+            Y: =45
             ZIndex: =14
 
-        Label17_6 As label:
+        Label17_13 As label:
             Height: =49
             Text: |-
                 ="Instalment Frequency: *"
             Width: =134
-            X: =6
-            Y: =104
+            Y: =41
             ZIndex: =15
 
-        Dropdown7_1 As dropdown:
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        Dropdown7_3 As dropdown:
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
             Items: |
                 =If(selectedType,
                     Filter(Choices('Instalment Frequency (InstallmentPaymentSchedules)'),Value = 128490003),
@@ -612,49 +460,40 @@
                 )
                 //["Annually", "Semi-Annually", "Quarterly","Monthly","Semi-monthly","Biweekly","Single Instalment"]
             Width: =237
-            X: =119
-            Y: =113
+            X: =141
+            Y: =42
             ZIndex: =16
 
-        Label17_7 As label:
+        Label17_12 As label:
             Height: =47
             Text: |-
                 ="Reimbursement Amount: *"
-            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            Visible: =If(Dropdown7_2.Selected.Value = 128490001,true,false)
             Width: =146
-            X: =617
-            Y: =46
+            X: =736
+            Y: =42
             ZIndex: =19
 
-        TextInput8_5 As text:
+        TextInput8_9 As text:
             Default: =""
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
-            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            Visible: =If(Dropdown7_2.Selected.Value = 128490001,true,false)
             Width: =150
-            X: =771
-            Y: =52
+            X: =890
+            Y: =48
             ZIndex: =20
 
-        Checkbox2 As checkbox:
+        Checkbox2_1 As checkbox:
             CheckboxSize: =30
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+            DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
             Height: =41
             Text: ="Reimbursement"
-            Visible: =If(Dropdown7.Selected.Value = 128490001,true,false)
+            Visible: =If(Dropdown7_2.Selected.Value = 128490001,true,false)
             Width: =216
-            X: =616
-            Y: =8
+            X: =766
             ZIndex: =21
 
-        TextInput3 As text:
-            Default: =Text(Int(TextInput8_4.Text) * Int(TextInput8.Text))
-            DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
-            Width: =150
-            X: =1104
-            Y: =52
-            ZIndex: =22
-
-    Label28 As label:
+    Label28_1 As label:
         Height: =34
         Text: ="*"
         Visible: |-
@@ -662,60 +501,43 @@
             //true
         Width: =15
         X: =202
-        Y: =344
+        Y: =384
         ZIndex: =68
 
-    Label7_7 As label:
+    Label7_13 As label:
         Height: =63
         Text: |-
             ="Funder's Project Number:"
         Width: =155
         X: =25
-        Y: =310
+        Y: =350
         ZIndex: =69
 
-    TextInput1_1 As text:
+    TextInput1_4 As text:
         Default: =""
-        DisplayMode: =If(Dropdown3_3.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
+        DisplayMode: =If(Dropdown3_4.Selected.Value = 128490002, DisplayMode.View, DisplayMode.Edit)
         Width: =288
         X: =180
-        Y: =322
+        Y: =362
         ZIndex: =70
 
-    Label7_8 As label:
-        Text: |-
-            ="Donation Product:"
-        Width: =91
-        X: =494
-        Y: =214
-        ZIndex: =71
+    Toggle2 As toggleSwitch:
+        FalseText: ="Donation to Campaign"
+        Height: =31
+        TrueText: ="Donation to Campaign"
+        Width: =296
+        X: =32
+        Y: =219
+        ZIndex: =93
 
-    Dropdown12 As dropdown:
-        Items: |
-            =//["Professorship","Scholarship","Planned gift","Deferred gift","Campaign","Not Applicable"]
-            [
-                {name:"Professorship",  value:128490003,   ovalue:'Donation Type (DonationTerms)'.Professorship},
-                {name:"Deferred gift",  value:128490007,   ovalue:'Donation Type (DonationTerms)'.'Deferred gift'},
-                {name:"Gift-in-kind",    value:128490002, ovalue:'Donation Type (DonationTerms)'.'Gift-in-kind'},
-                {name:"Monetary donation",  value:128490000,   ovalue:'Donation Type (DonationTerms)'.'Monetary donation'},
-                {name:"Planned gift",   value:128490006,    ovalue:'Donation Type (DonationTerms)'.'Planned gift'},
-                {name:"Scholarship",    value:128490004, ovalue:'Donation Type (DonationTerms)'.Scholarship},
-                {name:"Campaign donation",  value:128490001,   ovalue:'Donation Type (DonationTerms)'.'Campaign donation'},
-                {name:"Not Applicable",value:0}
-            ]
-        Width: =288
-        X: =590
-        Y: =213
-        ZIndex: =72
-
-    Group6_2 As group:
+    Group6_15 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
         ZIndex: =93
 
-        Circle1_14 As circle:
+        Circle1_105 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(136, 160, 209, 1)
             Height: =15
@@ -724,7 +546,7 @@
             Y: =95
             ZIndex: =73
 
-        Label2_14 As label:
+        Label2_106 As label:
             Align: =Align.Center
             OnSelect: =Navigate( StaffInformation , ScreenTransition.Cover  )
             Size: =10
@@ -734,17 +556,17 @@
             Y: =103
             ZIndex: =74
 
-        Circle1_15 As circle:
+        Circle1_106 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
             X: =303
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =75
 
-        Label2_15 As label:
+        Label2_107 As label:
             Align: =Align.Center
             OnSelect: =Navigate( 'Donor''s information' , ScreenTransition.Cover);
             Size: =10
@@ -754,20 +576,20 @@
             Y: =106
             ZIndex: =76
 
-        Circle1_16 As circle:
+        Circle1_107 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
             X: =488
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =77
 
-        Label2_16 As label:
+        Label2_105 As label:
             Align: =Align.Center
             OnSelect: |
-                =Navigate( 'Donation details_1' , ScreenTransition.Cover  )
+                =Navigate( 'Donation details_copy' , ScreenTransition.Cover  )
             Size: =10
             Text: ="Donoation Details"
             Width: =130
@@ -775,27 +597,27 @@
             Y: =101
             ZIndex: =78
 
-        Icon3_14 As icon.HorizontalLine:
+        Icon3_95 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =513
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =79
 
-        Circle1_17 As circle:
+        Circle1_108 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
             X: =673
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =80
 
-        Label2_17 As label:
+        Label2_110 As label:
             Align: =Align.Center
             Height: =33
             OnSelect: =Navigate(acknowledgement, ScreenTransition.Cover  )
@@ -806,17 +628,17 @@
             Y: =113
             ZIndex: =81
 
-        Circle1_18 As circle:
+        Circle1_109 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
             X: =858
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =82
 
-        Label2_18 As label:
+        Label2_108 As label:
             Align: =Align.Center
             Height: =31
             OnSelect: =Navigate(ThankYouLetter, ScreenTransition.Cover  )
@@ -827,17 +649,17 @@
             Y: =110
             ZIndex: =83
 
-        Circle1_19 As circle:
+        Circle1_110 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =15
             X: =1043
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =84
 
-        Label2_19 As label:
+        Label2_109 As label:
             Align: =Align.Center
             Height: =31
             OnSelect: =Navigate( DueDiligence, ScreenTransition.Cover  )
@@ -848,17 +670,17 @@
             Y: =110
             ZIndex: =85
 
-        Circle1_20 As circle:
+        Circle1_111 As circle:
             AccessibleLabel: ="Steo 1"
             Fill: =RGBA(149, 149, 149, 1)
             Height: =15
             Width: =14
             X: =1228
             Y: |
-                =Circle1_14.Y
+                =Circle1_105.Y
             ZIndex: =86
 
-        Label2_20 As label:
+        Label2_111 As label:
             Align: =Align.Center
             Height: =31
             OnSelect: =Navigate( Endorsement , ScreenTransition.Cover  )
@@ -869,53 +691,53 @@
             Y: =116
             ZIndex: =87
 
-        Icon3_15 As icon.HorizontalLine:
+        Icon3_94 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =328
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =88
 
-        Icon3_16 As icon.HorizontalLine:
+        Icon3_93 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =143
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =89
 
-        Icon3_17 As icon.HorizontalLine:
+        Icon3_96 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =698
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =90
 
-        Icon3_18 As icon.HorizontalLine:
+        Icon3_97 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =883
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =91
 
-        Icon3_19 As icon.HorizontalLine:
+        Icon3_98 As icon.HorizontalLine:
             Color: =RGBA(149, 149, 149, 1)
             Fill: =RGBA(149, 149, 149, 1)
             Height: =5
             Icon: =Icon.HorizontalLine
             Width: =150
             X: =1068
-            Y: =Circle1_14.Y +Self.Height
+            Y: =Circle1_105.Y +Self.Height
             ZIndex: =92
 

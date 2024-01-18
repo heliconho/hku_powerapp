@@ -603,49 +603,6 @@ StaffInformation As screen:
             Y: =Circle1.Y +Self.Height
             ZIndex: =33
 
-    SaveButton As button:
-        Fill: =RGBA(30, 85, 66, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =46
-        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
-        OnSelect: |
-            =If(
-                IsBlank('Contact person'.Text) 
-                || IsBlank(Email.Text)
-                || IsBlank(Date_text_2.Text)
-                || IsBlank(TextInput8_1.Text)
-                || IsBlank(TextInput4.Text),
-                
-                Notify("Please fill in all mandatory fields.", NotificationType.Error);
-                UpdateContext({requiredfieldsmissing: true}),
-               
-                //patch function; Defaults(DonationTerms),
-                Patch(ProcessingFormContactPeople,
-                    Defaults(ProcessingFormContactPeople), 
-                    {
-                        'First Contact Person': 'Contact person'.Text,
-                        'First Contact Person Email' : Email.Text,
-                        'Second Contact Person':TextInput10.Text,
-                        'Second Contact Person Email': TextInput12.Text,
-                    }
-                );
-            
-                //Set ID? filter PIC + createon(top 1; dec)
-                UpdateContext({requiredfieldsmissing: false})
-            
-            );
-            Set(OppID, First(SortByColumns(Filter(DonationTerms, PIC = LookUp(Users,'Full Name' = 'Contact person'.Text) ),"createdon",SortOrder.Descending).'Opportunity ID '))
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Size: =12
-        Text: ="Save "
-        Width: =72
-        X: =1063
-        Y: =708
-        ZIndex: =35
-
     Label10 As label:
         Height: =35
         Text: ="*"

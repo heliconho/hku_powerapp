@@ -1,4 +1,4 @@
-"'Donation details_2' As screen":
+"'Donation details_designation' As screen":
     OnVisible: =
 
     Label1_11 As label:
@@ -114,7 +114,7 @@
             Size: =10
             Text: |-
                 ="Next: 
-                Payment Method"
+                Instalment Payment "
             Width: =184
             X: =10
             Y: =7
