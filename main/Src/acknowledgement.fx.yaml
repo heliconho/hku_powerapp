@@ -69,7 +69,7 @@ acknowledgement As screen:
 
             NoReciept As groupContainer.manualLayoutContainer:
                 FillPortions: =0
-                Height: =500
+                Height: =390
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 Visible: =If(Dropdown1.Selected.Value="No need to send out reciept", true, false)
@@ -388,7 +388,7 @@ acknowledgement As screen:
                     Height: =30
                     Icon: =Icon.Add
                     OnSelect: |-
-                        =ClearCollect(Receiptcol, {Name: "Chan Tai Man", Amount:"5000", Email: "chan56@gmail.com"})
+                        =ClearCollect(Receiptcol, {Name: "", Amount:"", Email:""})
                     Width: =30
                     ZIndex: =1
 

@@ -67,15 +67,6 @@ DueDiligence As screen:
                         ="Staff Email :"
                     ZIndex: =1
 
-                TextInput7 As text:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    BorderThickness: =1
-                    Color: =RGBA(0, 0, 0, 0)
-                    Default: =""
-                    FillPortions: =1
-                    HintText: ="Please input the reponsible staff email"
-                    ZIndex: =2
-
             Container12_1 As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 LayoutMinHeight: =100
@@ -89,7 +80,7 @@ DueDiligence As screen:
                     ZIndex: =1
 
                 Label9 As label:
-                    Text: =""
+                    Text: ="Andy Wong"
                     ZIndex: =3
 
                 Label19_2 As label:
@@ -98,15 +89,16 @@ DueDiligence As screen:
                     ZIndex: =4
 
                 Label9_1 As label:
-                    Text: =""
+                    Text: ="Faculty of Arts"
                     ZIndex: =5
 
                 Label19_3 As label:
-                    Text: ="Position"
+                    Text: |-
+                        ="Position:"
                     ZIndex: =6
 
                 Label9_2 As label:
-                    Text: =""
+                    Text: ="Admin "
                     ZIndex: =7
 
     Label1_6 As label:
@@ -239,6 +231,14 @@ DueDiligence As screen:
             X: =147
             Y: =14
             ZIndex: =2
+
+    TextInput7 As text:
+        Default: ="andy.ck.wong@hku.com.hk"
+        Height: =35
+        Width: =430
+        X: =143
+        Y: =360
+        ZIndex: =79
 
     Group6_6 As group:
         Height: =5

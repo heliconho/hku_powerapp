@@ -219,6 +219,82 @@
             Y: =10
             ZIndex: =2
 
+        Container1_63 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DropShadow: =DropShadow.None
+            Height: =64
+            Width: =208
+            ZIndex: =3
+
+            Button3_57 As button:
+                Align: =Align.Left
+                BorderThickness: =3
+                Fill: =RGBA(30, 85, 66, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =46
+                HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: =Navigate( 'Donation details_3' , ScreenTransition.Cover  )
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =10
+                Text: |-
+                    ="Back: 
+                    Payment Method"
+                Width: =185
+                X: =13
+                Y: =7
+                ZIndex: =1
+
+            Icon6_31 As icon.NextArrow:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =40
+                Icon: =Icon.NextArrow
+                Rotation: =180
+                Width: =32
+                X: =152
+                Y: =10
+                ZIndex: =2
+
+            Container1_64 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DropShadow: =DropShadow.None
+                Height: =64
+                Width: =208
+                ZIndex: =3
+
+                Button3_58 As button:
+                    Align: =Align.Left
+                    BorderThickness: =3
+                    Fill: =RGBA(30, 85, 66, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =46
+                    HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                    OnSelect: =Navigate( 'Donation details_3' , ScreenTransition.Cover  )
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =10
+                    Text: |-
+                        ="Back: 
+                        Payment Method"
+                    Width: =185
+                    X: =13
+                    Y: =7
+                    ZIndex: =1
+
+                Icon6_32 As icon.NextArrow:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =40
+                    Icon: =Icon.NextArrow
+                    Rotation: =180
+                    Width: =32
+                    X: =152
+                    Y: =10
+                    ZIndex: =2
+
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =259
@@ -790,4 +866,73 @@
             X: =1068
             Y: =Circle1_72.Y +Self.Height
             ZIndex: =55
+
+    Container1_65 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DropShadow: =DropShadow.None
+        Height: =64
+        Width: =208
+        ZIndex: =57
+
+        Button3_59 As button:
+            Align: =Align.Left
+            BorderThickness: =3
+            Fill: =RGBA(30, 85, 66, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+            OnSelect: =Navigate( 'Donation details_3' , ScreenTransition.Cover  )
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =10
+            Text: |-
+                ="Back: 
+                Payment Method"
+            Width: =185
+            X: =13
+            Y: =7
+            ZIndex: =1
+
+        Icon6_33 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            Icon: =Icon.NextArrow
+            Rotation: =180
+            Width: =32
+            X: =152
+            Y: =10
+            ZIndex: =2
+
+    Button3_60 As button:
+        Align: =Align.Left
+        BorderThickness: =3
+        Fill: =RGBA(30, 85, 66, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =55
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+        OnSelect: =Navigate( 'Donation details_3' , ScreenTransition.Cover  )
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =10
+        Text: |-
+            ="Back: 
+            Gift Supporting Document "
+        Width: =166
+        X: =332
+        Y: =699
+        ZIndex: =58
+
+    Icon6_34 As icon.NextArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.NextArrow
+        Rotation: =180
+        Width: =32
+        X: =452
+        Y: =707
+        ZIndex: =59
 

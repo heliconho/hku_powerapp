@@ -799,7 +799,10 @@
                     ZIndex: =7
 
             Canvas1_6 As fluidGrid.fluidGridWithBlankCard:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 BorderThickness: =0
+                LayoutMinHeight: =250
+                LayoutMinWidth: =100
                 Width: =1318
                 X: =25
                 Y: =425
